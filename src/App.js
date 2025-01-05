@@ -32,7 +32,7 @@ const Achievements = lazy(() => import('./pages/Achievements/Achievements'));
 const App = () => {
   return (
     <React.Fragment>
-      <Router>
+      <Router basename="/Portfolio">
         <CampaignBanner />
         <Navigation />
         <React.Suspense fallback={<LoadingSpinner />}>
