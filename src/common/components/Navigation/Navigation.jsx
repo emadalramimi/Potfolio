@@ -1,10 +1,19 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-
-import { Logo } from '../../../assets/images';
+import { Link, useLocation } from 'react-router-dom';
+import Logo from '../../../assets/images/logo.png';
+import ThemeSwitcher from '../../../components/ThemeSwitcher';
 import './Navigation.scss';
 
 const Navigation = () => {
+  const location = useLocation();
+
+  const getLinkStyle = (path) => {
+    return {
+      color: location.pathname === path ? '#4F46E5' : 'inherit',
+      textDecoration: 'none'
+    };
+  };
+
   const closeNav = () => {
     const checkbox = document.getElementById('navi-toggle');
     checkbox.checked = !checkbox.checked;
@@ -30,49 +39,58 @@ const Navigation = () => {
         <div className="nav__btn__nav">
           <ul className="nav__btn__list">
             <li className="nav__btn__item" onClick={closeNav}>
-              <NavLink
+              <Link
                 to="/"
-                style={({ isActive }) => ({ color: isActive && '#ff5403' })}
+                style={getLinkStyle('/')}
                 className="nav__btn__link"
               >
                 Home
-              </NavLink>
+              </Link>
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
-              <NavLink
-                to="/work"
-                style={({ isActive }) => ({ color: isActive && '#ff5403' })}
+              <Link
+                to="/skills"
+                style={getLinkStyle('/skills')}
                 className="nav__btn__link"
               >
-                Work
-              </NavLink>
+                Skills
+              </Link>
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
-              <NavLink
-                to="/blogs"
-                style={({ isActive }) => ({ color: isActive && '#ff5403' })}
+              <Link
+                to="/projects"
+                style={getLinkStyle('/projects')}
                 className="nav__btn__link"
               >
-                Blogs
-              </NavLink>
+                Projects
+              </Link>
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
-              <NavLink
+              <Link
+                to="/achievements"
+                style={getLinkStyle('/achievements')}
+                className="nav__btn__link"
+              >
+                Achievements
+              </Link>
+            </li>
+            <li className="nav__btn__item" onClick={closeNav}>
+              <Link
                 to="/about"
-                style={({ isActive }) => ({ color: isActive && '#ff5403' })}
+                style={getLinkStyle('/about')}
                 className="nav__btn__link"
               >
                 About&nbsp;Me
-              </NavLink>
+              </Link>
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
-              <NavLink
+              <Link
                 to="/contact"
-                style={({ isActive }) => ({ color: isActive && '#ff5403' })}
+                style={getLinkStyle('/contact')}
                 className="nav__btn__link"
               >
                 Contact
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </div>
@@ -80,47 +98,38 @@ const Navigation = () => {
       <div className="nav__links">
         <ul>
           <li>
-            <NavLink
-              to="/"
-              style={({ isActive }) => ({ color: isActive && '#ff5403' })}
-            >
+            <Link to="/" style={getLinkStyle('/')}>
               Home
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
-              to="/work"
-              style={({ isActive }) => ({ color: isActive && '#ff5403' })}
-            >
-              Work
-            </NavLink>
+            <Link to="/skills" style={getLinkStyle('/skills')}>
+              Skills
+            </Link>
           </li>
           <li>
-            <NavLink
-              to="/blogs"
-              style={({ isActive }) => ({ color: isActive && '#ff5403' })}
-            >
-              Blogs
-            </NavLink>
+            <Link to="/projects" style={getLinkStyle('/projects')}>
+              Projects
+            </Link>
           </li>
           <li>
-            <NavLink
-              to="/about"
-              style={({ isActive }) => ({ color: isActive && '#ff5403' })}
-            >
+            <Link to="/achievements" style={getLinkStyle('/achievements')}>
+              Achievements
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" style={getLinkStyle('/about')}>
               About&nbsp;Me
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
-              to="/contact"
-              style={({ isActive }) => ({ color: isActive && '#ff5403' })}
-            >
+            <Link to="/contact" style={getLinkStyle('/contact')}>
               Contact
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </div>
+      <ThemeSwitcher />
     </nav>
   );
 };

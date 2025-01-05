@@ -1,38 +1,47 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Container } from 'react-bootstrap';
 
 import { BackToTop } from '../../common/components/UIElements';
-import { ContactForm } from './components';
+import { ContactForm, Calendly } from './components';
+import './Contact.scss';
 
 const Contact = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Contact | itsrakesh</title>
+        <title>Contact | Emad Al Ramimi</title>
         <meta
           name="description"
-          content="Leave a message or schedule a google meet."
+          content="Get in touch with Emad Al Ramimi. Let's discuss AI, Machine Learning, or your next project."
         />
-        <meta property="og:title" content="Get in touch with Rakesh" />
+        <meta property="og:title" content="Contact Emad Al Ramimi" />
         <meta
           property="og:description"
-          content="Leave a message or schedule a google meet."
+          content="Schedule a meeting or send a message to discuss AI, Machine Learning, or your next project."
         />
-        <meta
-          property="og:image"
-          content="https://ik.imagekit.io/itsrakesh/Portfolio/contact_og_kQt7MdqAH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646652254157"
-        />
-        <meta property="twitter:title" content="Get in touch with Rakesh" />
+        <meta property="twitter:title" content="Contact Emad Al Ramimi" />
         <meta
           property="twitter:description"
-          content="Leave a message or schedule a google meet."
-        />
-        <meta
-          property="twitter:image"
-          content="https://ik.imagekit.io/itsrakesh/Portfolio/contact_og_kQt7MdqAH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646652254157"
+          content="Schedule a meeting or send a message to discuss AI, Machine Learning, or your next project."
         />
       </Helmet>
-      <ContactForm />
+      <div className="contact-page">
+        <Container>
+          <div className="contact-header">
+            <h1>Let's Connect</h1>
+            <p>Have a project in mind? Let's bring your ideas to life!</p>
+          </div>
+          <div className="contact-content">
+            <ContactForm />
+            <div className="calendly-section">
+              <h2>Schedule a Meeting</h2>
+              <p>Choose a convenient time for us to discuss your project</p>
+              <Calendly />
+            </div>
+          </div>
+        </Container>
+      </div>
       <BackToTop />
     </React.Fragment>
   );

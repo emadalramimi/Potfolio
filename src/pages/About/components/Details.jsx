@@ -1,14 +1,51 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-// import { FiExternalLink } from 'react-icons/fi';
 
-import techData from './techData';
-// import {
-//   AnimatedCounter,
-//   CustomButton
-// } from '../../../common/components/UIElements';
 import './Details.scss';
 import { Link } from 'react-router-dom';
+
+const TechData = [
+  {
+    techName: 'Python',
+    imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    bg: '#FFD43B'
+  },
+  {
+    techName: 'Machine Learning',
+    imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
+    bg: '#FF6F61'
+  },
+  {
+    techName: 'JavaScript',
+    imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    bg: '#F7DF1E'
+  },
+  {
+    techName: 'React',
+    imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    bg: '#61DAFB'
+  },
+  {
+    techName: 'Docker',
+    imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+    bg: '#2496ED'
+  },
+  {
+    techName: 'C++',
+    imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+    bg: '#00599C'
+  },
+  {
+    techName: 'Java',
+    imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    bg: '#007396'
+  },
+  {
+    techName: 'Git',
+    imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    bg: '#F05032'
+  }
+];
 
 const TechCard = (props) => {
   return (
@@ -29,13 +66,13 @@ const Details = () => {
       <div className="details">
         <div className="details__techs">
           <h2 className="details__techs__title">
-            Tools, Languages &amp; Frameworks/Libraries
+            Technologies & Skills
           </h2>
           <div className="details__techs__container">
             <Row className="mt-5">
-              {techData.map((item, i) => {
+              {TechData.map((item, i) => {
                 return (
-                  <Col key={i}>
+                  <Col key={i} xs={4} md={3} className="mb-4">
                     <TechCard
                       imageUrl={item.imageUrl}
                       title={item.techName}
@@ -48,67 +85,59 @@ const Details = () => {
           </div>
         </div>
         <div className="details__skills mt-5">
-          <h2 className="details__skills__title">Skills</h2>
+          <h2 className="details__skills__title">Skill Categories</h2>
           <div className="details__skills__container">
             <Row>
               <Col sm>
-                <h4>Web Development</h4>
+                <h4>🤖 Machine Learning & AI</h4>
+                <ul>
+                  <li>Computer Vision</li>
+                  <li>Deep Learning</li>
+                  <li>Object Detection</li>
+                  <li>Neural Networks</li>
+                </ul>
               </Col>
-            </Row>
-            <Row>
               <Col sm>
-                <h4>Technical Writing</h4>
+                <h4>💻 Web Development</h4>
+                <ul>
+                  <li>Full Stack Development</li>
+                  <li>React.js</li>
+                  <li>REST APIs</li>
+                  <li>Frontend & Backend</li>
+                </ul>
+              </Col>
+              <Col sm>
+                <h4>🚁 Drone & IoT Technology</h4>
+                <ul>
+                  <li>Embedded Systems</li>
+                  <li>Drone Programming</li>
+                  <li>IoT Solutions</li>
+                  <li>Sensor Integration</li>
+                </ul>
               </Col>
             </Row>
           </div>
         </div>
-        {/* <div className="details__achievements mt-5">
-          <h2 className="details__achievements__title">Achievements</h2>
-          <div className="details__achievements__container">
-            <div className="details__achievements__container__achievement">
-              <h3 className="title">Hackathons</h3>
-              <div className="hackathon-card">
-                <Row>
-                  <Col sm>
-                    <h2>
-                      <AnimatedCounter end={5} duration={1} />
-                    </h2>
-                    <p>Participated</p>
-                  </Col>
-                  <Col sm>
-                    <h2>
-                      <AnimatedCounter end={3} duration={1} />
-                    </h2>
-                    <p>Won</p>
-                  </Col>
-                </Row>
-              </div>
-              <h6 className="m-4">See my hackathon achievements on:</h6>
-              <div className="hackathon-links">
-                <Row>
-                  <Col className="text-center">
-                    <Link to="/profiles/devpost">
-                      <CustomButton>
-                        Devpost <FiExternalLink />
-                      </CustomButton>
-                    </Link>
-                  </Col>
-                  <Col className="text-center">
-                    <Link to="/profiles/devfolio">
-                      <CustomButton>
-                        Devfolio <FiExternalLink />
-                      </CustomButton>
-                    </Link>
-                  </Col>
-                </Row>
-              </div>
-            </div>
+        <div className="details__languages mt-5">
+          <h2 className="details__languages__title">Languages</h2>
+          <div className="details__languages__container">
+            <Row>
+              <Col sm>
+                <h4>🇫🇷 French (B2)</h4>
+              </Col>
+              <Col sm>
+                <h4>🇬🇧 English (B2)</h4>
+              </Col>
+              <Col sm>
+                <h4>🇸🇦 Arabic (Native)</h4>
+              </Col>
+            </Row>
           </div>
-        </div> */}
-        <div className="support">
-          <h2>Want to support me?</h2>
+        </div>
+        <div className="support mt-5">
+          <h2>Want to collaborate?</h2>
           <p>
-            Follow me on <Link to="/profiles">socials</Link> :).
+            Connect with me on <Link to="/contact">LinkedIn or GitHub</Link> for potential projects or research opportunities!
           </p>
         </div>
       </div>

@@ -16,19 +16,18 @@ import { LoadingSpinner } from './common/components/UIElements/loadingAnimations
  */
 const Home = lazy(() => import('./pages/Home/Home'));
 const About = lazy(() => import('./pages/About/About'));
-const Blogs = lazy(() => import('./pages/Blogs/Blogs'));
-const Work = lazy(() => import('./pages/Work/Work'));
+const Skills = lazy(() => import('./pages/Skills/Skills'));
+const Projects = lazy(() => import('./pages/Projects/Projects'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 const NotFound = lazy(() => import('./pages/404/404'));
 const ProfileRedirect = lazy(() =>
   import('./features/ProfileRedirect/ProfileRedirect')
 );
 const Profiles = lazy(() => import('./pages/Profiles/Profiles'));
-const AllProjects = lazy(() => import('./pages/Work/projects/AllProjects'));
 const ProjectItem = lazy(() => import('./pages/Work/projects/ProjectItem'));
 const Events = lazy(() => import('./pages/Events/Events'));
 const PrivacyPolicy = lazy(() => import('./pages/Misc/PrivacyPolicy'));
-// const Stats = lazy(() => import('./pages/Misc/Stats'));
+const Achievements = lazy(() => import('./pages/Achievements/Achievements'));
 
 const App = () => {
   return (
@@ -41,23 +40,16 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/blogs" element={<Blogs />} />
-
-            <Route path="/work" element={<Work />} />
-
-            <Route path="/work/projects" element={<AllProjects />} />
-            <Route path="/work/projects/:repoName" element={<ProjectItem />} />
-
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:repoName" element={<ProjectItem />} />
             <Route path="/profiles/:profile" element={<ProfileRedirect />} />
             <Route path="/profiles" element={<Profiles />} />
-
             <Route path="/events" element={<Events />} />
-
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            {/* <Route path="/stats" element={<Stats />} /> */}
-
             <Route path="/404" element={<NotFound />} />
-            <Route path="*" element={<Navigate replace to="/404" />} />
+            <Route path="*" element={<Navigate to="/404" />} />
           </Routes>
         </React.Suspense>
         <Footer />

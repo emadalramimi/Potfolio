@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import {
   Form,
-  Container,
-  FloatingLabel,
   Row,
   Col,
   Spinner,
   Modal,
-  Stack
+  Alert
 } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { Calendly } from '.';
+import { 
+  FaGithub, 
+  FaLinkedin, 
+  FaTwitter, 
+  FaPaperPlane, 
+  FaCheckCircle
+} from 'react-icons/fa';
+import { MdEmail, MdError } from 'react-icons/md';
 
 import { CustomButton } from '../../../common/components/UIElements';
 import useHttpHook from '../../../common/hooks/http-hook';
@@ -22,6 +26,7 @@ const Input = ({
   name,
   value,
   onChange,
+  onBlur,
   placeholder,
   error,
   required,
@@ -30,228 +35,272 @@ const Input = ({
   ...props
 }) => {
   return (
-    <FloatingLabel label={label} controlId={controlId} className="mb-3">
-      <Form.Control
-        type={type}
-        name={name}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        isInvalid={isInvalid}
-        required={required}
-        {...props}
-      />
-      <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
-    </FloatingLabel>
+    <Form.Group className="input-wrapper" controlId={controlId}>
+      <Form.Label>{label}</Form.Label>
+      <div className="input-container">
+        <Form.Control
+          type={type}
+          name={name}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+          placeholder={placeholder}
+          isInvalid={isInvalid}
+          required={required}
+          aria-describedby={`${controlId}-error`}
+          {...props}
+        />
+        {isInvalid && (
+          <Form.Control.Feedback type="invalid" id={`${controlId}-error`}>
+            <MdError className="me-2" /> {error}
+          </Form.Control.Feedback>
+        )}
+      </div>
+    </Form.Group>
   );
 };
 
 const ContactForm = () => {
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: ''
+    fullName: '',
+    contactEmail: '',
+    messageSubject: '',
+    messageContent: ''
   });
   const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
   const [showModal, setShowModal] = useState(false);
-  const { sendRequest, isLoading, error, show } = useHttpHook();
+  const { sendRequest, isLoading, error: httpError } = useHttpHook();
 
-  const formSubmitHandler = async (event) => {
-    event.preventDefault();
-
-    const formErrors = formValidation();
-
-    if (Object.keys(formErrors).length > 0) {
-      setErrors(formErrors);
-    } else {
-      const sendForm = async () => {
-        try {
-          const { success } = await sendRequest(
-            `${process.env.REACT_APP_BACKEND_URL}/contact`,
-            'post',
-            {
-              name: formState.name,
-              email: formState.email,
-              message: formState.message
-            }
-          );
-
-          if (success) {
-            setShowModal(true);
-          }
-        } catch (err) {}
-      };
-      sendForm();
-
-      setFormState({
-        name: '',
-        email: '',
-        message: ''
-      });
-    }
-  };
-
-  const inputChangedHandler = (event) => {
+  const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormState((prevState) => ({
       ...prevState,
       [name]: value
     }));
+  };
 
-    if (!!errors[name]) {
-      setErrors((prevState) => ({
-        ...prevState,
-        [name]: null
-      }));
-    }
+  const handleBlur = (event) => {
+    const { name } = event.target;
+    setTouched((prevTouched) => ({
+      ...prevTouched,
+      [name]: true
+    }));
   };
 
   const formValidation = () => {
-    const { name, email, message } = formState;
-    const formErrors = {};
+    const errors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!name || name.trim() === '') {
-      formErrors.name = 'Please enter your name';
-    } else if (name.length > 50) {
-      formErrors.name = "I don't think there exist a name that long";
+    if (!formState.fullName.trim()) {
+      errors.fullName = 'Full name is required';
+    } else if (formState.fullName.trim().length < 2) {
+      errors.fullName = 'Name must be at least 2 characters';
     }
 
-    if (!email || email.trim() === '') {
-      formErrors.email = 'Please enter your email';
-    } else if (
-      !email.match(
-        //eslint-disable-next-line
-        /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-      )
-    ) {
-      formErrors.email = 'Please enter a valid email';
+    if (!formState.contactEmail.trim()) {
+      errors.contactEmail = 'Email address is required';
+    } else if (!emailRegex.test(formState.contactEmail)) {
+      errors.contactEmail = 'Please enter a valid email address';
     }
 
-    if (!message || message.trim() === '') {
-      formErrors.message = 'Please enter your message';
-    } else if (message.length < 10) {
-      formErrors.message = 'Message must be at least 10 characters long';
+    if (!formState.messageSubject.trim()) {
+      errors.messageSubject = 'Message subject is required';
+    } else if (formState.messageSubject.trim().length < 5) {
+      errors.messageSubject = 'Subject must be at least 5 characters';
     }
 
-    return formErrors;
+    if (!formState.messageContent.trim()) {
+      errors.messageContent = 'Message content is required';
+    } else if (formState.messageContent.trim().length < 10) {
+      errors.messageContent = 'Message must be at least 10 characters';
+    }
+
+    return errors;
   };
 
+  const formSubmitHandler = async (event) => {
+    event.preventDefault();
+    const formErrors = formValidation();
+
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      setTouched(
+        Object.keys(formState).reduce((acc, key) => {
+          acc[key] = true;
+          return acc;
+        }, {})
+      );
+      return;
+    }
+
+    try {
+      const response = await sendRequest(
+        `${process.env.REACT_APP_BACKEND_URL}/contact`,
+        'POST',
+        {
+          fullName: formState.fullName,
+          contactEmail: formState.contactEmail,
+          messageSubject: formState.messageSubject,
+          messageContent: formState.messageContent
+        }
+      );
+
+      if (response.success) {
+        setShowModal(true);
+        setFormState({
+          fullName: '',
+          contactEmail: '',
+          messageSubject: '',
+          messageContent: ''
+        });
+        setErrors({});
+        setTouched({});
+      }
+    } catch (err) {
+      console.error('Error sending message:', err);
+    }
+  };
+
+  const isFormValid = Object.keys(formValidation()).length === 0;
+
   return (
-    <>
-      <Modal show={show} error={error} />
-      <div id="contact-form">
-        <Modal
-          show={showModal}
-          onHide={() => setShowModal(false)}
-          size="lg"
-          aria-labelledby="contained-modal-title-vcenter"
-          centered
-        >
-          <Modal.Header closeButton closeVariant="white">
-            <Modal.Title id="contained-modal-title-vcenter">
-              Message sent successfully!
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <h6>
-              Thank you for contacting me! I will get back to you as soon as
-              possible.
-            </h6>
-          </Modal.Body>
-          <Modal.Footer>
-            <CustomButton
-              variant="secondary"
-              onClick={() => setShowModal(false)}
-            >
-              Close
-            </CustomButton>
-          </Modal.Footer>
-        </Modal>
-        <Container>
-          <div className="contact-form">
-            <h1>I'd love to hear from you</h1>
-            <p>
-              Just a quick chat? - DM me on Twitter{' '}
-              <Link to={'/profiles/twitter'}>@rakesh_at_tweet</Link>
-            </p>
-            <Row className="mt-5">
-              <Col className="mt-2" sm>
-                <Stack gap={5}>
-                  <h4>Simply leave a message</h4>
-                  <Form noValidate onSubmit={formSubmitHandler}>
-                    <Input
-                      controlId="floatingInput"
-                      label="Name"
-                      type="text"
-                      name="name"
-                      value={formState.name}
-                      onChange={inputChangedHandler}
-                      placeholder="Name"
-                      error={errors.name}
-                      required
-                      isInvalid={!!errors.name}
-                    />
-
-                    <Input
-                      controlId="floatingPassword"
-                      label="Email"
-                      type="email"
-                      name="email"
-                      value={formState.email}
-                      onChange={inputChangedHandler}
-                      placeholder="Email"
-                      error={errors.email}
-                      required
-                      isInvalid={!!errors.email}
-                    />
-
-                    <Input
-                      controlId="floatingTextarea2"
-                      label="Message"
-                      as="textarea"
-                      name="message"
-                      value={formState.message}
-                      onChange={inputChangedHandler}
-                      placeholder="Message"
-                      error={errors.message}
-                      required
-                      isInvalid={!!errors.message}
-                      style={{ height: '200px' }}
-                    />
-
-                    <CustomButton type="submit">
-                      {isLoading ? (
-                        <>
-                          Loading{' '}
-                          <Spinner
-                            as="span"
-                            animation="border"
-                            size="sm"
-                            role="status"
-                            aria-hidden="true"
-                          />
-                        </>
-                      ) : (
-                        'Send Message'
-                      )}
-                    </CustomButton>
-                  </Form>
-                </Stack>
-              </Col>
-              <Col sm>
-                <h2>Or</h2>
-              </Col>
-              <Col className="mt-2" sm>
-                <Stack gap={5}>
-                  <h4>Schedule a Google Meet with me!</h4>
-                  <Calendly />
-                </Stack>
-              </Col>
-            </Row>
+    <div className="contact-form-container">
+      <div className="contact-info">
+        <h2>Connect with Me</h2>
+        <p>Have a project in mind or just want to say hello? I'm all ears and excited to collaborate!</p>
+        
+        <div className="contact-methods">
+          <a href="mailto:alramimi10@gmail.com" className="contact-method">
+            <MdEmail className="icon" />
+            <span>alramimi10@gmail.com</span>
+          </a>
+          <div className="social-links">
+            <a href="https://github.com/emadalramimi" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/emad-alramimi" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="icon" />
+            </a>
+            <a href="https://twitter.com/emadalramimi" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="icon" />
+            </a>
           </div>
-        </Container>
+        </div>
       </div>
-    </>
+
+      <Form onSubmit={formSubmitHandler} className="contact-form" noValidate>
+        {httpError && (
+          <Alert variant="danger" className="mb-3">
+            <MdError className="me-2" /> {httpError}
+          </Alert>
+        )}
+
+        <Row>
+          <Col md={6}>
+            <Input
+              label="Your Name"
+              type="text"
+              name="fullName"
+              value={formState.fullName}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+              placeholder="Name"
+              controlId="fullName"
+              isInvalid={touched.fullName && errors.fullName}
+              error={errors.fullName}
+              required
+            />
+          </Col>
+          <Col md={6}>
+            <Input
+              label="Your Email"
+              type="email"
+              name="contactEmail"
+              value={formState.contactEmail}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+              placeholder="Email"
+              controlId="contactEmail"
+              isInvalid={touched.contactEmail && errors.contactEmail}
+              error={errors.contactEmail}
+              required
+            />
+          </Col>
+        </Row>
+
+        <Input
+          label="Subject Line"
+          type="text"
+          name="messageSubject"
+          value={formState.messageSubject}
+          onChange={handleInputChange}
+          onBlur={handleBlur}
+          placeholder="Subject"
+          controlId="messageSubject"
+          isInvalid={touched.messageSubject && errors.messageSubject}
+          error={errors.messageSubject}
+          required
+        />
+
+        <Form.Group className="mb-3" controlId="messageContent">
+          <Form.Label>Your Message</Form.Label>
+          <Form.Control
+            as="textarea"
+            name="messageContent"
+            value={formState.messageContent}
+            onChange={handleInputChange}
+            onBlur={handleBlur}
+            placeholder="Message"
+            style={{ height: '150px' }}
+            isInvalid={touched.messageContent && errors.messageContent}
+            required
+          />
+          {touched.messageContent && errors.messageContent && (
+            <Form.Control.Feedback type="invalid">
+              <MdError className="me-2" /> {errors.messageContent}
+            </Form.Control.Feedback>
+          )}
+        </Form.Group>
+
+        <div className="form-actions">
+          <CustomButton 
+            type="submit" 
+            disabled={isLoading}
+            className="submit-btn"
+          >
+            {isLoading ? (
+              <Spinner animation="border" size="sm" className="me-2" />
+            ) : (
+              <FaPaperPlane className="me-2" />
+            )}
+            {isLoading ? 'Sending...' : 'Send Message'}
+          </CustomButton>
+        </div>
+      </Form>
+
+      <Modal 
+        show={showModal} 
+        onHide={() => setShowModal(false)} 
+        centered 
+        className="success-modal"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Message Sent Successfully</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="text-center">
+            <FaCheckCircle className="success-icon" />
+            <p>Thank you for reaching out! I'll get back to you soon.</p>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <CustomButton onClick={() => setShowModal(false)}>
+            Close
+          </CustomButton>
+        </Modal.Footer>
+      </Modal>
+    </div>
   );
 };
 

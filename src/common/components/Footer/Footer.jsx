@@ -1,110 +1,56 @@
-import React, { useEffect, useState } from 'react';
-import {
-  Col,
-  Row,
-  Spinner,
-  OverlayTrigger,
-  Tooltip,
-  Stack
-} from 'react-bootstrap';
-import { FaTwitter, FaMedium, FaLinkedin, FaGithub } from 'react-icons/all';
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
-import useHttpClient from '../../hooks/http-hook';
 import './Footer.scss';
 
 const Footer = () => {
-  const [visits, setVisits] = useState(0);
-  const { isLoading, error, sendRequest } = useHttpClient();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const responseData = await sendRequest(
-          `https://api.countapi.xyz/hit/itsrakesh.com/${process.env.REACT_APP_COUNTAPI_KEY}`
-        );
-        setVisits(responseData.value);
-      } catch (err) {}
-    };
-    fetchData();
-  }, [sendRequest]);
+  const currentYear = new Date().getFullYear();
 
   return (
-    <div id="footer">
-      <footer>
-        <Row>
-          <Col sm>
-            <h1>Let's Connect</h1>
-            {!isLoading && visits?.lenght > 0 && (
-              <h6>
-                Visits:{' '}
-                <OverlayTrigger
-                  placement="right"
-                  overlay={<Tooltip>Times Viewed</Tooltip>}
-                >
-                  <span className="visits">
-                    {isLoading ? (
-                      <Spinner animation="grow" size="sm" />
-                    ) : (
-                      visits
-                    )}
-                    {error && <span>{error}</span>}
-                  </span>
-                </OverlayTrigger>
-              </h6>
-            )}
+    <footer className="footer">
+      <Container>
+        <Row className="footer-content">
+          <Col lg={4} className="footer-brand">
+            <h3 className="gradient-text">Emad Al Ramimi</h3>
+            <p>AI & Machine Learning Engineer</p>
+            <p className="footer-description">
+              Building innovative solutions at the intersection of AI and technology.
+            </p>
           </Col>
-          <Col className="p-2" sm>
-            <Link to="/profiles/twitter">
-              <FaTwitter className="social-icon" />
-            </Link>
-            <Link to="/profiles/github">
-              <FaGithub className="social-icon" />
-            </Link>
-            <Link to="/profiles/medium">
-              <FaMedium className="social-icon" />
-            </Link>
-            <Link to="/profiles/linkedin">
-              <FaLinkedin className="social-icon" />
-            </Link>
+          
+          <Col lg={4} className="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/work">Projects</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+          </Col>
+          
+          <Col lg={4} className="footer-social">
+            <h4>Connect With Me</h4>
+            <div className="social-links">
+              <a href="https://github.com/emadalramimi" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+              </a>
+              <a href="https://linkedin.com/in/emad-alramimi" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
+              <a href="https://twitter.com/emadalramimi" target="_blank" rel="noopener noreferrer">
+                <FaTwitter />
+              </a>
+            </div>
           </Col>
         </Row>
-        <span className="divider"></span>
-        <Row className="extras">
-          <Col sm>
-            <Stack>
-              <a
-                href="https://forms.gle/2mtF1kybEQQQVrRdA"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Report
-              </a>
-              <a
-                href="https://forms.gle/PbcqrhTEWQtKxE6g7"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Feedback
-              </a>
-              <Link to="/privacy-policy">Privacy Policy</Link>
-            </Stack>
-          </Col>
-          {/* <Col sm>
-            <Link to="/stats">Stats</Link>
-          </Col> */}
-        </Row>
-      </footer>
-      <Stack className="copyright" direction="horizontal" gap={5}>
-        <p>
-          {' '}
-          &copy; 2021 - {new Date().getFullYear()} itsrakesh. All rights
-          reserved.
-        </p>
-        <p className="ms-auto">Made with 💖 by Me!</p>
-        <p>v1.1.0</p>
-      </Stack>
-    </div>
+        
+        <div className="footer-bottom">
+          <p>&copy; {currentYear} Emad Al Ramimi. All rights reserved.</p>
+          <p className="footer-tagline">Made with 💻 and ❤️</p>
+        </div>
+      </Container>
+    </footer>
   );
 };
 

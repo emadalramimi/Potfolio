@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiExternalLink, FaMedium, FaDev } from 'react-icons/all';
+import { FiExternalLink } from 'react-icons/fi';
+import { FaMedium, FaDev } from 'react-icons/fa';
 
 import { CustomButton } from '../../../common/components/UIElements';
 import './BlogPreview.scss';

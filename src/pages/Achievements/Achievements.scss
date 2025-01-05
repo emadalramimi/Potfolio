@@ -1,0 +1,138 @@
+@import '../../common/util/variables';
+
+.achievements-page {
+  padding: 4rem 0;
+  min-height: 100vh;
+
+  .page-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-subtitle {
+    text-align: center;
+    color: $color-secondary-3;
+    margin-bottom: 3rem;
+  }
+
+  .achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .achievement-card {
+    background: rgba($color-primary-4, 0.3);
+    border-radius: $border-radius-3;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba($color-secondary-4, 0.1);
+    box-shadow: $shadow-lg;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .achievement-content {
+      padding-right: 2rem;
+
+      @media (max-width: $screen-sm) {
+        padding-right: 0;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .achievement-header {
+      margin-bottom: 1.5rem;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        background: $gradient-secondary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .achievement-meta {
+        display: flex;
+        gap: 1.5rem;
+        color: $color-secondary-3;
+
+        .year, .location {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+    }
+
+    .description {
+      color: $color-secondary-3;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .highlights {
+      h3 {
+        color: $color-primary-6;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          color: $color-secondary-3;
+          margin-bottom: 0.75rem;
+          padding-left: 1.5rem;
+          position: relative;
+
+          &::before {
+            content: '•';
+            color: $color-primary-3;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .achievement-gallery {
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        
+        .image-container {
+          aspect-ratio: 4/3;
+          overflow: hidden;
+          border-radius: $border-radius-2;
+          box-shadow: $shadow-md;
+          
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+      
+      @media (max-width: $screen-sm) {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

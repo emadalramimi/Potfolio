@@ -1,41 +1,49 @@
-$color-primary-1: #ff5403;
-$color-primary-2: #90c0e8;
-$color-primary-3: #6fc2c5;
-$color-primary-4: #386163;
-$color-primary-5: #486074;
-$color-primary-6: #cd921e;
-$color-primary-7: #84a1ff;
-$color-primary-8: #ffcc00;
+// Primary Colors - Modern Tech Theme
+$color-primary-1: #4F46E5; // Main brand color - Deep Indigo
+$color-primary-2: #7C3AED; // Secondary brand - Purple
+$color-primary-3: #3B82F6; // Accent blue
+$color-primary-4: #1E293B; // Dark background
+$color-primary-5: #0F172A; // Deeper dark
+$color-primary-6: #38BDF8; // Light blue accent
+$color-primary-7: #818CF8; // Soft indigo
+$color-primary-8: #6366F1; // Electric indigo
 
-$color-secondary-1: #f1f1f1;
-$color-secondary-2: #2f2f2f;
-$color-secondary-3: #828282;
-$color-secondary-4: #e1e1e1;
-$color-secondary-5: #ffffff;
-$color-secondary-6: #000000;
+// Secondary Colors
+$color-secondary-1: #F8FAFC; // Light background
+$color-secondary-2: #1E293B; // Dark text
+$color-secondary-3: #94A3B8; // Muted text
+$color-secondary-4: #E2E8F0; // Borders
+$color-secondary-5: #FFFFFF; // Pure white
+$color-secondary-6: #0F172A; // Deep dark
 
-$border-radius-1: 10px;
-$border-radius-2: 20px;
-$border-radius-3: 25px;
-$border-radius-4: 30px;
-$border-radius-5: 45px;
+// Border Radius
+$border-radius-1: 8px;    // Small
+$border-radius-2: 12px;   // Medium
+$border-radius-3: 16px;   // Large
+$border-radius-4: 24px;   // Extra large
+$border-radius-5: 32px;   // Rounded
 
-$text-color-light: #ffffff;
-$text-color-dark: #000000;
+// Text Colors
+$text-color-light: #F8FAFC;
+$text-color-dark: #0F172A;
+$p-color-dark: #64748B;
 
-$p-color-dark: #8a94a6;
+// Gradients
+$gradient-primary: linear-gradient(135deg, $color-primary-1 0%, $color-primary-2 100%);
+$gradient-secondary: linear-gradient(135deg, $color-primary-6 0%, $color-primary-3 100%);
+$gradient-dark: linear-gradient(135deg, $color-primary-4 0%, $color-primary-5 100%);
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
 $font-family-primary: 'Poppins', sans-serif;
 
-// Small devices
-$screen-xss: 480px;
-// Mobile breakpoint
-$screen-xs: 576px;
-// Tablet breakpoint
-$screen-sm: 768px;
-// Laptop breakpoint
-$screen-md: 1280px;
-// Desktop breakpoint
-$screen-lg: 2880px;
-// Large desktop breakpoint
-$screen-xl: 3072px;
+// Breakpoints
+$screen-xss: 480px;  // Small devices
+$screen-xs: 576px;   // Mobile breakpoint
+$screen-sm: 768px;   // Tablet breakpoint
+$screen-md: 1280px;  // Laptop breakpoint
+$screen-lg: 1920px;  // Desktop breakpoint
+$screen-xl: 2560px;  // Large desktop breakpoint

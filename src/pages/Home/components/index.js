@@ -1,3 +1,2 @@
-export { default as Hero } from '../components/Hero';
-export { default as Content } from '../components/Content';
-export { default as CTA } from '../components/CTA';
+export { default as Hero } from './Hero';
+export { default as Content } from './Content';

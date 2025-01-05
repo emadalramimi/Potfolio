@@ -7,7 +7,7 @@ import {
   Tooltip,
   Card
 } from 'react-bootstrap';
-import { FaReadme, FaEye } from 'react-icons/all';
+import { FaReadme, FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 import './ProjectCard.scss';

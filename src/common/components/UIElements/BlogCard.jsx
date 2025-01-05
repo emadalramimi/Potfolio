@@ -1,7 +1,9 @@
 import React from 'react';
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 
-import { AiFillLike, BsEyeFill, BiTimeFive } from 'react-icons/all';
+import { AiFillLike } from 'react-icons/ai';
+import { BsEyeFill } from 'react-icons/bs';
+import { BiTimeFive } from 'react-icons/bi';
 
 import './BlogCard.scss';
 

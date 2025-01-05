@@ -1,110 +1,102 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import Typist from 'react-typist';
-import {
-  FaTwitter,
-  FaGithub,
-  FaMedium,
-  AiOutlineMail,
-  HiDownload,
-  AiOutlineLink
-} from 'react-icons/all';
-import { Link } from 'react-router-dom';
+import { TypeAnimation } from 'react-type-animation';
 
-import { AnimatedButton } from '../../../common/components/UIElements';
-import Resume from '../../../assets/documents/resume.pdf';
-import 'react-typist/dist/Typist.css';
+import { 
+  FaGithub, 
+  FaLinkedin, 
+  FaTwitter 
+} from 'react-icons/fa';
+import { 
+  AiOutlineDownload,
+  AiOutlineMail 
+} from 'react-icons/ai';
+
 import './Hero.scss';
 
-const words = [
-  'web developer',
-  'technical writer',
-  'freelancer',
-  'oss contributor'
-];
-
 const Hero = () => {
-  const [count, setCount] = useState(1);
-
-  useEffect(() => {
-    setCount(1);
-  }, [count]);
-
   return (
-    <div id="hero">
-      <Container>
-        <div className="hero">
-          <Row>
-            <Col sm className="hero__content">
-              <div>
-                <h6>Hey!</h6>
-                <h1>
-                  <span className="hero__content__title">
-                    <span className="hero__content__title-first">I'm</span>{' '}
-                    <span className="hero__content__title-second">Rakesh</span>
-                  </span>
-                </h1>
-                <h2>
-                  <div className="type-writer">
-                    {count ? (
-                      <Typist onTypingDone={() => setCount(0)}>
-                        {words.map((word) => [
-                          <span>{word}</span>,
-                          <Typist.Backspace count={word.length} delay={1000} />
-                        ])}
-                      </Typist>
-                    ) : (
-                      ''
-                    )}
-                  </div>
-                </h2>
-                <p>I have a passion for technology.</p>
-                <p className="know-more">
-                  <Link to="/about">
-                    Know More <AiOutlineLink />
-                  </Link>{' '}
-                  about me
-                </p>
-                <h6 className="hero__content__social">
-                  Follow me{' '}
-                  <span className="hero__content__social-icons">
-                    <Link to="/profiles/twitter">
-                      <FaTwitter className="social-icon twitter" />
-                    </Link>
-                    <Link to="/profiles/github">
-                      <FaGithub className="social-icon github" />
-                    </Link>
-                    <Link to="/profiles/medium">
-                      <FaMedium className="social-icon medium" />
-                    </Link>
-                  </span>
-                </h6>
-                <div className="hero__content__main-btns">
-                  <a href="mailto:rakesh@itsrakesh.com">
-                    <AnimatedButton>
-                      <AiOutlineMail className="main-btn" />
-                      &nbsp;Email&nbsp;Me
-                    </AnimatedButton>
-                  </a>
-                  <a href={Resume} target="_blank" rel="noopener noreferrer">
-                    <AnimatedButton outline className="ms-4">
-                      <HiDownload className="main-btn" />
-                      &nbsp;Resume
-                    </AnimatedButton>
-                  </a>
-                </div>
+    <div className="hero-wrapper">
+      <Container className="hero-container">
+        <Row className="hero-content">
+          <Col md={6} className="hero-text">
+            <div>
+              <h6 className="hero-greeting">Hello, I'm</h6>
+              <h1 className="hero-name">Emad Al Ramimi</h1>
+              <div className="hero-typed-container">
+                <TypeAnimation
+                  sequence={[
+                    'AI Developer',
+                    1000,
+                    'Machine Learning Specialist',
+                    1000,
+                    'Web Developer',
+                    1000,
+                    'Drone Technology Expert',
+                    1000
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                  className="hero-typed-text"
+                />
               </div>
-            </Col>
-            <Col sm className="hero__image">
-              <img
-                id="hero-avatar"
-                src="https://ik.imagekit.io/itsrakesh/Portfolio/avatar_3PaiLNQSnTE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644134493976"
-                alt="Rakesh Potnuru"
-                loading="eager"
-              />
-            </Col>
-          </Row>
-        </div>
+              <p className="hero-description">
+                Innovating at the intersection of AI, Machine Learning, and Technology
+              </p>
+              <div className="hero-cta-buttons">
+                <a 
+                  href="/resume.pdf" 
+                  download 
+                  className="btn btn-primary"
+                >
+                  <AiOutlineDownload /> Download CV
+                </a>
+                <a 
+                  href="#contact" 
+                  className="btn btn-outline-primary"
+                >
+                  Contact Me
+                </a>
+              </div>
+              <div className="hero-social-links">
+                <a 
+                  href="https://github.com/emadalramimi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/emad-alramimi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin />
+                </a>
+                <a 
+                  href="https://twitter.com/emadalramimi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter />
+                </a>
+                <a 
+                  href="mailto:alramimi10@gmail.com"
+                >
+                  <AiOutlineMail />
+                </a>
+              </div>
+            </div>
+          </Col>
+          <Col md={6} className="hero-image">
+            <img 
+              src="/profile.jpg" 
+              alt="Emad Al Ramimi" 
+              className="profile-image" 
+            />
+          </Col>
+        </Row>
       </Container>
     </div>
   );

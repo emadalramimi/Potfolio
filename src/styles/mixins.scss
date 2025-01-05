@@ -1,0 +1,95 @@
+@import './variables.scss';
+
+// Flexbox Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Responsive Mixins
+@mixin for-phone-only {
+  @media (max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin for-tablet-up {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+// Hover Effect Mixin
+@mixin hover-effect {
+  transition: all $transition-medium ease;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Gradient Text Mixin
+@mixin gradient-text($start-color, $end-color) {
+  background: linear-gradient(to right, $start-color, $end-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Button Styles
+@mixin primary-button {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 50px;
+  background-color: $color-primary;
+  color: $text-color-light;
+  text-decoration: none;
+  transition: all $transition-medium ease;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    transform: translateY(-3px);
+  }
+}
+
+// Anchor Link Mixin
+@mixin anchor($color) {
+  color: $color;
+  text-decoration: none;
+  position: relative;
+  transition: color $transition-fast ease;
+
+  &:hover {
+    color: darken($color, 15%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: $color;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all $transition-medium ease;
+  }
+
+  &:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}

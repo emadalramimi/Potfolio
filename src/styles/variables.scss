@@ -1,0 +1,40 @@
+// Color Palette
+$color-primary: #1a2980;
+$color-secondary: #26d0ce;
+$color-accent: #61dafb;
+
+// Text Colors
+$text-color-light: #ffffff;
+$text-color-dark: #333333;
+
+// Screen Breakpoints
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+
+// Font Families
+$font-family-primary: 'Roboto', sans-serif;
+$font-family-secondary: 'Open Sans', sans-serif;
+
+// Typography
+$font-primary: $font-family-primary;
+$font-secondary: $font-family-secondary;
+
+// Border Radius
+$border-radius-1: 4px;
+$border-radius-2: 8px;
+$border-radius-3: 12px;
+$border-radius-4: 16px;
+$border-radius-5: 24px;
+
+// Transitions
+$transition-fast: 0.2s;
+$transition-medium: 0.3s;
+$transition-slow: 0.5s;

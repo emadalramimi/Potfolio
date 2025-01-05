@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const useHttpClient = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState();
+  const [error, setError] = useState(null);
   const [show, setShow] = useState(false);
 
   const activeHttpRequests = useRef([]);
@@ -23,12 +23,20 @@ const useHttpClient = () => {
       setIsLoading(false);
       return response.data;
     } catch (err) {
-      setError(err);
+      const errorMessage = err.response?.data?.message || 
+                           err.message || 
+                           'An unexpected error occurred';
+      setError(errorMessage);
       setShow(true);
-      throw err;
+      throw new Error(errorMessage);
     } finally {
       setIsLoading(false);
     }
+  }, []);
+
+  const clearError = useCallback(() => {
+    setError(null);
+    setShow(false);
   }, []);
 
   useEffect(() => {
@@ -38,7 +46,7 @@ const useHttpClient = () => {
     };
   }, []);
 
-  return { isLoading, error, sendRequest, show };
+  return { isLoading, error, sendRequest, show, clearError };
 };
 
 export default useHttpClient;

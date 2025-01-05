@@ -1,7 +1,8 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaTwitter, FaMedium, FaGithub } from 'react-icons/all';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
 
 import { CustomButton } from '../../../common/components/UIElements';
 
@@ -16,25 +17,24 @@ const Introduction = () => {
             <Col sm>
               <div className="introduction__img">
                 <img
-                  src="https://ik.imagekit.io/itsrakesh/Portfolio/avatar_3PaiLNQSnTE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644134493976"
-                  alt="its rakesh"
+                  src="https://via.placeholder.com/400x400?text=Emad+Al+Ramimi"
+                  alt="Emad Al Ramimi"
                   loading="lazy"
                 />
               </div>
             </Col>
             <Col className="introduction__short mt-4" sm>
               <div>
-                <h1>Rakesh Potnuru</h1>
+                <h1>Emad Al Ramimi</h1>
                 <p>
-                  Full Stack Developer, technical writer, and a passionate
-                  learner.
+                  Computer Scientist, AI Developer, and Web Developer
                 </p>
               </div>
               <div>
                 <h6>Email Me</h6>
-                <a href="mailto:rakesh@itsrakesh.com">
+                <a href="mailto:alramimi10@gmail.com">
                   <span className="introduction__short__email">
-                    rakesh@itsrakesh.com
+                    alramimi10@gmail.com
                   </span>
                 </a>
               </div>
@@ -42,12 +42,12 @@ const Introduction = () => {
                 <Row>
                   <Col lg={3} md={6} xs={6}>
                     <Link to="/work">
-                      <CustomButton className="work">Work</CustomButton>
+                      <CustomButton className="work">Projects</CustomButton>
                     </Link>
                   </Col>
                   <Col lg={3} md={6} xs={6}>
-                    <Link to="/blogs">
-                      <CustomButton className="blogs">Blogs</CustomButton>
+                    <Link to="/about">
+                      <CustomButton className="about">About</CustomButton>
                     </Link>
                   </Col>
                   <Col lg={3} md={6} xs={6}>
@@ -55,25 +55,20 @@ const Introduction = () => {
                       <CustomButton className="contact">Contact</CustomButton>
                     </Link>
                   </Col>
-                  <Col lg={3} md={6} xs={6}>
-                    <Link to="/profiles">
-                      <CustomButton className="profiles">Profiles</CustomButton>
-                    </Link>
-                  </Col>
                 </Row>
               </div>
               <div className="introduction__short__social">
-                <h6>Follow me on</h6>
+                <h6>Connect with me</h6>
                 <div>
-                  <Link to="/profiles/twitter">
-                    <FaTwitter className="social-icon" />
-                  </Link>
-                  <Link to="/profiles/github">
+                  <a href="https://github.com/emadalramimi" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="social-icon" />
-                  </Link>
-                  <Link to="/profiles/medium">
-                    <FaMedium className="social-icon" />
-                  </Link>
+                  </a>
+                  <a href="https://www.linkedin.com/in/emad-alramimi" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="social-icon" />
+                  </a>
+                  <a href="mailto:alramimi10@gmail.com">
+                    <AiOutlineMail className="social-icon" />
+                  </a>
                 </div>
               </div>
             </Col>
@@ -81,30 +76,21 @@ const Introduction = () => {
           <hr />
           <div className="introduction__brief">
             <p>
-              Hi there! Thanks for visiting my portfolio.
-              <br /> I'm{' '}
-              <a
-                href="https://www.linkedin.com/in/potnururakesh/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Rakesh Potnuru
-              </a>
-              , a Full Stack Developer, Technical Writer, and a passionate
-              learner. I am pursuing B.Tech in Computer Science and Engineering
-              at{' '}
-              <a
-                href="https://www.lpu.in"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Lovely Professional University
-              </a>
-              , Punjab, India. I have worked on a wide range of technologies and
-              have worked on projects ranging from small to large scale. I am a
-              self-motivated and self-driven individual who is always looking
-              for new challenges and opportunities. I love participating in
-              hackathons and engaging in communities.
+              Hi there! I'm Emad Al Ramimi, a passionate Computer Scientist and AI Developer 
+              with expertise in Machine Learning, Web Development, and Drone Technology. 
+              Currently pursuing my Bachelor's in Computer Science at the University of 
+              Paul Sabatier in Toulouse, France, I am dedicated to creating innovative 
+              solutions that leverage cutting-edge technologies.
+            </p>
+            <p>
+              My journey includes developing groundbreaking projects like the AI Guardian Drone, 
+              Aircraft Damage Detection system, and AquaCare IoT platform. I've been recognized 
+              for my innovative work, including winning the Water Research & Innovation Award 
+              and participating in global initiatives like COP28 and ROWAD Hackathon.
+            </p>
+            <p>
+              As an entrepreneur and technology enthusiast, I'm committed to pushing the 
+              boundaries of AI and creating impactful solutions that address real-world challenges.
             </p>
           </div>
         </div>
