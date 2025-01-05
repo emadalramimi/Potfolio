@@ -1,6 +1,7 @@
 @use './common/util/mixins';
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DIN+Next+Arabic:wght@400;700&display=swap');
 @import '~bootstrap/scss/bootstrap';
 @import './common/util/variables';
 
@@ -33,6 +34,10 @@
   --modal-text-secondary: #6B7280;
 }
 
+*[dir="rtl"] {
+  font-family: 'Cairo', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -40,12 +45,20 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cairo', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DIN Next Arabic', sans-serif;
+  }
+}
+
+body[dir="rtl"] {
+  font-family: 'Cairo', sans-serif;
 }
 
 // Modern Scrollbar

@@ -23,6 +23,31 @@ $dark-border: rgba(255, 255, 255, 0.12);
   min-height: 100vh;
   padding: 2rem 0;
   transition: background-color 0.3s ease;
+
+  &[dir="rtl"] {
+    .project-info {
+      text-align: right;
+    }
+
+    .project-links {
+      direction: ltr; // Keep icons direction
+    }
+
+    .tech-label {
+      margin-left: 0.5rem;
+      margin-right: 0;
+    }
+
+    .tech-item {
+      margin-left: 0.5rem;
+      margin-right: 0;
+    }
+
+    .project-status {
+      left: auto;
+      right: 1rem;
+    }
+  }
 }
 
 .projects-container {

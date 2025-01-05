@@ -93,12 +93,36 @@ nav {
     }
   }
 
+  .nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .nav__btn {
     display: none;
   }
   @media screen and (max-width: $screen-sm) {
     .nav__btn {
       display: block;
+    }
+  }
+}
+
+[dir="rtl"] {
+  nav {
+    .nav__brand {
+      margin-left: 0;
+      margin-right: 2rem;
+    }
+
+    ul {
+      padding-right: 0;
+    }
+
+    .nav__actions {
+      margin-right: auto;
+      margin-left: 0;
     }
   }
 }

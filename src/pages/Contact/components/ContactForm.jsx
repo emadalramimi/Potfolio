@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Form,
   Row,
   Col,
   Spinner,
   Modal,
-  Alert
+  Alert,
+  Button
 } from 'react-bootstrap';
 import { 
   FaGithub, 
   FaLinkedin, 
   FaTwitter, 
   FaPaperPlane, 
-  FaCheckCircle
+  FaCheckCircle,
+  FaSpinner
 } from 'react-icons/fa';
 import { MdEmail, MdError } from 'react-icons/md';
 
@@ -61,6 +64,7 @@ const Input = ({
 };
 
 const ContactForm = () => {
+  const { t, i18n } = useTranslation();
   const [formState, setFormState] = useState({
     fullName: '',
     contactEmail: '',
@@ -93,27 +97,27 @@ const ContactForm = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!formState.fullName.trim()) {
-      errors.fullName = 'Full name is required';
+      errors.fullName = t('contact.form.nameError');
     } else if (formState.fullName.trim().length < 2) {
-      errors.fullName = 'Name must be at least 2 characters';
+      errors.fullName = t('contact.form.nameLengthError');
     }
 
     if (!formState.contactEmail.trim()) {
-      errors.contactEmail = 'Email address is required';
+      errors.contactEmail = t('contact.form.emailError');
     } else if (!emailRegex.test(formState.contactEmail)) {
-      errors.contactEmail = 'Please enter a valid email address';
+      errors.contactEmail = t('contact.form.emailInvalidError');
     }
 
     if (!formState.messageSubject.trim()) {
-      errors.messageSubject = 'Message subject is required';
+      errors.messageSubject = t('contact.form.subjectError');
     } else if (formState.messageSubject.trim().length < 5) {
-      errors.messageSubject = 'Subject must be at least 5 characters';
+      errors.messageSubject = t('contact.form.subjectLengthError');
     }
 
     if (!formState.messageContent.trim()) {
-      errors.messageContent = 'Message content is required';
+      errors.messageContent = t('contact.form.messageError');
     } else if (formState.messageContent.trim().length < 10) {
-      errors.messageContent = 'Message must be at least 10 characters';
+      errors.messageContent = t('contact.form.messageLengthError');
     }
 
     return errors;
@@ -162,13 +166,13 @@ const ContactForm = () => {
     }
   };
 
-  const isFormValid = Object.keys(formValidation()).length === 0;
+  const isRtl = i18n.dir() === 'rtl';
 
   return (
-    <div className="contact-form-container">
+    <div className="contact-form-container" dir={i18n.dir()}>
       <div className="contact-info">
-        <h2>Connect with Me</h2>
-        <p>Have a project in mind or just want to say hello? I'm all ears and excited to collaborate!</p>
+        <h2>{t('contact.connectWithMe')}</h2>
+        <p>{t('contact.haveAProject')}</p>
         
         <div className="contact-methods">
           <a href="mailto:alramimi10@gmail.com" className="contact-method">
@@ -199,13 +203,13 @@ const ContactForm = () => {
         <Row>
           <Col md={6}>
             <Input
-              label="Your Name"
+              label={t('contact.form.name')}
               type="text"
               name="fullName"
               value={formState.fullName}
               onChange={handleInputChange}
               onBlur={handleBlur}
-              placeholder="Name"
+              placeholder={t('contact.form.namePlaceholder')}
               controlId="fullName"
               isInvalid={touched.fullName && errors.fullName}
               error={errors.fullName}
@@ -214,13 +218,13 @@ const ContactForm = () => {
           </Col>
           <Col md={6}>
             <Input
-              label="Your Email"
+              label={t('contact.form.email')}
               type="email"
               name="contactEmail"
               value={formState.contactEmail}
               onChange={handleInputChange}
               onBlur={handleBlur}
-              placeholder="Email"
+              placeholder={t('contact.form.emailPlaceholder')}
               controlId="contactEmail"
               isInvalid={touched.contactEmail && errors.contactEmail}
               error={errors.contactEmail}
@@ -230,13 +234,13 @@ const ContactForm = () => {
         </Row>
 
         <Input
-          label="Subject Line"
+          label={t('contact.form.subject')}
           type="text"
           name="messageSubject"
           value={formState.messageSubject}
           onChange={handleInputChange}
           onBlur={handleBlur}
-          placeholder="Subject"
+          placeholder={t('contact.form.subjectPlaceholder')}
           controlId="messageSubject"
           isInvalid={touched.messageSubject && errors.messageSubject}
           error={errors.messageSubject}
@@ -244,14 +248,14 @@ const ContactForm = () => {
         />
 
         <Form.Group className="mb-3" controlId="messageContent">
-          <Form.Label>Your Message</Form.Label>
+          <Form.Label>{t('contact.form.message')}</Form.Label>
           <Form.Control
             as="textarea"
             name="messageContent"
             value={formState.messageContent}
             onChange={handleInputChange}
             onBlur={handleBlur}
-            placeholder="Message"
+            placeholder={t('contact.form.messagePlaceholder')}
             style={{ height: '150px' }}
             isInvalid={touched.messageContent && errors.messageContent}
             required
@@ -264,18 +268,32 @@ const ContactForm = () => {
         </Form.Group>
 
         <div className="form-actions">
-          <CustomButton 
+          <Button 
             type="submit" 
+            className={`submit-btn ${isRtl ? 'rtl-submit' : ''}`}
             disabled={isLoading}
-            className="submit-btn"
           >
             {isLoading ? (
-              <Spinner animation="border" size="sm" className="me-2" />
+              <span className="button-content">
+                <FaSpinner className="spinner-icon" />
+                {t('contact.form.sending')}
+              </span>
             ) : (
-              <FaPaperPlane className="me-2" />
+              <span className="button-content">
+                {isRtl ? (
+                  <>
+                    {t('contact.form.send')}
+                    <FaPaperPlane className="send-icon rtl-icon" />
+                  </>
+                ) : (
+                  <>
+                    <FaPaperPlane className="send-icon" />
+                    {t('contact.form.send')}
+                  </>
+                )}
+              </span>
             )}
-            {isLoading ? 'Sending...' : 'Send Message'}
-          </CustomButton>
+          </Button>
         </div>
       </Form>
 
@@ -286,17 +304,17 @@ const ContactForm = () => {
         className="success-modal"
       >
         <Modal.Header closeButton>
-          <Modal.Title>Message Sent Successfully</Modal.Title>
+          <Modal.Title>{t('contact.form.success')}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="text-center">
             <FaCheckCircle className="success-icon" />
-            <p>Thank you for reaching out! I'll get back to you soon.</p>
+            <p>{t('contact.form.successMessage')}</p>
           </div>
         </Modal.Body>
         <Modal.Footer>
           <CustomButton onClick={() => setShowModal(false)}>
-            Close
+            {t('contact.form.close')}
           </CustomButton>
         </Modal.Footer>
       </Modal>

@@ -1,0 +1,95 @@
+{
+  "navbar": {
+    "home": "الرئيسية",
+    "skills": "المهارات",
+    "work": "الأعمال",
+    "contact": "اتصل بي",
+    "about": "من أنا",
+    "projects": "المشاريع",
+    "achievements": "الإنجازات"
+  },
+  "projects": {
+    "title": "مشاريعي",
+    "subtitle": "بعض من أعمالي الحديثة",
+    "viewProject": "عرض المشروع",
+    "viewGithub": "GitHub",
+    "visitWebsite": "زيارة الموقع",
+    "technologies": "التقنيات المستخدمة",
+    "skills": "المهارات المستخدمة",
+    "exploreMyWork": "استكشف آخر أعمالي في الذكاء الاصطناعي، والتعلم الآلي، وتطوير الويب والتكنولوجيا",
+    "relatedTo": "مشاريع مرتبطة بـ",
+    "filters": {
+      "all": "الكل",
+      "web": "الويب",
+      "mobile": "الجوال",
+      "ai": "الذكاء الاصطناعي",
+      "other": "أخرى"
+    },
+    "status": {
+      "completed": "مكتمل",
+      "inProgress": "قيد التنفيذ",
+      "ongoing": "مستمر"
+    },
+    "details": {
+      "client": "العميل",
+      "duration": "المدة",
+      "role": "الدور",
+      "description": "الوصف"
+    }
+  },
+  "home": {
+    "title": "مرحبا، أنا اسمك",
+    "subtitle": "مطور برمجيات متكامل",
+    "greeting": "مرحبًا، أنا",
+    "name": "عماد الرميمي",
+    "roles": {
+      "aiDeveloper": "مطور الذكاء الاصطناعي",
+      "mlSpecialist": "متخصص التعلم الآلي", 
+      "webDeveloper": "مطور الويب",
+      "droneTech": "خبير تكنولوجيا الطائرات بدون طيار"
+    },
+    "description": "مبتكر في الذكاء الاصطناعي والتعلم الآلي والتكنولوجيا",
+    "downloadCV": "تحميل السيرة الذاتية",
+    "contactMe": "تواصل معي",
+    "socialLinks": {
+      "github": "صفحة GitHub",
+      "linkedin": "صفحة LinkedIn", 
+      "twitter": "صفحة Twitter",
+      "email": "إرسال بريد إلكتروني"
+    }
+  },
+  "contact": {
+    "title": "تواصل معي",
+    "subtitle": "هل لديك سؤال أو ترغب في العمل معاً؟",
+    "connectWithMe": "تواصل معي",
+    "haveAProject": "هل لديك مشروع في ذهنك أو ترغب في مجرد التحية؟ أنا مستمع جيد ومتحمس للتعاون!",
+    "schedule": {
+      "title": "حدد موعدًا",
+      "description": "اختر وقتًا مناسبًا لمناقشة مشروعك"
+    },
+    "form": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "subject": "الموضوع",
+      "message": "الرسالة",
+      "send": "إرسال",
+      "sending": "جاري الإرسال...",
+      "namePlaceholder": "اسمك الكريم",
+      "emailPlaceholder": "بريدك الإلكتروني",
+      "subjectPlaceholder": "ما موضوع رسالتك؟",
+      "messagePlaceholder": "شاركنا أفكارك، اقتراحاتك أو تفاصيل مشروعك...",
+      "success": "تم إرسال الرسالة بنجاح!",
+      "successMessage": "شكرًا لتواصلك! سأعود إليك قريبًا.",
+      "error": "حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.",
+      "close": "إغلاق",
+      "nameError": "الاسم الكامل مطلوب",
+      "nameLengthError": "يجب أن يكون الاسم مكونًا من حرفين على الأقل",
+      "emailError": "البريد الإلكتروني مطلوب",
+      "emailInvalidError": "يرجى إدخال عنوان بريد إلكتروني صالح",
+      "subjectError": "موضوع الرسالة مطلوب",
+      "subjectLengthError": "يجب أن يكون الموضوع مكونًا من 5 أحرف على الأقل",
+      "messageError": "محتوى الرسالة مطلوب",
+      "messageLengthError": "يجب أن يكون محتوى الرسالة مكونًا من 10 أحرف على الأقل"
+    }
+  }
+}

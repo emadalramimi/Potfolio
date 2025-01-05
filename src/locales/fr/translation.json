@@ -1,0 +1,95 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "skills": "Compétences",
+    "work": "Travaux",
+    "contact": "Contact",
+    "about": "À Propos",
+    "projects": "Projets",
+    "achievements": "Réalisations"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Voici quelques-uns de mes travaux récents",
+    "viewProject": "Voir le Projet",
+    "viewGithub": "Voir sur GitHub",
+    "visitWebsite": "Visiter le Site",
+    "technologies": "Technologies Utilisées",
+    "skills": "Compétences Démontrées",
+    "exploreMyWork": "Explorez mes derniers travaux en IA, Apprentissage Automatique, Développement Web et Technologie",
+    "relatedTo": "Projets liés à",
+    "filters": {
+      "all": "Tous",
+      "web": "Web",
+      "mobile": "Mobile",
+      "ai": "IA/ML",
+      "other": "Autre"
+    },
+    "status": {
+      "completed": "Terminé",
+      "inProgress": "En Cours",
+      "ongoing": "En Développement"
+    },
+    "details": {
+      "client": "Client",
+      "duration": "Durée",
+      "role": "Rôle",
+      "description": "Description"
+    }
+  },
+  "home": {
+    "title": "Bonjour, je suis Votre Nom",
+    "subtitle": "Développeur Full Stack",
+    "greeting": "Bonjour, je suis",
+    "name": "Emad Al Ramimi",
+    "roles": {
+      "aiDeveloper": "Développeur IA",
+      "mlSpecialist": "Spécialiste en Apprentissage Automatique", 
+      "webDeveloper": "Développeur Web",
+      "droneTech": "Expert en Technologie de Drone"
+    },
+    "description": "Innovation à l'intersection de l'IA, de l'Apprentissage Automatique et de la Technologie",
+    "downloadCV": "Télécharger CV",
+    "contactMe": "Contactez-moi",
+    "socialLinks": {
+      "github": "Profil GitHub",
+      "linkedin": "Profil LinkedIn", 
+      "twitter": "Profil Twitter",
+      "email": "Envoyer un e-mail"
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Une question ou envie de collaborer ?",
+    "connectWithMe": "Connectons-nous",
+    "haveAProject": "Vous avez un projet en tête ou simplement envie de dire bonjour ? Je suis tout ouïe et enthousiaste à l'idée de collaborer !",
+    "schedule": {
+      "title": "Planifiez une Réunion",
+      "description": "Choisissez un moment qui vous convient pour discuter de votre projet"
+    },
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer",
+      "sending": "Envoi en cours...",
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "Votre adresse email",
+      "subjectPlaceholder": "À propos de quoi ?",
+      "messagePlaceholder": "Partagez vos pensées, idées ou détails du projet...",
+      "success": "Message envoyé avec succès !",
+      "successMessage": "Merci de m'avoir contacté ! Je vous répondrai bientôt.",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer.",
+      "close": "Fermer",
+      "nameError": "Le nom complet est requis",
+      "nameLengthError": "Le nom doit comporter au moins 2 caractères",
+      "emailError": "L'adresse email est requise",
+      "emailInvalidError": "Veuillez entrer une adresse email valide",
+      "subjectError": "Le sujet du message est requis",
+      "subjectLengthError": "Le sujet doit comporter au moins 5 caractères",
+      "messageError": "Le contenu du message est requis",
+      "messageLengthError": "Le message doit comporter au moins 10 caractères"
+    }
+  }
+}

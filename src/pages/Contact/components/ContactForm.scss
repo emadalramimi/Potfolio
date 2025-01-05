@@ -18,6 +18,26 @@
     background: rgba($color-primary-6, 0.1);
   }
 
+  &[dir="rtl"] {
+    text-align: right;
+
+    .input-wrapper {
+      label {
+        margin-right: 0;
+        margin-left: auto;
+      }
+
+      .form-control {
+        text-align: right;
+        direction: rtl;
+      }
+    }
+
+    .form-actions {
+      justify-content: flex-end;
+    }
+  }
+
   .contact-info {
     text-align: center;
     margin-bottom: 3rem;
@@ -176,6 +196,33 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
+
+        &.rtl-submit {
+          flex-direction: row-reverse;
+        }
+
+        .button-content {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .send-icon {
+          transition: transform 0.3s ease;
+
+          &.rtl-icon {
+            transform: scaleX(-1);
+          }
+        }
+
+        .spinner-icon {
+          animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
 
         [data-theme='light'] & {
           box-shadow: 

@@ -1,42 +1,44 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
-
+import { useTranslation } from 'react-i18next';
 import { BackToTop } from '../../common/components/UIElements';
 import { ContactForm, Calendly } from './components';
 import './Contact.scss';
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <React.Fragment>
       <Helmet>
-        <title>Contact | Emad Al Ramimi</title>
+        <title>{t('contact.title')} | Emad Al Ramimi</title>
         <meta
           name="description"
-          content="Get in touch with Emad Al Ramimi. Let's discuss AI, Machine Learning, or your next project."
+          content={t('contact.description')}
         />
-        <meta property="og:title" content="Contact Emad Al Ramimi" />
+        <meta property="og:title" content={t('contact.title')} />
         <meta
           property="og:description"
-          content="Schedule a meeting or send a message to discuss AI, Machine Learning, or your next project."
+          content={t('contact.description')}
         />
-        <meta property="twitter:title" content="Contact Emad Al Ramimi" />
+        <meta property="twitter:title" content={t('contact.title')} />
         <meta
           property="twitter:description"
-          content="Schedule a meeting or send a message to discuss AI, Machine Learning, or your next project."
+          content={t('contact.description')}
         />
       </Helmet>
       <div className="contact-page">
         <Container>
           <div className="contact-header">
-            <h1>Let's Connect</h1>
-            <p>Have a project in mind? Let's bring your ideas to life!</p>
+            <h1>{t('contact.title')}</h1>
+            <p>{t('contact.subtitle')}</p>
           </div>
           <div className="contact-content">
             <ContactForm />
             <div className="calendly-section">
-              <h2>Schedule a Meeting</h2>
-              <p>Choose a convenient time for us to discuss your project</p>
+              <h2>{t('contact.schedule.title')}</h2>
+              <p>{t('contact.schedule.description')}</p>
               <Calendly />
             </div>
           </div>

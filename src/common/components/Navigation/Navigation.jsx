@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Logo from '../../../assets/images/logo.png';
 import ThemeSwitcher from '../../../components/ThemeSwitcher';
+import LanguageSwitcher from '../../../components/LanguageSwitcher';
 import './Navigation.scss';
 
 const Navigation = () => {
+  const { t } = useTranslation();
   const location = useLocation();
 
   const getLinkStyle = (path) => {
@@ -44,7 +47,7 @@ const Navigation = () => {
                 style={getLinkStyle('/')}
                 className="nav__btn__link"
               >
-                Home
+                {t('navbar.home')}
               </Link>
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
@@ -53,7 +56,7 @@ const Navigation = () => {
                 style={getLinkStyle('/skills')}
                 className="nav__btn__link"
               >
-                Skills
+                {t('navbar.skills')}
               </Link>
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
@@ -62,7 +65,7 @@ const Navigation = () => {
                 style={getLinkStyle('/projects')}
                 className="nav__btn__link"
               >
-                Projects
+                {t('navbar.projects')}
               </Link>
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
@@ -71,7 +74,7 @@ const Navigation = () => {
                 style={getLinkStyle('/achievements')}
                 className="nav__btn__link"
               >
-                Achievements
+                {t('navbar.achievements')}
               </Link>
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
@@ -80,7 +83,7 @@ const Navigation = () => {
                 style={getLinkStyle('/about')}
                 className="nav__btn__link"
               >
-                About&nbsp;Me
+                {t('navbar.about')}
               </Link>
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
@@ -89,7 +92,7 @@ const Navigation = () => {
                 style={getLinkStyle('/contact')}
                 className="nav__btn__link"
               >
-                Contact
+                {t('navbar.contact')}
               </Link>
             </li>
           </ul>
@@ -99,37 +102,40 @@ const Navigation = () => {
         <ul>
           <li>
             <Link to="/" style={getLinkStyle('/')}>
-              Home
+              {t('navbar.home')}
             </Link>
           </li>
           <li>
             <Link to="/skills" style={getLinkStyle('/skills')}>
-              Skills
+              {t('navbar.skills')}
             </Link>
           </li>
           <li>
             <Link to="/projects" style={getLinkStyle('/projects')}>
-              Projects
+              {t('navbar.projects')}
             </Link>
           </li>
           <li>
             <Link to="/achievements" style={getLinkStyle('/achievements')}>
-              Achievements
+              {t('navbar.achievements')}
             </Link>
           </li>
           <li>
             <Link to="/about" style={getLinkStyle('/about')}>
-              About&nbsp;Me
+              {t('navbar.about')}
             </Link>
           </li>
           <li>
             <Link to="/contact" style={getLinkStyle('/contact')}>
-              Contact
+              {t('navbar.contact')}
             </Link>
           </li>
         </ul>
       </div>
-      <ThemeSwitcher />
+      <div className="nav__actions">
+        <LanguageSwitcher />
+        <ThemeSwitcher />
+      </div>
     </nav>
   );
 };

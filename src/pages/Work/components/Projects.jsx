@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container, Modal, Row, Col } from 'react-bootstrap';
 import { FaGithub, FaExternalLinkAlt, FaTimes, FaInfoCircle } from 'react-icons/fa';
 import './Projects.scss';
@@ -219,6 +220,7 @@ function ProjectDetailModal({
   onSkillClick, 
   isDarkMode 
 }) {
+  const { t } = useTranslation();
   if (!project) return null;
 
   return (
@@ -240,7 +242,7 @@ function ProjectDetailModal({
               <div className="project-detail-description">{project.fullDescription}</div>
               
               <div className="project-detail-technologies">
-                <h4>Technologies Used</h4>
+                <h4>{t('projects.technologies')}</h4>
                 <div className="tech-tags">
                   {project.technologies.map((tech, index) => (
                     <span key={index} className="tech-tag">{tech}</span>
@@ -250,7 +252,7 @@ function ProjectDetailModal({
 
               {project.skills && (
                 <div className="project-detail-skills">
-                  <h4>Skills Demonstrated</h4>
+                  <h4>{t('projects.skills')}</h4>
                   <div className="skill-tags">
                     {project.skills.map((skill, index) => (
                       <span 
@@ -279,7 +281,7 @@ function ProjectDetailModal({
                     rel="noopener noreferrer" 
                     className="github-link btn"
                   >
-                    <FaGithub /> GitHub
+                    <FaGithub /> {t('projects.viewGithub')}
                   </a>
                   <a 
                     href={project.demoLink} 
@@ -287,7 +289,7 @@ function ProjectDetailModal({
                     rel="noopener noreferrer" 
                     className="demo-link btn"
                   >
-                    <FaExternalLinkAlt /> Live Demo
+                    <FaExternalLinkAlt /> {t('projects.visitWebsite')}
                   </a>
                 </div>
               </div>
@@ -300,6 +302,7 @@ function ProjectDetailModal({
 }
 
 const Projects = () => {
+  const { t, i18n } = useTranslation();
   const { activeSkill } = useContext(SkillFilterContext);
   const [filteredProjects, setFilteredProjects] = useState(projectsData);
   const [currentSkillTitle, setCurrentSkillTitle] = useState(null);
@@ -332,17 +335,18 @@ const Projects = () => {
   };
 
   const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+  const isRtl = i18n.dir() === 'rtl';
 
   return (
     <div className="projects-container">
       <div className="projects-grid">
         <Container>
           <div className="section-title">
-            <h2>Featured Projects</h2>
+            <h2>{t('projects.title')}</h2>
             <p>
               {currentSkillTitle 
-                ? `Projects related to "${currentSkillTitle}" skill` 
-                : "Explore my latest work in AI, Machine Learning, Web Development, and Technology"}
+                ? `${t('projects.relatedTo')} "${currentSkillTitle}"` 
+                : t('projects.exploreMyWork')}
             </p>
           </div>
           

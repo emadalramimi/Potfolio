@@ -1,0 +1,95 @@
+{
+  "navbar": {
+    "home": "Home",
+    "skills": "Skills",
+    "work": "Work",
+    "contact": "Contact",
+    "about": "About Me",
+    "projects": "Projects",
+    "achievements": "Achievements"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Here are some of my recent works",
+    "viewProject": "View Project",
+    "viewGithub": "View on GitHub",
+    "visitWebsite": "Visit Website",
+    "technologies": "Technologies Used",
+    "skills": "Skills Demonstrated",
+    "exploreMyWork": "Explore my latest work in AI, Machine Learning, Web Development, and Technology",
+    "relatedTo": "Projects related to",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "ai": "AI/ML",
+      "other": "Other"
+    },
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "ongoing": "Ongoing"
+    },
+    "details": {
+      "client": "Client",
+      "duration": "Duration",
+      "role": "Role",
+      "description": "Description"
+    }
+  },
+  "home": {
+    "title": "Hi, I'm Your Name",
+    "subtitle": "Full Stack Developer",
+    "greeting": "Hello, I'm",
+    "name": "Emad Al Ramimi",
+    "roles": {
+      "aiDeveloper": "AI Developer",
+      "mlSpecialist": "Machine Learning Specialist", 
+      "webDeveloper": "Web Developer",
+      "droneTech": "Drone Technology Expert"
+    },
+    "description": "Innovating at the intersection of AI, Machine Learning, and Technology",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me",
+    "socialLinks": {
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile", 
+      "twitter": "Twitter Profile",
+      "email": "Send Email"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a question or want to work together?",
+    "connectWithMe": "Connect with Me",
+    "haveAProject": "Have a project in mind or just want to say hello? I'm all ears and excited to collaborate!",
+    "schedule": {
+      "title": "Schedule a Meeting",
+      "description": "Choose a convenient time for us to discuss your project"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email address",
+      "subjectPlaceholder": "What's your message about?",
+      "messagePlaceholder": "Share your thoughts, ideas, or project details...",
+      "success": "Message sent successfully!",
+      "successMessage": "Thank you for reaching out! I'll get back to you soon.",
+      "error": "Error sending message. Please try again.",
+      "close": "Close",
+      "nameError": "Full name is required",
+      "nameLengthError": "Name must be at least 2 characters",
+      "emailError": "Email address is required",
+      "emailInvalidError": "Please enter a valid email address",
+      "subjectError": "Message subject is required",
+      "subjectLengthError": "Subject must be at least 5 characters",
+      "messageError": "Message content is required",
+      "messageLengthError": "Message must be at least 10 characters"
+    }
+  }
+}
