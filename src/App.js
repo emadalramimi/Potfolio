@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Navigate
@@ -32,7 +32,7 @@ const Achievements = lazy(() => import('./pages/Achievements/Achievements'));
 const App = () => {
   return (
     <React.Fragment>
-      <Router basename="/Portfolio">
+      <Router>
         <CampaignBanner />
         <Navigation />
         <React.Suspense fallback={<LoadingSpinner />}>
