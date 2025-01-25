@@ -4,7 +4,6 @@
     "skills": "Skills",
     "work": "Work",
     "contact": "Contact",
-    "about": "About Me",
     "projects": "Projects",
     "achievements": "Achievements"
   },
@@ -35,6 +34,76 @@
       "duration": "Duration",
       "role": "Role",
       "description": "Description"
+    },
+    "springBlog": {
+      "title": "Blog Application - Spring Boot",
+      "shortDescription": "Secure Spring Boot web application featuring JWT authentication, user management, and article creation capabilities",
+      "fullDescription": "A comprehensive Spring Boot web application demonstrating modern security practices and user management. Features include secure authentication using JWT tokens, role-based access control, and a clean RESTful API architecture.",
+      "features": [
+        "JWT-based Authentication",
+        "Role-based Access Control",
+        "User Management",
+        "Article Creation",
+        "Secure Password Encoding",
+        "RESTful API Endpoints"
+      ],
+      "technical": [
+        "Stateless session management with JWT",
+        "MySQL database integration with JPA",
+        "Maven dependency management",
+        "Structured project architecture following best practices",
+        "Comprehensive API documentation",
+        "Unit test coverage"
+      ],
+      "challenges": [
+        "Implementing secure JWT authentication flow",
+        "Setting up role-based access control",
+        "Database schema design and optimization",
+        "API endpoint security configuration"
+      ],
+      "setup": [
+        "Database creation and user privileges",
+        "Application properties configuration",
+        "Maven dependency management",
+        "Security configuration"
+      ]
+    },
+    "mantiqPlatform": {
+      "title": "Mantiq Platform - AI-Powered Sales Dashboard",
+      "shortDescription": "A modern, intelligent sales management platform that leverages AI to enhance sales operations, analytics, and decision-making processes.",
+      "fullDescription": "A modern, intelligent sales management platform that leverages AI to enhance sales operations, analytics, and decision-making processes. The platform integrates advanced AI technologies to provide comprehensive sales insights, automate workflows, and optimize business performance.",
+      "features": [
+        "Interactive Dashboard with Real-time Sales Metrics",
+        "AI-Powered Sales Assistant",
+        "Intelligent Proposal Builder",
+        "Smart Contract Analysis",
+        "AI-Driven Lead Intelligence",
+        "Competitive Market Analysis",
+        "Advanced Customer Segmentation",
+        "Social Media Engagement Tracking",
+        "Workflow Task Automation",
+        "Team Collaboration Tools"
+      ],
+      "technologies": [
+        "React.js for Dynamic Frontend",
+        "Material-UI for Modern Design",
+        "Nivo Charts for Advanced Data Visualization",
+        "Emotion for Styling",
+        "React Router for Seamless Navigation"
+      ],
+      "challenges": [
+        "Integrating AI Technologies",
+        "Creating Intuitive User Experience",
+        "Developing Complex Data Visualization",
+        "Implementing Real-time Analytics",
+        "Ensuring Data Privacy and Security"
+      ],
+      "projectStructure": [
+        "Modular Component Architecture",
+        "Comprehensive State Management",
+        "Responsive and Adaptive Design",
+        "Scalable AI Integration Framework"
+      ]
     }
   },
   "home": {
@@ -56,6 +125,80 @@
       "linkedin": "LinkedIn Profile", 
       "twitter": "Twitter Profile",
       "email": "Send Email"
+    },
+    "statistics": {
+      "title": "Professional Highlights",
+      "projects": {
+        "label": "Innovative Projects",
+        "description": "Cutting-edge solutions spanning web, mobile, and emerging technologies"
+      },
+      "achievements": {
+        "label": "Professional Achievements",
+        "description": "Awards recognizing innovation, leadership, and technical excellence"
+      },
+      "experience": {
+        "label": "Professional Experience",
+        "description": "Years of transformative work in tech innovation and software engineering"
+      }
+    },
+    "personalIntro": {
+      "title": "Let's Create Something Extraordinary",
+      "description": "I'm a passionate technologist who thrives on transforming complex challenges into elegant, innovative solutions. With a blend of technical expertise and creative problem-solving, I'm always eager to collaborate on projects that push the boundaries of what's possible.",
+      "contactButton": "Get In Touch"
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "badge": "Experience",
+      "details": {
+        "starDrones": {
+          "title": "AI & Drone Technology Specialist",
+          "organization": "Star Drones",
+          "duration": "Jan 2022 - Present",
+          "location": "Remote, Global",
+          "description": "Leading innovative AI and drone technology projects, developing advanced machine learning algorithms for autonomous drone navigation and intelligent data processing.",
+          "tags": ["AI", "Machine Learning", "Drone Technology", "Computer Vision"]
+        },
+        "rentWay": {
+          "title": "Software Developer",
+          "organization": "Rent-Way",
+          "duration": "Oct 2023 - Jun 2024",
+          "location": "Sohar, Al Batinah North Governorate, Oman",
+          "description": "Designed and implemented scalable web applications, improving platform efficiency and user experience through modern technologies.",
+          "tags": ["Contract", "Web Development", "Full-Stack"]
+        },
+        "matterz": {
+          "title": "Innovation Specialist",
+          "organization": "Matterz",
+          "duration": "Jul 2023 - Nov 2023",
+          "location": "Masqaţ, Oman",
+          "description": "Guided and mentored emerging innovators, creating collaborative environments that foster creativity, critical thinking, and technical skill development.",
+          "tags": ["Innovation", "Facilitation", "Skill Development"]
+        }
+      },
+      "exploreMore": "Explore More Experiences"
+    },
+    "education": {
+      "title": "Educational Journey",
+      "badge": "Education",
+      "details": {
+        "toulouse": {
+          "title": "Bachelor of Technology in Computer Science",
+          "organization": "University of Toulouse",
+          "duration": "Sep 2022 - Jun 2025",
+          "location": "Toulouse, France",
+          "description": "Comprehensive program focusing on advanced software design, development methodologies, teamwork, and cutting-edge technological skills.",
+          "tags": ["Application Development", "Software Engineering"]
+        },
+        "lorraine": {
+          "title": "University Diploma in Scientific & Tech Training",
+          "organization": "University of Lorraine",
+          "duration": "Dec 2020 - Jun 2022",
+          "location": "Nancy, France",
+          "description": "Interdisciplinary program combining French language studies with scientific and technological training, developing a holistic approach to learning.",
+          "tags": ["French Language", "Sciences"]
+        }
+      },
+      "exploreMore": "Explore Academic Journey"
     }
   },
   "contact": {
@@ -90,6 +233,126 @@
       "subjectLengthError": "Subject must be at least 5 characters",
       "messageError": "Message content is required",
       "messageLengthError": "Message must be at least 10 characters"
+    }
+  },
+  "achievements": {
+    "title": "Achievements",
+    "subtitle": "A journey of innovation, learning, and impact",
+    "learnMore": "Learn More",
+    "items": {
+      "liysf": {
+        "title": "London International Youth Science Forum (LIYSF)",
+        "description": "Participated in a prestigious international scientific conference, engaging with top young scientists from around the world and presenting innovative research projects.",
+        "highlights": [
+          "Selected as one of 500 global participants",
+          "Presented research on sustainable water technologies",
+          "Networked with international scientific community"
+        ]
+      },
+      "rowad": {
+        "title": "ROWAD Hackathon - Furat Project",
+        "description": "Led a groundbreaking project at the ROWAD Hackathon, developing innovative solutions for regional water resource management and sustainability.",
+        "highlights": [
+          "Winner of Best Technological Innovation Award",
+          "Developed a comprehensive water resource management platform",
+          "Collaborated with multidisciplinary team of engineers and researchers"
+        ]
+      },
+      "biodiversity": {
+        "title": "Biodiversity Marathon Award",
+        "description": "Recognized for outstanding contribution to biodiversity conservation and environmental research, showcasing commitment to ecological preservation.",
+        "highlights": [
+          "Conducted extensive field research on local ecosystems",
+          "Developed conservation strategy for endangered species",
+          "Presented findings at regional environmental conference"
+        ]
+      },
+      "techYouth": {
+        "title": "Tech Youth Camps",
+        "description": "Served as a lead mentor and instructor in technology youth development programs, inspiring and guiding young students in STEM fields.",
+        "highlights": [
+          "Designed and delivered coding workshops",
+          "Mentored over 100 young technology enthusiasts",
+          "Developed curriculum for advanced programming concepts"
+        ]
+      },
+      "waterAward2020": {
+        "title": "Water Research and Innovation Award 2020",
+        "description": "Received prestigious recognition for groundbreaking research in water purification and sustainable water management technologies.",
+        "highlights": [
+          "Developed novel water filtration technique",
+          "Presented research at international water technology symposium",
+          "Collaborated with environmental engineering experts"
+        ]
+      },
+      "dahirah": {
+        "title": "Al-Dahirah Leaders Forum",
+        "description": "Selected as a key participant in a leadership development program focusing on regional innovation, entrepreneurship, and social impact.",
+        "highlights": [
+          "Participated in strategic leadership workshops",
+          "Developed comprehensive community development project",
+          "Networked with regional thought leaders"
+        ]
+      },
+      "alRoya": {
+        "title": "Al-Roya Award for Youth Initiatives",
+        "description": "Honored for exceptional youth leadership and innovative community development projects that demonstrate significant social impact.",
+        "highlights": [
+          "Recognized for innovative social entrepreneurship",
+          "Developed sustainable community development model",
+          "Presented project at national youth leadership conference"
+        ]
+      },
+      "waterAward2019": {
+        "title": "Water Research and Innovation Award 2019",
+        "description": "Acknowledged for pioneering research in water conservation and sustainable resource management technologies.",
+        "highlights": [
+          "Developed advanced water conservation prototype",
+          "Presented research methodology at international forum",
+          "Collaborated with environmental research institutions"
+        ]
+      },
+      "waterAward2018": {
+        "title": "Water Research and Innovation Award 2018",
+        "description": "Recognized for innovative approach to addressing water scarcity challenges through technological and scientific research.",
+        "highlights": [
+          "Conducted comprehensive water resource analysis",
+          "Developed initial water conservation technology concept",
+          "Received early-stage research grant"
+        ]
+      },
+      "namaa": {
+        "title": "Namaa Ambassadors",
+        "description": "Selected as a distinguished ambassador for youth development and community empowerment, promoting education and innovation.",
+        "highlights": [
+          "Represented youth leadership initiatives",
+          "Developed educational outreach programs",
+          "Mentored young entrepreneurs and students"
+        ]
+      },
+      "globe": {
+        "title": "GLOBE Environmental Research Competition",
+        "description": "Participated in a global environmental research competition, presenting innovative solutions for ecological challenges and sustainability.",
+        "highlights": [
+          "Developed comprehensive environmental research project",
+          "Presented findings at international scientific conference",
+          "Collaborated with global research team"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "subtitle": "Computer Science & Engineering",
+    "description": "Building innovative solutions at the intersection of AI and technology.",
+    "quickLinks": "Quick Links",
+    "connectWith": "Connect With Me",
+    "copyright": "Emad Al Ramimi. All rights reserved.",
+    "tagline": "Crafted with 💻 & ❤️",
+    "links": {
+      "home": "Home",
+      "about": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
     }
   }
 }

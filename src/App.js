@@ -17,7 +17,7 @@ import { LoadingSpinner } from './common/components/UIElements/loadingAnimations
 const Home = lazy(() => import('./pages/Home/Home'));
 const About = lazy(() => import('./pages/About/About'));
 const Skills = lazy(() => import('./pages/Skills/Skills'));
-const Projects = lazy(() => import('./pages/Projects/Projects'));
+const Projects = lazy(() => import('./pages/Work/components/Projects'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 const NotFound = lazy(() => import('./pages/404/404'));
 const ProfileRedirect = lazy(() =>

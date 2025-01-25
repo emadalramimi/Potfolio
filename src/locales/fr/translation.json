@@ -4,7 +4,6 @@
     "skills": "Compétences",
     "work": "Travaux",
     "contact": "Contact",
-    "about": "À Propos",
     "projects": "Projets",
     "achievements": "Réalisations"
   },
@@ -34,7 +33,191 @@
       "client": "Client",
       "duration": "Durée",
       "role": "Rôle",
-      "description": "Description"
+      "description": "Description",
+      "teamSize": "Taille de l'équipe",
+      "difficulty": "Difficulté",
+      "keyAchievements": "Réalisations Clés",
+      "learnings": "Apprentissages",
+      "futureImprovements": "Améliorations Futures",
+      "metrics": "Métriques"
+    },
+    "categories": {
+      "AI": "Intelligence Artificielle",
+      "WEB": "Développement Web",
+      "MOBILE": "Applications Mobiles",
+      "DESKTOP": "Applications Bureau",
+      "IOT": "Internet des Objets"
+    },
+    "difficulty": {
+      "BEGINNER": "Débutant",
+      "INTERMEDIATE": "Intermédiaire",
+      "ADVANCED": "Avancé",
+      "EXPERT": "Expert"
+    },
+    "projectsList": {
+      "1": {
+        "title": "Drone Guardian IA",
+        "category": "IA & Technologie des Drones",
+        "shortDescription": "Drone avancé alimenté par l'IA pour les opérations de recherche et sauvetage",
+        "fullDescription": "Développement d'un système de drone intelligent utilisant la vision par ordinateur et des algorithmes d'apprentissage automatique pour améliorer les capacités de recherche et sauvetage. Le projet intègre la détection d'objets en temps réel, l'imagerie thermique et l'optimisation des trajets pour améliorer l'efficacité des interventions d'urgence.",
+        "role": "Développeur Principal & Ingénieur IA"
+      },
+      "2": {
+        "title": "Détection des Dommages d'Aéronefs",
+        "category": "Vision par Ordinateur",
+        "shortDescription": "Système IA basé sur YOLOv8 pour l'évaluation des dommages d'aéronefs",
+        "fullDescription": "Implémentation d'un modèle de détection d'objets de pointe utilisant YOLOv8 pour identifier et classifier automatiquement les dommages sur la surface des aéronefs. Le système fournit une localisation précise et une évaluation de la gravité des imperfections structurelles, réduisant le temps d'inspection manuelle et améliorant l'efficacité de la maintenance.",
+        "role": "Développeur Principal & Ingénieur IA"
+      },
+      "3": {
+        "title": "Système IoT AquaCare",
+        "category": "IoT & Apprentissage Automatique",
+        "shortDescription": "Plateforme intelligente de surveillance et prédiction de la qualité de l'eau",
+        "fullDescription": "Création d'un système de surveillance de la qualité de l'eau basé sur l'IoT qui utilise des algorithmes d'apprentissage automatique pour prédire les niveaux de contamination. Le projet intègre des données de capteurs, des analyses en temps réel et une modélisation prédictive pour fournir des alertes précoces et des aperçus complets de la santé de l'eau.",
+        "role": "Développeur Principal & Ingénieur IoT"
+      },
+      "4": {
+        "title": "Assistant Diagnostic IA",
+        "category": "IA pour la Santé",
+        "shortDescription": "Système d'aide au diagnostic médical alimenté par l'apprentissage automatique",
+        "fullDescription": "Développement d'un assistant de diagnostic alimenté par l'IA qui aide les professionnels de santé à établir des diagnostics précis. Le système analyse les symptômes des patients, les antécédents médicaux et les résultats des tests en utilisant des algorithmes d'apprentissage automatique avancés pour suggérer des diagnostics potentiels et des plans de traitement.",
+        "role": "Développeur Principal & Ingénieur IA"
+      },
+      "5": {
+        "title": "Application de Blog - Spring Boot",
+        "category": "Développement Web",
+        "shortDescription": "Application web Spring Boot sécurisée avec authentification JWT, gestion des utilisateurs et création d'articles",
+        "fullDescription": "Une application web Spring Boot complète démontrant les pratiques modernes de sécurité et la gestion des utilisateurs. Les fonctionnalités incluent l'authentification sécurisée par jetons JWT, le contrôle d'accès basé sur les rôles et une architecture API RESTful claire.",
+        "features": [
+          "Authentification basée sur JWT",
+          "Contrôle d'accès basé sur les rôles",
+          "Gestion des utilisateurs",
+          "Création d'articles",
+          "Encodage sécurisé des mots de passe",
+          "Points d'accès API RESTful"
+        ],
+        "technical": [
+          "Gestion de session sans état avec JWT",
+          "Intégration de base de données MySQL avec JPA",
+          "Gestion des dépendances avec Maven",
+          "Architecture de projet structurée selon les meilleures pratiques",
+          "Documentation API complète",
+          "Couverture de tests unitaires"
+        ],
+        "challenges": [
+          "Implémentation du flux d'authentification JWT sécurisé",
+          "Configuration du contrôle d'accès basé sur les rôles",
+          "Conception et optimisation du schéma de base de données",
+          "Configuration de la sécurité des points d'accès API"
+        ],
+        "setup": [
+          "Création de base de données et privilèges utilisateur",
+          "Configuration des propriétés de l'application",
+          "Gestion des dépendances Maven",
+          "Configuration de la sécurité"
+        ]
+      },
+      "6": {
+        "title": "Plateforme Mantiq - Tableau de Bord Commercial Alimenté par l'IA",
+        "category": "IA & Développement Web",
+        "shortDescription": "Une plateforme moderne et intelligente de gestion des ventes qui exploite l'IA pour améliorer les opérations commerciales, l'analytique et les processus de prise de décision.",
+        "fullDescription": "Une plateforme moderne et intelligente de gestion des ventes qui exploite l'IA pour améliorer les opérations commerciales, l'analytique et les processus de prise de décision. La plateforme intègre des technologies d'IA avancées pour fournir des perspectives commerciales complètes, automatiser les workflows et optimiser les performances commerciales.",
+        "features": [
+          "Tableau de Bord Interactif avec Métriques de Vente en Temps Réel",
+          "Assistant de Vente Alimenté par l'IA",
+          "Générateur de Propositions Intelligent",
+          "Analyse Intelligente des Contrats",
+          "Intelligence des Prospects par IA",
+          "Analyse Concurrentielle du Marché",
+          "Segmentation Avancée des Clients",
+          "Suivi de l'Engagement sur les Réseaux Sociaux",
+          "Automatisation des Tâches de Workflow",
+          "Outils de Collaboration d'Équipe"
+        ],
+        "technologies": [
+          "React.js pour un Frontend Dynamique",
+          "Material-UI pour un Design Moderne",
+          "Nivo Charts pour une Visualisation de Données Avancée",
+          "Emotion pour le Stylisme",
+          "React Router pour une Navigation Fluide"
+        ],
+        "challenges": [
+          "Intégration des Technologies d'IA",
+          "Création d'une Expérience Utilisateur Intuitive",
+          "Développement de Visualisations de Données Complexes",
+          "Implémentation d'Analytiques en Temps Réel",
+          "Garantie de la Confidentialité et de la Sécurité des Données"
+        ],
+        "projectStructure": [
+          "Architecture de Composants Modulaire",
+          "Gestion Complète des États",
+          "Design Réactif et Adaptatif",
+          "Framework d'Intégration d'IA Évolutif"
+        ]
+      },
+      "7": {
+        "title": "E-Sporter : Application de Gestion E-Sport",
+        "category": "Développement de Logiciel",
+        "shortDescription": "Application de gestion complète pour équipes et tournois d'e-sport",
+        "fullDescription": "Une plateforme innovante de gestion d'e-sport conçue pour aider les équipes, les joueurs et les organisateurs à gérer efficacement les tournois, les performances des joueurs et les stratégies d'équipe. L'application offre des outils de suivi, d'analyse et de communication pour optimiser les performances compétitives.",
+        "role": "Développeur Principal & Concepteur UX"
+      },
+      "8": {
+        "title": "Solveur de Graphes et d'Algorithmes",
+        "category": "Algorithmes et Structures de Données",
+        "shortDescription": "Outil interactif de résolution et de visualisation de graphes",
+        "fullDescription": "Un outil de développement avancé pour la résolution et la visualisation de problèmes de graphes. L'application permet aux utilisateurs d'implémenter et de tester divers algorithmes de graphes, offrant une interface interactive pour comprendre et explorer les structures de données complexes.",
+        "role": "Développeur Algorithmique & Concepteur d'Interface"
+      },
+      "9": {
+        "title": "Assistant de Diagnostic Médical Mobile",
+        "category": "IA pour la Santé",
+        "shortDescription": "Application mobile d'aide au diagnostic médical basée sur l'IA",
+        "fullDescription": "Une solution mobile innovante qui utilise l'intelligence artificielle pour assister les professionnels de santé dans le diagnostic précoce et la gestion des conditions médicales. L'application combine des algorithmes d'apprentissage automatique avec une base de données médicale comprehensive pour fournir des recommandations précises.",
+        "role": "Développeur IA & Concepteur d'Application Mobile"
+      },
+      "10": {
+        "title": "Outil de Chiffrement César",
+        "category": "Cryptographie",
+        "shortDescription": "Application de chiffrement de messages utilisant le chiffre de César",
+        "fullDescription": "Un outil de cryptographie éducatif et pratique qui implémente l'algorithme de chiffrement César. L'application permet aux utilisateurs de chiffrer et déchiffrer des messages en utilisant différents décalages, offrant une introduction interactive aux concepts de cryptographie classique.",
+        "role": "Développeur de Sécurité & Concepteur d'Outils"
+      },
+      "11": {
+        "title": "Solveur de Puzzles Takuzu",
+        "category": "Logique et Algorithmes",
+        "shortDescription": "Application de résolution de puzzles Takuzu (Binairo)",
+        "fullDescription": "Un solveur de puzzles intelligent qui utilise des algorithmes avancés pour résoudre des grilles Takuzu (également connu sous le nom de Binairo). L'application offre des fonctionnalités de génération de puzzles, de vérification et de résolution automatique, démontrant des techniques sophistiquées de résolution de problèmes logiques.",
+        "role": "Développeur Logique & Concepteur d'Algorithmes"
+      },
+      "12": {
+        "title": "Plateforme E-Commerce Tomato",
+        "category": "Développement Web",
+        "shortDescription": "Plateforme de commerce électronique complète et moderne",
+        "fullDescription": "Une solution e-commerce robuste qui offre une expérience d'achat en ligne fluide et intuitive. La plateforme intègre des fonctionnalités avancées telles que la gestion des produits, le panier d'achat, le système de paiement et la gestion des utilisateurs.",
+        "role": "Développeur Full Stack & Architecte Web"
+      },
+      "13": {
+        "title": "API de Produits en Ligne",
+        "category": "Développement Backend",
+        "shortDescription": "Interface API RESTful pour la gestion de produits en ligne",
+        "fullDescription": "Une API backend hautement performante et sécurisée pour la gestion de produits en ligne. Conçue avec des pratiques modernes de développement, l'API offre des endpoints complets pour la manipulation et la récupération de données de produits.",
+        "role": "Développeur Backend & Architecte API"
+      },
+      "14": {
+        "title": "API de Blog Spring",
+        "category": "Développement Backend",
+        "shortDescription": "API de blog RESTful construite avec Spring Boot",
+        "fullDescription": "Une API de blog robuste et sécurisée développée avec Spring Boot. L'application offre des fonctionnalités complètes de gestion de blog, y compris l'authentification, la création d'articles, et la gestion des utilisateurs.",
+        "role": "Développeur Backend & Architecte Spring"
+      },
+      "15": {
+        "title": "Plateforme de Vente Mantiq",
+        "category": "IA & Développement Web",
+        "shortDescription": "Tableau de bord commercial alimenté par l'IA",
+        "fullDescription": "Une plateforme moderne et intelligente de gestion des ventes qui exploite l'IA pour améliorer les opérations commerciales, l'analytique et les processus de prise de décision. La plateforme intègre des technologies d'IA avancées pour fournir des perspectives commerciales complètes.",
+        "role": "Développeur IA & Architecte de Plateforme"
+      }
     }
   },
   "home": {
@@ -44,7 +227,7 @@
     "name": "Emad Al Ramimi",
     "roles": {
       "aiDeveloper": "Développeur IA",
-      "mlSpecialist": "Spécialiste en Apprentissage Automatique", 
+      "mlSpecialist": "Spécialiste en R&D", 
       "webDeveloper": "Développeur Web",
       "droneTech": "Expert en Technologie de Drone"
     },
@@ -56,6 +239,198 @@
       "linkedin": "Profil LinkedIn", 
       "twitter": "Profil Twitter",
       "email": "Envoyer un e-mail"
+    },
+    "statistics": {
+      "title": "Mes Points Forts",
+      "projects": {
+        "label": "Projets Innovants",
+        "description": "Solutions de pointe couvrant le web, le mobile et les technologies émergentes"
+      },
+      "achievements": {
+        "label": "Réalisations Professionnelles",
+        "description": "Prix reconnaissant l'innovation, le leadership et l'excellence technique"
+      },
+      "experience": {
+        "label": "Expérience Professionnelle",
+        "description": "Années de travail transformateur dans l'innovation technologique et l'ingénierie logicielle"
+      }
+    },
+    "personalIntro": {
+      "title": "Créons Quelque Chose d'Extraordinaire",
+      "description": "Je suis un technologue passionné qui transforme les défis complexes en solutions élégantes et innovantes. Avec un mélange d'expertise technique et de résolution créative de problèmes, je suis toujours enthousiaste à l'idée de collaborer sur des projets qui repoussent les limites du possible.",
+      "contactButton": "Contactez-moi"
+    },
+    "experience": {
+      "title": "Expérience Professionnelle",
+      "badge": "Expérience",
+      "details": {
+        "starDrones": {
+          "title": "Spécialiste en IA et Technologie de Drone",
+          "organization": "Star Drones",
+          "duration": "Janv. 2022 - Présent",
+          "location": "Télétravail, Global",
+          "description": "Pilotage de projets innovants d'IA et de technologie de drone, développement d'algorithmes d'apprentissage automatique avancés pour la navigation autonome de drones et le traitement intelligent des données.",
+          "tags": ["IA", "Apprentissage Automatique", "Technologie de Drone", "Vision par Ordinateur"]
+        },
+        "rentWay": {
+          "title": "Développeur Logiciel",
+          "organization": "Rent-Way",
+          "duration": "Oct. 2023 - Juin 2024",
+          "location": "Sohar, Gouvernorat du Nord d'Al Batinah, Oman",
+          "description": "Conception et mise en œuvre d'applications web évolutives, améliorant l'efficacité de la plateforme et l'expérience utilisateur grâce à des technologies modernes.",
+          "tags": ["Contrat", "Développement Web", "Full-Stack"]
+        },
+        "matterz": {
+          "title": "Spécialiste en Innovation",
+          "organization": "Matterz",
+          "duration": "Juil. 2023 - Nov. 2023",
+          "location": "Masqaţ, Oman",
+          "description": "Guidé et encadré des innovateurs émergents, créant des environnements collaboratifs qui favorisent la créativité, la pensée critique et le développement des compétences techniques.",
+          "tags": ["Innovation", "Facilitation", "Développement des Compétences"]
+        }
+      },
+      "exploreMore": "Explorer Plus d'Expériences"
+    },
+    "education": {
+      "title": "Parcours Éducatif",
+      "badge": "Éducation",
+      "details": {
+        "toulouse": {
+          "title": "Licence en Technologie Informatique",
+          "organization": "Université de Toulouse",
+          "duration": "Sept. 2022 - Juin 2025",
+          "location": "Toulouse, France",
+          "description": "Programme complet axé sur la conception avancée de logiciels, les méthodologies de développement, le travail d'équipe et les compétences technologiques de pointe.",
+          "tags": ["Développement d'Applications", "Génie Logiciel"]
+        },
+        "lorraine": {
+          "title": "Diplôme Universitaire en Formation Scientifique et Technique",
+          "organization": "Université de Lorraine",
+          "duration": "Déc. 2020 - Juin 2022",
+          "location": "Nancy, France",
+          "description": "Programme interdisciplinaire combinant des études de langue française avec une formation scientifique et technologique, développant une approche holistique de l'apprentissage.",
+          "tags": ["Langue Française", "Sciences"]
+        }
+      },
+      "exploreMore": "Explorer Mon Parcours Académique"
+    }
+  },
+  "achievements": {
+    "title": "Réalisations & Reconnaissances",
+    "subtitle": "Un parcours d'innovation, de recherche et d'excellence scientifique dans plusieurs domaines",
+    "learnMore": "En Savoir Plus",
+    "viewGallery": "Voir la Galerie",
+    "items": {
+      "liysf": {
+        "title": "Forum International des Jeunes Scientifiques de Londres (LIYSF)",
+        "description": "Sélectionné parmi plus de 180 projets pour présenter le Drone Guardian AI à l'Imperial College London. Rejoignant plus de 500 jeunes scientifiques du monde entier pour une collaboration scientifique de pointe.",
+        "highlights": [
+          "Projet sélectionné parmi plus de 180 soumissions internationales",
+          "Événement résidentiel de deux semaines à l'Imperial College London",
+          "Drone Guardian AI pour les opérations de recherche et sauvetage",
+          "Réseautage avec plus de 500 jeunes scientifiques internationaux"
+        ]
+      },
+      "rowad": {
+        "title": "Hackathon ROWAD - Projet Furat",
+        "description": "Développement du Projet Furat combinant biosolutions et technologies IA pour l'innovation entrepreneuriale au Hackathon ROWAD.",
+        "highlights": [
+          "Intégration des biosolutions avec la technologie IA",
+          "Présentation d'innovation entrepreneuriale",
+          "Expérience de compétition internationale",
+          "Développement de technologie durable"
+        ]
+      },
+      "biodiversity": {
+        "title": "Prix du Marathon de la Biodiversité",
+        "description": "Lauréat du Marathon des Idées sur la Biodiversité avec le projet d'Unités de Filtration d'Eau Intégrées, menant à une incubation scientifique à l'Université Sultan Qaboos.",
+        "highlights": [
+          "Première place au Marathon des Idées sur la Biodiversité",
+          "Création de l'équipe 'Furat' pour le développement du projet",
+          "Sélectionné pour les incubateurs de développement scientifique",
+          "Solution innovante de filtration d'eau"
+        ]
+      },
+      "techYouth": {
+        "title": "Camps Technologiques pour la Jeunesse",
+        "description": "Programme intensif de formation technique axé sur les technologies émergentes incluant l'IA, l'IoT, la Robotique et l'impression 3D.",
+        "highlights": [
+          "Expérience pratique en IA et IoT",
+          "Formation pratique en robotique et impression 3D",
+          "Résolution de problèmes orientée industrie",
+          "Développement de compétences techniques"
+        ]
+      },
+      "waterAward2020": {
+        "title": "Prix de Recherche et Innovation en Eau 2020",
+        "description": "Deuxième place pour une unité innovante de purification eau-pétrole utilisant l'énergie électrochimique dans les processus d'extraction pétrolière.",
+        "highlights": [
+          "Deuxième place",
+          "Méthode innovante de purification électrochimique",
+          "Amélioration du processus d'extraction pétrolière",
+          "Solution durable de traitement des eaux"
+        ]
+      },
+      "dahirah": {
+        "title": "Forum des Leaders d'Al-Dahirah",
+        "description": "Deuxième place au forum des applications de la Quatrième Révolution Industrielle pour une solution innovante de Production Vitale Agricole.",
+        "highlights": [
+          "Deuxième place dans un programme spécialisé",
+          "Focus sur les solutions technologiques durables",
+          "Développement d'innovation agricole",
+          "Application de transformation numérique"
+        ]
+      },
+      "alRoya": {
+        "title": "Prix Al-Roya pour les Initiatives Jeunesse",
+        "description": "Deuxième place dans la catégorie énergie renouvelable et nomination pour le Prix d'Innovation Occidental Oman.",
+        "highlights": [
+          "Deuxième place en énergie renouvelable",
+          "Nomination pour le Prix d'Innovation",
+          "Top 5 des projets innovants scientifiques",
+          "Solution d'énergie durable"
+        ]
+      },
+      "waterAward2019": {
+        "title": "Prix de Recherche et Innovation en Eau 2019",
+        "description": "Première place pour le développement d'un filtre biologique de purification d'eau utilisant des extraits naturels de plantes omanaises.",
+        "highlights": [
+          "Première place",
+          "Solution naturelle de purification d'eau",
+          "Utilisation d'extraits de plantes locales",
+          "Traitement écologique de l'eau"
+        ]
+      },
+      "waterAward2018": {
+        "title": "Prix de Recherche et Innovation en Eau 2018",
+        "description": "Première place pour une solution innovante traitant les parasites des eaux grises utilisant l'énergie thermoélectrique.",
+        "highlights": [
+          "Première place",
+          "Application d'énergie thermoélectrique",
+          "Innovation en traitement des eaux grises",
+          "Solution durable pour l'eau"
+        ]
+      },
+      "namaa": {
+        "title": "Ambassadeurs Namaa",
+        "description": "Deuxième place dans la compétition de projets d'énergie renouvelable pour des solutions durables innovantes.",
+        "highlights": [
+          "Deuxième place",
+          "Innovation en énergie renouvelable",
+          "Développement de projet durable",
+          "Solution d'efficacité énergétique"
+        ]
+      },
+      "globe": {
+        "title": "Compétition de Recherche Environnementale GLOBE",
+        "description": "Troisième place pour la recherche sur l'impact environnemental des parasites des eaux grises et cinquième place pour l'étude de la fertilité des sols.",
+        "highlights": [
+          "Deux prix en recherche environnementale",
+          "Étude des parasites des eaux grises",
+          "Analyse de la fertilité des sols",
+          "Évaluation de l'impact environnemental"
+        ]
+      }
     }
   },
   "contact": {
@@ -90,6 +465,19 @@
       "subjectLengthError": "Le sujet doit comporter au moins 5 caractères",
       "messageError": "Le contenu du message est requis",
       "messageLengthError": "Le message doit comporter au moins 10 caractères"
+    }
+  },
+  "footer": {
+    "subtitle": "Développeur Full Stack",
+    "description": "Développement de solutions innovantes à l'intersection de l'IA et de la technologie.",
+    "quickLinks": "Liens Rapides",
+    "connectWith": "Connectez-vous avec Moi",
+    "copyright": "Emad Al Ramimi. Tous droits réservés.",
+    "tagline": "Conçu avec 💻 & ❤️",
+    "links": {
+      "home": "Accueil",
+      "projects": "Projets",
+      "contact": "Contact"
     }
   }
 }

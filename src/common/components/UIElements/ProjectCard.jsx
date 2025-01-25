@@ -67,16 +67,18 @@ const ProjectCard = (props) => {
                   &nbsp;Details
                 </Link>
               </Col>
-              <Col className="text-center">
-                <a
-                  href={props.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaEye />
-                  &nbsp;Live&nbsp;Preview
-                </a>
-              </Col>
+              {props.liveUrl && (
+                <Col className="text-center">
+                  <a
+                    href={props.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaEye />
+                    &nbsp;Live&nbsp;Preview
+                  </a>
+                </Col>
+              )}
             </Row>
           </Card.Footer>
         </Card>

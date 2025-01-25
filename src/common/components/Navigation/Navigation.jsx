@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Logo from '../../../assets/images/logo.png';
-import ThemeSwitcher from '../../../components/ThemeSwitcher';
 import LanguageSwitcher from '../../../components/LanguageSwitcher';
 import './Navigation.scss';
 
@@ -23,12 +21,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav id="navbar">
-      <div className="nav__brand">
-        <Link to="/">
-          <img src={Logo} alt="itsrakesh logo" />
-        </Link>
-      </div>
+    <nav id="navbar" style={{ height: '60px' }}>
       <div className="nav__btn">
         <input
           type="checkbox"
@@ -79,15 +72,6 @@ const Navigation = () => {
             </li>
             <li className="nav__btn__item" onClick={closeNav}>
               <Link
-                to="/about"
-                style={getLinkStyle('/about')}
-                className="nav__btn__link"
-              >
-                {t('navbar.about')}
-              </Link>
-            </li>
-            <li className="nav__btn__item" onClick={closeNav}>
-              <Link
                 to="/contact"
                 style={getLinkStyle('/contact')}
                 className="nav__btn__link"
@@ -121,11 +105,6 @@ const Navigation = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about" style={getLinkStyle('/about')}>
-              {t('navbar.about')}
-            </Link>
-          </li>
-          <li>
             <Link to="/contact" style={getLinkStyle('/contact')}>
               {t('navbar.contact')}
             </Link>
@@ -134,7 +113,6 @@ const Navigation = () => {
       </div>
       <div className="nav__actions">
         <LanguageSwitcher />
-        <ThemeSwitcher />
       </div>
     </nav>
   );

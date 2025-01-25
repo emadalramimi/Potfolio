@@ -1,0 +1,70 @@
+:root {
+  // Dark Mode Variables
+  &.dark {
+    --bg-color: #121212;
+    --bg-secondary: #1E1E1E;
+    --card-bg: #1E1E1E;
+    --primary-color: #E5E5E5;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+    --text-muted: #6C757D;
+    --accent-color: #61AFEF;
+    --accent-secondary: #56B6C2;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.4);
+  }
+
+  // Light Mode Variables
+  &.light {
+    --bg-color: #F8F9FA;
+    --bg-secondary: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --primary-color: #212529;
+    --text-primary: #000000;
+    --text-secondary: #6C757D;
+    --text-muted: #495057;
+    --accent-color: #339AF0;
+    --accent-secondary: #0CA678;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Global Styles
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Theme Transition Mixins
+@mixin theme-transition {
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+// Utility Classes
+.theme-transition {
+  @include theme-transition;
+}
+
+// Scrollbar Styling
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}

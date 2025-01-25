@@ -1,11 +1,43 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaCode } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Footer.scss';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { 
+      icon: <FaGithub />, 
+      href: "https://github.com/emadalramimi", 
+      label: "GitHub" 
+    },
+    { 
+      icon: <FaLinkedin />, 
+      href: "https://linkedin.com/in/emad-alramimi", 
+      label: "LinkedIn" 
+    },
+    { 
+      icon: <FaTwitter />, 
+      href: "https://twitter.com/emadalramimi", 
+      label: "Twitter" 
+    },
+    { 
+      icon: <FaEnvelope />, 
+      href: "mailto:contact@emadalramimi.com", 
+      label: "Email" 
+    }
+  ];
+
+  const quickLinks = [
+    { to: "/", label: t('footer.links.home') },
+    { to: "/skills", label: t('footer.links.about') },
+    { to: "/projects", label: t('footer.links.projects') },
+    { to: "/contact", label: t('footer.links.contact') }
+  ];
 
   return (
     <footer className="footer">
@@ -13,41 +45,47 @@ const Footer = () => {
         <Row className="footer-content">
           <Col lg={4} className="footer-brand">
             <h3 className="gradient-text">Emad Al Ramimi</h3>
-            <p>AI & Machine Learning Engineer</p>
-            <p className="footer-description">
-              Building innovative solutions at the intersection of AI and technology.
-            </p>
+            <p className="footer-subtitle">{t('footer.subtitle')}</p>
+            <p className="footer-description">{t('footer.description')}</p>
           </Col>
           
           <Col lg={4} className="footer-links">
-            <h4>Quick Links</h4>
+            <h4>{t('footer.quickLinks')}</h4>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/work">Projects</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.to}>{link.label}</Link>
+                </li>
+              ))}
             </ul>
           </Col>
           
           <Col lg={4} className="footer-social">
-            <h4>Connect With Me</h4>
+            <h4>{t('footer.connectWith')}</h4>
             <div className="social-links">
-              <a href="https://github.com/emadalramimi" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
-              </a>
-              <a href="https://linkedin.com/in/emad-alramimi" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin />
-              </a>
-              <a href="https://twitter.com/emadalramimi" target="_blank" rel="noopener noreferrer">
-                <FaTwitter />
-              </a>
+              {socialLinks.map((social, index) => (
+                <a 
+                  key={index} 
+                  href={social.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </Col>
         </Row>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Emad Al Ramimi. All rights reserved.</p>
-          <p className="footer-tagline">Made with 💻 and ❤️</p>
+          <p>
+            &copy; {currentYear} {t('footer.copyright')}
+          </p>
+          <p className="footer-tagline">
+            <FaCode style={{ marginRight: '0.5rem' }} />
+            {t('footer.tagline')}
+          </p>
         </div>
       </Container>
     </footer>

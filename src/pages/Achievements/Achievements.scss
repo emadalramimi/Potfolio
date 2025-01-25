@@ -1,138 +1,208 @@
+@import '../../styles/typography';
 @import '../../common/util/variables';
 
 .achievements-page {
-  padding: 4rem 0;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
   min-height: 100vh;
 
-  .page-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  .page-header {
     text-align: center;
-    background: $gradient-primary;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .page-subtitle {
-    text-align: center;
-    color: $color-secondary-3;
     margin-bottom: 3rem;
+    
+    h1 {
+      @include heading-1;
+      background: linear-gradient(45deg, $text-accent, lighten($text-accent, 20%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      @include body-text;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
   }
 
-  .achievements-list {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
   }
 
   .achievement-card {
     background: rgba($color-primary-4, 0.3);
-    border-radius: $border-radius-3;
-    padding: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
     backdrop-filter: blur(10px);
     border: 1px solid rgba($color-secondary-4, 0.1);
-    box-shadow: $shadow-lg;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
       transform: translateY(-5px);
-    }
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
-    .achievement-content {
-      padding-right: 2rem;
-
-      @media (max-width: $screen-sm) {
-        padding-right: 0;
-        margin-bottom: 2rem;
+      .achievement-images {
+        .achievement-image {
+          opacity: 1;
+        }
       }
     }
 
-    .achievement-header {
-      margin-bottom: 1.5rem;
+    .achievement-images {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      cursor: pointer;
 
-      h2 {
-        font-size: 2rem;
+      .achievement-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.8s ease-in-out;
+        opacity: 1;
+
+        &.exit {
+          opacity: 0;
+        }
+      }
+
+      .image-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+
+        .indicator {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.5);
+          transition: all 0.3s ease;
+
+          &.active {
+            background: white;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    .achievement-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      .achievement-title {
+        @include heading-3;
         margin-bottom: 1rem;
-        background: $gradient-secondary;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
       }
 
       .achievement-meta {
         display: flex;
-        gap: 1.5rem;
-        color: $color-secondary-3;
+        gap: 1rem;
+        margin-bottom: 1rem;
 
-        .year, .location {
+        .meta-item {
+          @include code-text;
           display: flex;
           align-items: center;
           gap: 0.5rem;
-        }
-      }
-    }
+          opacity: 0.8;
 
-    .description {
-      color: $color-secondary-3;
-      margin-bottom: 2rem;
-      line-height: 1.8;
-    }
-
-    .highlights {
-      h3 {
-        color: $color-primary-6;
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-          color: $color-secondary-3;
-          margin-bottom: 0.75rem;
-          padding-left: 1.5rem;
-          position: relative;
-
-          &::before {
-            content: '•';
-            color: $color-primary-3;
-            position: absolute;
-            left: 0;
+          svg {
+            font-size: 1.1em;
           }
         }
       }
-    }
 
-    .achievement-gallery {
-      .image-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        
-        .image-container {
-          aspect-ratio: 4/3;
-          overflow: hidden;
-          border-radius: $border-radius-2;
-          box-shadow: $shadow-md;
-          
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-            
-            &:hover {
-              transform: scale(1.05);
-            }
+      .achievement-description {
+        @include body-text;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+      }
+
+      .achievement-highlights {
+        margin-top: auto;
+
+        .highlight-item {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-bottom: 0.5rem;
+
+          .highlight-icon {
+            color: $text-accent;
+            font-size: 1.2em;
+          }
+
+          span {
+            @include body-text;
+            font-size: $font-size-sm;
           }
         }
       }
-      
-      @media (max-width: $screen-sm) {
-        margin-top: 2rem;
+
+      .achievement-link {
+        @include code-text;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: lighten($text-accent, 10%);
+        }
+
+        svg {
+          font-size: 1em;
+        }
       }
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    .achievements-page {
+      padding: 1rem;
+
+      .page-header {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+
+      .achievements-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    .page-header {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .achievements-grid {
+      grid-template-columns: 1fr;
     }
   }
 }

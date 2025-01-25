@@ -6,96 +6,62 @@ import { FaRocket } from 'react-icons/fa';
 
 const StyledWrapper = styled.div`
   .terminal {
-    background: linear-gradient(180deg, #1E1E1E 0%, #2D2D2D 100%);
+    background: var(--card-bg);
     border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    box-shadow: ${props => props.theme.mode === 'dark'
+      ? '0 15px 35px rgba(0, 0, 0, 0.4)'
+      : '0 8px 24px rgba(0, 0, 0, 0.1)'};
     overflow: hidden;
     font-family: 'JetBrains Mono', monospace;
     min-height: 450px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid ${props => props.theme.mode === 'dark'
+      ? 'rgba(255, 255, 255, 0.1)'
+      : 'rgba(0, 0, 0, 0.1)'};
 
     &:hover {
       transform: translateY(-5px) scale(1.01);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
-      border-color: rgba(255, 255, 255, 0.15);
+      box-shadow: ${props => props.theme.mode === 'dark'
+        ? '0 20px 45px rgba(0, 0, 0, 0.5)'
+        : '0 12px 30px rgba(0, 0, 0, 0.15)'};
+      border-color: ${props => props.theme.mode === 'dark'
+        ? 'rgba(255, 255, 255, 0.15)'
+        : 'rgba(0, 0, 0, 0.15)'};
     }
   }
 
   .terminal-header {
-    background: linear-gradient(90deg, #2D2D2D 0%, #353535 100%);
+    background: ${props => props.theme.mode === 'dark'
+      ? '#1A1A1A'
+      : '#F1F3F5'};
     padding: 15px 20px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .terminal-buttons {
-    display: flex;
-    gap: 8px;
-    margin-right: 15px;
-
-    span {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      display: inline-block;
-      position: relative;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 50%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      &:hover::after {
-        opacity: 1;
-      }
-    }
-
-    .close { background: linear-gradient(45deg, #FF5F56, #FF4242); }
-    .minimize { background: linear-gradient(45deg, #FFBD2E, #FFB000); }
-    .maximize { background: linear-gradient(45deg, #27C93F, #1AAB29); }
+    border-bottom: 1px solid ${props => props.theme.mode === 'dark'
+      ? 'rgba(255, 255, 255, 0.1)'
+      : 'rgba(0, 0, 0, 0.1)'};
   }
 
   .terminal-title {
-    color: #858585;
+    color: ${props => props.theme.mode === 'dark' ? '#858585' : '#6C757D'};
     font-size: 0.9rem;
     flex-grow: 1;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  }
-
-  .terminal-controls {
-    display: flex;
-    gap: 10px;
-    color: #858585;
-    font-size: 0.8rem;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 4px 10px;
-    border-radius: 4px;
+    text-shadow: ${props => props.theme.mode === 'dark'
+      ? '0 1px 2px rgba(0, 0, 0, 0.3)'
+      : 'none'};
   }
 
   .terminal-body {
     padding: 40px;
-    color: #fff;
+    color: ${props => props.theme.mode === 'dark' ? '#fff' : '#212529'};
     font-size: 1rem;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 350px;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+    background: ${props => props.theme.mode === 'dark'
+      ? 'linear-gradient(180deg, #1E1E1E 0%, #121212 100%)'
+      : '#FFFFFF'};
   }
 
   .title-line {
@@ -104,31 +70,31 @@ const StyledWrapper = styled.div`
     align-items: center;
 
     .prompt {
-      color: #C678DD;
+      color: ${props => props.theme.mode === 'dark' ? '#C678DD' : '#9C27B0'};
       margin-right: 12px;
       opacity: 0.9;
     }
 
     .title {
-      color: #E5C07B;
+      color: ${props => props.theme.mode === 'dark' ? '#E5C07B' : '#F59F00'};
       font-weight: bold;
       font-size: 1.5rem;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      text-shadow: ${props => props.theme.mode === 'dark'
+        ? '0 2px 4px rgba(0, 0, 0, 0.3)'
+        : 'none'};
       letter-spacing: -0.5px;
     }
   }
 
   .description-line {
     margin-bottom: 30px;
-    color: #ABB2BF;
+    color: ${props => props.theme.mode === 'dark' ? '#ABB2BF' : '#495057'};
     padding-left: 25px;
-    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    border-left: 2px solid ${props => props.theme.mode === 'dark'
+      ? 'rgba(255, 255, 255, 0.1)'
+      : 'rgba(0, 0, 0, 0.1)'};
     font-size: 1.1rem;
     line-height: 1.7;
-
-    .description {
-      display: inline-block;
-    }
   }
 
   .highlight-line {
@@ -137,24 +103,34 @@ const StyledWrapper = styled.div`
     align-items: center;
 
     .prompt {
-      color: #E06C75;
+      color: ${props => props.theme.mode === 'dark' ? '#E06C75' : '#E03131'};
       margin-right: 12px;
       opacity: 0.9;
     }
 
     .highlight {
-      color: #56B6C2;
-      background: rgba(86, 182, 194, 0.1);
+      color: ${props => props.theme.mode === 'dark' ? '#56B6C2' : '#0CA678'};
+      background: ${props => props.theme.mode === 'dark'
+        ? 'rgba(86, 182, 194, 0.1)'
+        : 'rgba(12, 166, 120, 0.08)'};
       padding: 8px 16px;
       border-radius: 6px;
       font-size: 0.95rem;
-      border: 1px solid rgba(86, 182, 194, 0.2);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border: 1px solid ${props => props.theme.mode === 'dark'
+        ? 'rgba(86, 182, 194, 0.2)'
+        : 'rgba(12, 166, 120, 0.2)'};
+      box-shadow: ${props => props.theme.mode === 'dark'
+        ? '0 2px 5px rgba(0, 0, 0, 0.2)'
+        : '0 2px 5px rgba(0, 0, 0, 0.05)'};
       transition: all 0.3s ease;
 
       &:hover {
-        background: rgba(86, 182, 194, 0.15);
-        border-color: rgba(86, 182, 194, 0.3);
+        background: ${props => props.theme.mode === 'dark'
+          ? 'rgba(86, 182, 194, 0.15)'
+          : 'rgba(12, 166, 120, 0.12)'};
+        border-color: ${props => props.theme.mode === 'dark'
+          ? 'rgba(86, 182, 194, 0.3)'
+          : 'rgba(12, 166, 120, 0.3)'};
       }
     }
   }
@@ -162,7 +138,9 @@ const StyledWrapper = styled.div`
   .explore-line {
     margin-top: auto;
     padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid ${props => props.theme.mode === 'dark'
+      ? 'rgba(255, 255, 255, 0.1)'
+      : 'rgba(0, 0, 0, 0.1)'};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -177,16 +155,24 @@ const StyledWrapper = styled.div`
       font-weight: 500;
       padding: 12px 24px;
       border-radius: 8px;
-      background: linear-gradient(135deg, #61AFEF 0%, #56B6C2 100%);
+      background: ${props => props.theme.mode === 'dark'
+        ? 'linear-gradient(135deg, #61AFEF 0%, #56B6C2 100%)'
+        : 'linear-gradient(135deg, #339AF0 0%, #0CA678 100%)'};
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 15px rgba(97, 175, 239, 0.3);
+      box-shadow: ${props => props.theme.mode === 'dark'
+        ? '0 4px 15px rgba(97, 175, 239, 0.3)'
+        : '0 4px 15px rgba(51, 154, 240, 0.2)'};
       text-transform: uppercase;
       letter-spacing: 0.5px;
 
       &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(97, 175, 239, 0.4);
-        background: linear-gradient(135deg, #74BEFF 0%, #65C5D1 100%);
+        box-shadow: ${props => props.theme.mode === 'dark'
+          ? '0 6px 20px rgba(97, 175, 239, 0.4)'
+          : '0 6px 20px rgba(51, 154, 240, 0.3)'};
+        background: ${props => props.theme.mode === 'dark'
+          ? 'linear-gradient(135deg, #74BEFF 0%, #65C5D1 100%)'
+          : 'linear-gradient(135deg, #4DABF7 0%, #12B886 100%)'};
       }
 
       svg {
@@ -203,11 +189,11 @@ const StyledWrapper = styled.div`
   .progress-bar {
     margin-top: 30px;
     height: 2px;
-    background: rgba(255, 255, 255, 0.1);
+    background: ${props => props.theme.mode === 'dark'
+      ? 'rgba(255, 255, 255, 0.1)'
+      : 'rgba(0, 0, 0, 0.1)'};
     position: relative;
-    border-radius: 2px;
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 
     &::after {
       content: '';
@@ -215,27 +201,16 @@ const StyledWrapper = styled.div`
       top: 0;
       left: 0;
       height: 100%;
-      background: linear-gradient(90deg, #61AFEF 0%, #56B6C2 100%);
-      animation: progress 5s linear infinite;
-      width: ${props => (props.currentIndex + 1) * (100 / props.totalAchievements)}%;
-      transition: width 0.3s ease;
-      box-shadow: 0 0 10px rgba(97, 175, 239, 0.5);
+      width: var(--progress);
+      background: ${props => props.theme.mode === 'dark'
+        ? 'linear-gradient(90deg, #61AFEF, #56B6C2)'
+        : 'linear-gradient(90deg, #339AF0, #0CA678)'};
+      transition: width 0.5s ease;
     }
-  }
-
-  @keyframes progress {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
-  }
-
-  .typed-cursor {
-    color: #61AFEF;
-    text-shadow: 0 0 8px rgba(97, 175, 239, 0.5);
   }
 `;
 
-const AchievementCard = ({ achievement, totalAchievements, currentIndex }) => {
+const AchievementCard = ({ achievement, totalAchievements, currentIndex, theme }) => {
   const titleRef = useRef(null);
   const descRef = useRef(null);
   const titleTypedRef = useRef(null);
@@ -276,7 +251,7 @@ const AchievementCard = ({ achievement, totalAchievements, currentIndex }) => {
   }, [achievement]);
 
   return (
-    <StyledWrapper currentIndex={currentIndex} totalAchievements={totalAchievements}>
+    <StyledWrapper theme={theme} currentIndex={currentIndex} totalAchievements={totalAchievements}>
       <div className="terminal">
         <div className="terminal-header">
           <div className="terminal-buttons">

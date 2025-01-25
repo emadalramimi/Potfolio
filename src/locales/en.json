@@ -1,0 +1,25 @@
+{
+  "home": {
+    "stats": {
+      "awards": "Awards & Honors",
+      "awardsDesc": "Local and international recognitions",
+      "projects": "Projects",
+      "projectsDesc": "Cutting-edge projects and solutions",
+      "participations": "Participations",
+      "participationsDesc": "Conferences, hackathons, and events",
+      "experience": "Experience",
+      "experienceDesc": "Years of professional expertise"
+    },
+    "achievements": {
+      "title": "Achievements",
+      "subtitle": "Key milestones and recognitions in my journey"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "subtitle": "A selection of my most impactful work",
+      "viewAll": "View All Projects",
+      "viewGithub": "View on GitHub",
+      "liveDemo": "Live Demo"
+    }
+  }
+}

@@ -1,314 +1,145 @@
-@import '../../../styles/variables.scss';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
 
-.content-wrapper {
-  background: #0D1117;
-  padding: 4rem 0;
-  overflow: hidden;
+.content-container {
+  padding: 2rem 0;
+  background: var(--background);
+  color: var(--text);
+
+  section {
+    padding: 4rem 0;
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      background: linear-gradient(120deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+  }
+}
+
+.experience-grid,
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.experience-card,
+.education-card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
 
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      linear-gradient(90deg, #0D1117 21px, transparent 1%) center,
-      linear-gradient(#0D1117 21px, transparent 1%) center,
-      #16181C;
-    background-size: 22px 22px;
-    opacity: 0.4;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
   }
 
-  .stats-section {
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 1;
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-      color: #58A6FF;
-      font-family: 'JetBrains Mono', monospace;
-      position: relative;
-
-      &::before {
-        content: '< ';
-        color: #7EE787;
-      }
-
-      &::after {
-        content: ' />';
-        color: #7EE787;
-      }
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      
-      @media (max-width: $screen-md) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @media (max-width: $screen-xs) {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .stat-item {
-      background: linear-gradient(135deg, #1C2128 0%, #22272E 100%);
-      border-radius: 12px;
-      padding: $spacing-lg;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-
-      &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-        border-color: rgba(255, 255, 255, 0.15);
-      }
-
-      .stat-icon-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: $spacing-md;
-      }
-
-      .stat-icon {
-        font-size: 2.5rem;
-        color: #58A6FF;
-        filter: drop-shadow(0 0 10px rgba(88, 166, 255, 0.3));
-      }
-
-      .stat-number {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #E6EDF3;
-        margin-bottom: $spacing-sm;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-        span {
-          color: #58A6FF;
-        }
-      }
-
-      .stat-label {
-        font-size: 1rem;
-        color: #7EE787;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: $spacing-sm;
-        font-family: 'JetBrains Mono', monospace;
-      }
-
-      .stat-description {
-        font-size: 0.9rem;
-        color: #8B949E;
-      }
-    }
+  .company-logo,
+  .university-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    padding: 0.5rem;
+    background: var(--card-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
-  .achievements-section {
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 1;
-
-    .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #58A6FF;
-      margin-bottom: $spacing-md;
-      font-family: 'JetBrains Mono', monospace;
-      
-      &::before {
-        content: '< ';
-        color: #7EE787;
-      }
-
-      &::after {
-        content: ' />';
-        color: #7EE787;
-      }
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: #8B949E;
-      margin-bottom: $spacing-lg;
-      font-family: 'JetBrains Mono', monospace;
-
-      &::before {
-        content: '// ';
-        color: #6E7681;
-      }
-    }
-
-    .achievement-cards {
-      display: flex;
-      justify-content: center;
-      gap: $spacing-lg;
-      
-      @media (max-width: $screen-md) {
-        flex-wrap: wrap;
-      }
-    }
-
-    .achievement-card {
-      background: linear-gradient(135deg, #1C2128 0%, #22272E 100%);
-      border-radius: 12px;
-      padding: $spacing-lg;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-
-      &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-        border-color: rgba(255, 255, 255, 0.15);
-      }
-
-      .achievement-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: $spacing-md;
-        
-        svg {
-          font-size: 3rem;
-          color: #58A6FF;
-          filter: drop-shadow(0 0 10px rgba(88, 166, 255, 0.3));
-        }
-      }
-
-      h3 {
-        font-size: 1.3rem;
-        color: #E6EDF3;
-        margin-bottom: $spacing-sm;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      }
-
-      p {
-        color: #8B949E;
-        flex-grow: 1;
-      }
-
-      .achievement-highlight {
-        background-color: rgba(88, 166, 255, 0.1);
-        color: #58A6FF;
-        padding: $spacing-sm;
-        border-radius: $border-radius-3;
-        font-size: 0.8rem;
-        margin-top: $spacing-md;
-      }
-    }
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading);
+    font-weight: 600;
   }
 
-  .content__recent-projects {
-    position: relative;
-    z-index: 1;
-    
-    .content__recent-projects__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: $spacing-lg;
+  h4 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
 
+  .duration,
+  .location {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .grade {
+    font-size: 1rem;
+    color: var(--success);
+    margin: 0.5rem 0;
+    font-weight: 500;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: var(--text);
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-weight: 500;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .content-container {
+    section {
+      padding: 2rem 0;
+      
       h2 {
-        font-size: 2.5rem;
-        color: #58A6FF;
-        font-family: 'JetBrains Mono', monospace;
-        
-        &::before {
-          content: '< ';
-          color: #7EE787;
-        }
-
-        &::after {
-          content: ' />';
-          color: #7EE787;
-        }
+        font-size: 2rem;
       }
     }
   }
 
-  .recent-projects-section {
-    padding: 4rem 0;
-    position: relative;
-    z-index: 1;
+  .experience-grid,
+  .education-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
 
-    .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #58A6FF;
-      margin-bottom: 1rem;
-      font-family: 'JetBrains Mono', monospace;
-      
-      &::before {
-        content: '< ';
-        color: #7EE787;
-      }
+  .experience-card,
+  .education-card {
+    padding: 1.5rem;
 
-      &::after {
-        content: ' />';
-        color: #7EE787;
-      }
+    h3 {
+      font-size: 1.2rem;
     }
 
-    .section-subtitle {
-      text-align: center;
-      color: #8B949E;
-      margin-bottom: 3rem;
-      font-family: 'JetBrains Mono', monospace;
-
-      &::before {
-        content: '// ';
-        color: #6E7681;
-      }
-    }
-
-    .view-more-projects {
-      text-align: center;
-      margin-top: 3rem;
-
-      .explore-more-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        color: #fff;
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight: 500;
-        padding: 12px 24px;
-        border-radius: 8px;
-        background: linear-gradient(135deg, #61AFEF 0%, #56B6C2 100%);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 15px rgba(97, 175, 239, 0.3);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(97, 175, 239, 0.4);
-          background: linear-gradient(135deg, #74BEFF 0%, #65C5D1 100%);
-        }
-
-        svg {
-          font-size: 1.1rem;
-          transition: transform 0.3s ease;
-        }
-
-        &:hover svg {
-          transform: translateX(4px) translateY(-2px);
-        }
-      }
+    h4 {
+      font-size: 1rem;
     }
   }
 }

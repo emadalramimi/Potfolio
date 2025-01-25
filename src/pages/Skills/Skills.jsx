@@ -50,29 +50,29 @@ import {
 import './Skills.scss';
 
 const technologies = [
-  { name: 'React.js', icon: FaReact, color: '#61DAFB', level: 90 },
-  { name: 'Next.js', icon: SiNextdotjs, color: '#000000', level: 85 },
-  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6', level: 80 },
-  { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', level: 95 },
-  { name: 'Redux', icon: SiRedux, color: '#764ABC', level: 85 },
-  { name: 'Tailwind', icon: SiTailwindcss, color: '#06B6D4', level: 90 },
-  { name: 'HTML5', icon: FaHtml5, color: '#E34F26', level: 95 },
-  { name: 'CSS3', icon: FaCss3Alt, color: '#1572B6', level: 90 },
-  { name: 'Node.js', icon: FaNode, color: '#339933', level: 85 },
-  { name: 'Express', icon: SiExpress, color: '#000000', level: 80 },
-  { name: 'Django', icon: SiDjango, color: '#092E20', level: 75 },
-  { name: 'Flask', icon: SiFlask, color: '#000000', level: 70 },
-  { name: 'PHP', icon: FaPhp, color: '#777BB4', level: 75 },
-  { name: 'Laravel', icon: FaLaravel, color: '#FF2D20', level: 70 },
-  { name: 'MongoDB', icon: SiMongodb, color: '#47A248', level: 85 },
-  { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1', level: 80 },
-  { name: 'Firebase', icon: SiFirebase, color: '#FFCA28', level: 85 },
-  { name: 'AWS', icon: FaAws, color: '#FF9900', level: 75 },
-  { name: 'Vercel', icon: SiVercel, color: '#000000', level: 90 },
-  { name: 'Docker', icon: FaDocker, color: '#2496ED', level: 80 },
-  { name: 'Git', icon: FaGit, color: '#F05032', level: 90 },
-  { name: 'Linux', icon: FaLinux, color: '#FCC624', level: 85 },
-  { name: 'Vite', icon: SiVite, color: '#646CFF', level: 85 }
+  { name: 'React.js', icon: FaReact, color: '#61DAFB' },
+  { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
+  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+  { name: 'Redux', icon: SiRedux, color: '#764ABC' },
+  { name: 'Tailwind', icon: SiTailwindcss, color: '#06B6D4' },
+  { name: 'HTML5', icon: FaHtml5, color: '#E34F26' },
+  { name: 'CSS3', icon: FaCss3Alt, color: '#1572B6' },
+  { name: 'Node.js', icon: FaNode, color: '#339933' },
+  { name: 'Express', icon: SiExpress, color: '#000000' },
+  { name: 'Django', icon: SiDjango, color: '#092E20' },
+  { name: 'Flask', icon: SiFlask, color: '#000000' },
+  { name: 'PHP', icon: FaPhp, color: '#777BB4' },
+  { name: 'Laravel', icon: FaLaravel, color: '#FF2D20' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+  { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
+  { name: 'AWS', icon: FaAws, color: '#FF9900' },
+  { name: 'Vercel', icon: SiVercel, color: '#000000' },
+  { name: 'Docker', icon: FaDocker, color: '#2496ED' },
+  { name: 'Git', icon: FaGit, color: '#F05032' },
+  { name: 'Linux', icon: FaLinux, color: '#FCC624' },
+  { name: 'Vite', icon: SiVite, color: '#646CFF' }
 ];
 
 const TechStack = () => {
@@ -137,15 +137,6 @@ const TechStack = () => {
               >
                 <Icon className="tech-icon" />
                 <span className="tech-name">{tech.name}</span>
-                <div className="skill-bar">
-                  <div 
-                    className="skill-progress" 
-                    style={{ 
-                      width: `${tech.level}%`,
-                      backgroundColor: tech.color 
-                    }}
-                  />
-                </div>
               </motion.div>
             );
           })}

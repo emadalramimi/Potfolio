@@ -1,66 +1,55 @@
-import React, { useEffect, useState, Fragment } from 'react';
-import { Helmet } from 'react-helmet';
-import { useLocation } from 'react-router-dom';
-
-import { BackToTop } from '../../common/components/UIElements';
-import { Projects, SkillsGrid } from './components';
-import { SkillFilterProvider } from './components/SkillsGrid';
-import useHttpClient from '../../common/hooks/http-hook';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import Projects from './components/Projects';
+import './Work.scss';
 
 const Work = () => {
-  const { isLoading, error, sendRequest, show } = useHttpClient();
-  const [projects, setProjects] = useState([]);
-  const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const view = searchParams.get('view') || 'skills';
+  const { t } = useTranslation();
+  const [activeFilter, setActiveFilter] = useState('All');
+  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const responseData = await sendRequest(
-          `${process.env.REACT_APP_BACKEND_URL}/project/projects`
-        );
-        setProjects(responseData);
-      } catch (err) {}
-    };
-    fetchData();
-  }, [sendRequest]);
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard({ y: 100, opacity: 0 });
+
+    setTimeout(() => {
+      setAnimateCard({ y: 0, opacity: 1 });
+    }, 500);
+  };
 
   return (
-    <Fragment>
-      <Helmet>
-        <title>{view === 'skills' ? 'Skills' : 'Projects'} | Portfolio</title>
-        <meta 
-          name="description" 
-          content={view === 'skills' ? 'Explore my technical skills and expertise.' : 'Check out my latest projects and work.'} 
-        />
-        <meta 
-          property="og:title" 
-          content={`${view === 'skills' ? 'Skills' : 'Projects'} | Portfolio`} 
-        />
-        <meta 
-          property="og:description" 
-          content={view === 'skills' ? 'Explore my technical skills and expertise.' : 'Check out my latest projects and work.'} 
-        />
-        <meta
-          property="og:image"
-          content="https://ik.imagekit.io/itsrakesh/Portfolio/work_og_cli-eLMr5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646652255031"
-        />
-        <meta property="twitter:title" content="Rakesh Potnuru's Work" />
-        <meta property="twitter:description" content="Get to know what I do." />
-        <meta
-          property="twitter:image"
-          content="https://ik.imagekit.io/itsrakesh/Portfolio/work_og_cli-eLMr5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646652255031"
-        />
-      </Helmet>
-      
-      <SkillFilterProvider>
-        {view === 'skills' && <SkillsGrid />}
-        {view === 'projects' && <Projects projects={projects} isLoading={isLoading} error={error} show={show} />}
-      </SkillFilterProvider>
-      
-      <BackToTop />
-    </Fragment>
+    <div className="work-container">
+      <motion.div
+        className="work-header"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1>{t('projects.title')}</h1>
+        <p className="subtitle">{t('projects.subtitle')}</p>
+      </motion.div>
+
+      <div className="work-filter">
+        {['All', 'Web', 'Mobile', 'AI/ML', 'Other'].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`work-filter-item ${activeFilter === item ? 'item-active' : ''}`}
+          >
+            {t(`projects.filters.${item.toLowerCase().replace('/', '')}`)}
+          </div>
+        ))}
+      </div>
+
+      <motion.div
+        animate={animateCard}
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        className="work-portfolio"
+      >
+        <Projects activeFilter={activeFilter} />
+      </motion.div>
+    </div>
   );
 };
 

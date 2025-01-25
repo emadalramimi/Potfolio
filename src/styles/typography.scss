@@ -1,0 +1,92 @@
+// Typography Variables
+$font-primary: 'Space Mono', monospace;    // For code-like text and headings
+$font-secondary: 'Inter', sans-serif;      // For body text
+$font-accent: 'Roboto Mono', monospace;    // For special elements
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Font Sizes
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+
+// Line Heights
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Colors
+$text-primary: #E0E0E0;      // Light gray for main text
+$text-secondary: #A0A0A0;    // Darker gray for secondary text
+$text-accent: #64FFDA;       // Mint color for accents
+$text-heading: #CCD6F6;      // Light blue-gray for headings
+
+// Mixins
+@mixin heading-1 {
+  font-family: $font-primary;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  color: $text-heading;
+  line-height: $line-height-tight;
+}
+
+@mixin heading-2 {
+  font-family: $font-primary;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $text-heading;
+  line-height: $line-height-tight;
+}
+
+@mixin heading-3 {
+  font-family: $font-primary;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-medium;
+  color: $text-heading;
+  line-height: $line-height-tight;
+}
+
+@mixin body-text {
+  font-family: $font-secondary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  color: $text-primary;
+  line-height: $line-height-normal;
+}
+
+@mixin code-text {
+  font-family: $font-accent;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  color: $text-accent;
+  line-height: $line-height-normal;
+}
+
+// Global Typography Styles
+body {
+  @include body-text;
+}
+
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+code, pre {
+  @include code-text;
+}

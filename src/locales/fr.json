@@ -1,0 +1,25 @@
+{
+  "home": {
+    "stats": {
+      "awards": "Prix & Distinctions",
+      "awardsDesc": "Reconnaissances locales et internationales",
+      "projects": "Projets",
+      "projectsDesc": "Projets et solutions innovants",
+      "participations": "Participations",
+      "participationsDesc": "Conférences, hackathons et événements",
+      "experience": "Expérience",
+      "experienceDesc": "Années d'expertise professionnelle"
+    },
+    "achievements": {
+      "title": "Réalisations",
+      "subtitle": "Étapes clés et reconnaissances dans mon parcours"
+    },
+    "projects": {
+      "title": "Projets en Vedette",
+      "subtitle": "Une sélection de mes travaux les plus impactants",
+      "viewAll": "Voir Tous les Projets",
+      "viewGithub": "Voir sur GitHub",
+      "liveDemo": "Démo en Direct"
+    }
+  }
+}

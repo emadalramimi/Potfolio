@@ -37,21 +37,17 @@ const DropdownContainer = styled.div`
   position: absolute;
   top: calc(100% + 5px);
   right: 0;
-  background: white;
+  background: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
   min-width: 160px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   opacity: ${props => props.$isOpen ? 1 : 0};
   visibility: ${props => props.$isOpen ? 'visible' : 'hidden'};
   transform: ${props => props.$isOpen ? 'translateY(0)' : 'translateY(-10px)'};
   transition: all 0.2s ease;
   z-index: 1000;
-
-  [data-theme='dark'] & {
-    background: #1a1a1a;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  }
+  border: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
 const LanguageOption = styled.button`
@@ -95,11 +91,6 @@ const languages = [
     code: 'fr',
     name: 'Français',
     flag: '/flags/fr.png'
-  },
-  {
-    code: 'ar',
-    name: 'العربية',
-    flag: '/flags/ar.png'
   }
 ];
 

@@ -1,0 +1,318 @@
+@import '../../styles/typography';
+@import '../../common/util/variables';
+
+.projects-page {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+  
+  .projects-section {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, var(--card-bg) 0%, var(--bg-color) 100%);
+    position: relative;
+    overflow: hidden;
+    
+    .projects-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      
+      .header-content {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        h2 {
+          @include heading-2;
+          color: $text-heading;
+          margin-bottom: 1rem;
+        }
+
+        .subtitle {
+          @include body-text;
+          margin-top: 0.5rem;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .project-filters {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: var(--card-bg);
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+        background: var(--bg-color);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+
+        input {
+          flex: 1;
+          border: none;
+          background: transparent;
+          color: $text-primary;
+          font-size: $font-size-base;
+          
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .filter-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+
+        .filter-group {
+          h4 {
+            @include heading-4;
+            margin-bottom: 0.5rem;
+          }
+
+          .filter-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: $text-primary;
+            transition: all 0.3s ease;
+            margin: 0.25rem;
+            cursor: pointer;
+
+            &:hover {
+              background: rgba($text-accent, 0.1);
+            }
+
+            &.active {
+              background: $text-accent;
+              color: white;
+              border-color: $text-accent;
+            }
+
+            svg {
+              font-size: 1em;
+            }
+          }
+        }
+
+        .sort-options {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          select {
+            padding: 0.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-color);
+            color: $text-primary;
+            cursor: pointer;
+
+            &:focus {
+              outline: none;
+              border-color: $text-accent;
+            }
+          }
+        }
+      }
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+
+      .project-card {
+        background: var(--card-bg);
+        border-radius: 15px;
+        border: 1px solid var(--border-color);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+
+          .project-image {
+            transform: scale(1.05);
+          }
+        }
+
+        .project-image-container {
+          position: relative;
+          height: 200px;
+          overflow: hidden;
+
+          .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+          }
+
+          .project-overlay {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+
+            .project-category {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              padding: 0.5rem 1rem;
+              border-radius: 20px;
+              color: white;
+              font-size: $font-size-sm;
+              cursor: pointer;
+              transition: transform 0.3s ease;
+
+              &:hover {
+                transform: scale(1.05);
+              }
+
+              svg {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+
+        .project-content {
+          padding: 1.5rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+          .project-title {
+            @include heading-3;
+            color: $text-heading;
+            margin-bottom: 0.5rem;
+          }
+
+          .project-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+            .meta-item {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              font-size: $font-size-sm;
+              color: $text-secondary;
+
+              svg {
+                font-size: 1em;
+              }
+            }
+          }
+
+          .project-description {
+            @include body-text;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+          }
+
+          .project-tech,
+          .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+
+            span {
+              padding: 0.25rem 0.75rem;
+              border-radius: 15px;
+              font-size: $font-size-sm;
+              cursor: pointer;
+              transition: all 0.3s ease;
+
+              &:hover {
+                transform: translateY(-2px);
+              }
+            }
+          }
+
+          .project-tech span {
+            background: rgba($text-accent, 0.1);
+            color: $text-secondary;
+
+            &:hover {
+              background: rgba($text-accent, 0.2);
+            }
+          }
+
+          .project-skills span {
+            background: rgba($text-primary, 0.1);
+            color: $text-primary;
+
+            &:hover {
+              background: rgba($text-primary, 0.2);
+            }
+          }
+
+          .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+
+            a {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              padding: 0.5rem 1rem;
+              border-radius: 8px;
+              text-decoration: none;
+              color: $text-secondary;
+              transition: all 0.3s ease;
+              
+              &:hover {
+                color: $text-accent;
+                background: rgba($text-accent, 0.1);
+              }
+
+              svg {
+                font-size: 1.2em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .projects-page {
+    .projects-section {
+      padding: 2rem 0;
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .project-filters {
+        .filter-section {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}
