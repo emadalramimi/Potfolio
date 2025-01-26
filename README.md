@@ -4,15 +4,6 @@
 >
 > Please change script tags (Google analytics, tawk and schema markup) in `index.html`
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9791dc74-ed3e-40c5-bc3d-0a823a64cebc/deploy-status)](https://app.netlify.com/sites/itsrakesh/deploys)
-[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/sq5a.svg)](https://status.itsrakesh.com)
-
-Visit - [itsrakesh.com](https://itsrakesh.com)
-
-<img width="960" alt="Screenshot 2022-01-16 154645" src="https://user-images.githubusercontent.com/70439799/149660033-475229da-96c7-46d1-b05d-c893a3946932.png">
-
-Backend Repo - [Here](https://github.com/RakeshPotnuru/Portfolio-Server)
-
 Made with
 
 - ReactJs

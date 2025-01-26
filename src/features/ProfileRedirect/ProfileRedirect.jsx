@@ -30,7 +30,7 @@ const ProfileRedirect = () => {
     <Fragment>
       <Helmet>
         <title>
-          {profileLink ? `${profile} | itsrakesh` : 'Profile Not Found'}
+          {profileLink ? `${profile} | Emad` : 'Profile Not Found'}
         </title>
         <meta
           name="description"
@@ -48,14 +48,7 @@ const ProfileRedirect = () => {
             profileLink ? `Follow me on ${profile}` : 'Profile Not Found'
           }
         />
-        <meta
-          property="og:image"
-          content={
-            profileLink
-              ? 'https://ik.imagekit.io/itsrakesh/Portfolio/profiles__og_8pHrPNnPsNUr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644159089673'
-              : 'https://ik.imagekit.io/itsrakesh/Portfolio/404__og_5VtpVJDVMx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644160421004'
-          }
-        />
+        
         <meta
           property="twitter:title"
           content={profileLink ? profile : 'Profile Not Found'}
@@ -66,14 +59,7 @@ const ProfileRedirect = () => {
             profileLink ? `Follow me on ${profile}` : 'Profile Not Found'
           }
         />
-        <meta
-          property="twitter:image"
-          content={
-            profileLink
-              ? 'https://ik.imagekit.io/itsrakesh/Portfolio/profiles__og_8pHrPNnPsNUr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644159089673'
-              : 'https://ik.imagekit.io/itsrakesh/Portfolio/404__og_5VtpVJDVMx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644160421004'
-          }
-        />
+        
       </Helmet>
       <ErrorModal show={show} error={error} />
       <div className="profile-redirect">

@@ -7,6 +7,109 @@
     "projects": "Projets",
     "achievements": "Réalisations"
   },
+  "skills": {
+    "title": "Compétences Techniques",
+    "subtitle": "Expertise dans Plusieurs Domaines",
+    "technicalCompetencies": "Compétences Techniques",
+    "technologiesAndTools": "Technologies & Outils",
+    "categories": {
+      "Entrepreneurship": {
+        "name": "Entrepreneuriat",
+        "description": "Développement de stratégies commerciales et solutions innovantes",
+        "details": [
+          "Planification Stratégique",
+          "Gestion de l'Innovation",
+          "Analyse de Marché",
+          "Développement de Produits"
+        ],
+        "level": "Avancé"
+      },
+      "Innovation R&D": {
+        "name": "Recherche & Innovation",
+        "description": "Pilotage de la recherche et du développement de technologies de pointe",
+        "details": [
+          "Recherche Technologique",
+          "Développement de Prototypes",
+          "Exploration des Technologies Émergentes",
+          "Méthodologie Scientifique"
+        ],
+        "level": "Expert"
+      },
+      "Software Development": {
+        "name": "Développement Logiciel",
+        "description": "Création de solutions logicielles robustes et évolutives",
+        "details": [
+          "Développement Full-Stack",
+          "Ingénierie Backend & Frontend",
+          "Architecture Cloud",
+          "Optimisation des Performances"
+        ],
+        "level": "Expert"
+      },
+      "AI & ML": {
+        "name": "IA & Apprentissage Automatique",
+        "description": "Développement de systèmes intelligents utilisant l'intelligence artificielle et l'apprentissage automatique",
+        "details": [
+          "Algorithmes d'Apprentissage Automatique",
+          "Apprentissage Profond",
+          "Vision par Ordinateur",
+          "Traitement du Langage Naturel"
+        ],
+        "level": "Avancé"
+      },
+      "Communication": {
+        "name": "Communication Stratégique",
+        "description": "Communication efficace de concepts techniques complexes",
+        "details": [
+          "Rédaction Technique",
+          "Compétences en Présentation",
+          "Collaboration Interdisciplinaire",
+          "Transfert de Connaissances"
+        ],
+        "level": "Expert"
+      },
+      "Problem-Solving": {
+        "name": "Résolution Stratégique de Problèmes",
+        "description": "Analyse des défis et développement de solutions innovantes",
+        "details": [
+          "Pensée Analytique",
+          "Décomposition Critique des Problèmes",
+          "Conception de Solutions Créatives",
+          "Approche Systématique"
+        ],
+        "level": "Expert"
+      },
+      "Development": {
+        "name": "Développement Logiciel",
+        "level": "Expert"
+      }
+    },
+    "technologies": {
+      "React.js": "React.js",
+      "Next.js": "Next.js",
+      "TypeScript": "TypeScript",
+      "JavaScript": "JavaScript",
+      "Redux": "Redux",
+      "Tailwind": "Tailwind CSS",
+      "HTML5": "HTML5",
+      "CSS3": "CSS3",
+      "Node.js": "Node.js",
+      "Express": "Express.js",
+      "Django": "Django",
+      "Flask": "Flask",
+      "PHP": "PHP",
+      "Laravel": "Laravel",
+      "MongoDB": "MongoDB",
+      "PostgreSQL": "PostgreSQL",
+      "Firebase": "Firebase",
+      "AWS": "AWS",
+      "Vercel": "Vercel",
+      "Docker": "Docker",
+      "Git": "Git",
+      "Linux": "Linux",
+      "Vite": "Vite"
+    }
+  },
   "projects": {
     "title": "Mes Projets",
     "subtitle": "Voici quelques-uns de mes travaux récents",
@@ -14,7 +117,7 @@
     "viewGithub": "Voir sur GitHub",
     "visitWebsite": "Visiter le Site",
     "technologies": "Technologies Utilisées",
-    "skills": "Compétences Démontrées",
+    "skills": "Compétences",
     "exploreMyWork": "Explorez mes derniers travaux en IA, Apprentissage Automatique, Développement Web et Technologie",
     "relatedTo": "Projets liés à",
     "filters": {
@@ -46,13 +149,86 @@
       "WEB": "Développement Web",
       "MOBILE": "Applications Mobiles",
       "DESKTOP": "Applications Bureau",
-      "IOT": "Internet des Objets"
+      "IOT": "Internet des Objets",
+      "DRONE": "Technologie des Drones"
     },
     "difficulty": {
       "BEGINNER": "Débutant",
       "INTERMEDIATE": "Intermédiaire",
       "ADVANCED": "Avancé",
       "EXPERT": "Expert"
+    },
+    "skillsDetails": {
+      "Entrepreneurship": {
+        "name": "Entrepreneuriat",
+        "description": "Développement de stratégies commerciales et de solutions innovantes",
+        "details": [
+          "Planification Stratégique",
+          "Gestion de l'Innovation",
+          "Analyse de Marché",
+          "Développement de Produits"
+        ],
+        "level": "Avancé"
+      },
+      "Innovation R&D": {
+        "name": "Recherche & Innovation",
+        "description": "Pilotage de la recherche et du développement de technologies de pointe",
+        "details": [
+          "Recherche Technologique",
+          "Développement de Prototypes",
+          "Exploration des Technologies Émergentes",
+          "Méthodologie Scientifique"
+        ],
+        "level": "Expert"
+      },
+      "Software Development": {
+        "name": "Développement Logiciel",
+        "description": "Création de solutions logicielles robustes et évolutives",
+        "details": [
+          "Développement Full-Stack",
+          "Ingénierie Backend & Frontend",
+          "Architecture Cloud",
+          "Optimisation des Performances"
+        ],
+        "level": "Expert"
+      },
+      "AI & ML": {
+        "name": "IA & Apprentissage Automatique",
+        "description": "Développement de systèmes intelligents utilisant l'intelligence artificielle et l'apprentissage automatique",
+        "details": [
+          "Algorithmes d'Apprentissage Automatique",
+          "Apprentissage Profond",
+          "Vision par Ordinateur",
+          "Traitement du Langage Naturel"
+        ],
+        "level": "Avancé"
+      },
+      "Communication": {
+        "name": "Communication Stratégique",
+        "description": "Communication efficace de concepts techniques complexes",
+        "details": [
+          "Rédaction Technique",
+          "Compétences en Présentation",
+          "Collaboration Interdisciplinaire",
+          "Transfert de Connaissances"
+        ],
+        "level": "Expert"
+      },
+      "Problem-Solving": {
+        "name": "Résolution Stratégique de Problèmes",
+        "description": "Analyse des défis et développement de solutions innovantes",
+        "details": [
+          "Pensée Analytique",
+          "Décomposition Critique des Problèmes",
+          "Conception de Solutions Créatives",
+          "Approche Systématique"
+        ],
+        "level": "Expert"
+      },
+      "Development": {
+        "name": "Développement Logiciel",
+        "level": "Expert"
+      }
     },
     "projectsList": {
       "1": {
@@ -65,7 +241,7 @@
       "2": {
         "title": "Détection des Dommages d'Aéronefs",
         "category": "Vision par Ordinateur",
-        "shortDescription": "Système IA basé sur YOLOv8 pour l'évaluation des dommages d'aéronefs",
+        "shortDescription": "Système IA basé sur YOLOv8 pour l'évaluation des dommages d'aéronef",
         "fullDescription": "Implémentation d'un modèle de détection d'objets de pointe utilisant YOLOv8 pour identifier et classifier automatiquement les dommages sur la surface des aéronefs. Le système fournit une localisation précise et une évaluation de la gravité des imperfections structurelles, réduisant le temps d'inspection manuelle et améliorant l'efficacité de la maintenance.",
         "role": "Développeur Principal & Ingénieur IA"
       },
@@ -184,9 +360,9 @@
         "role": "Développeur de Sécurité & Concepteur d'Outils"
       },
       "11": {
-        "title": "Solveur de Puzzles Takuzu",
+        "title": "Solveur de Puzzle Takuzu",
         "category": "Logique et Algorithmes",
-        "shortDescription": "Application de résolution de puzzles Takuzu (Binairo)",
+        "shortDescription": "Application de résolution de puzzle Takuzu (Binairo)",
         "fullDescription": "Un solveur de puzzles intelligent qui utilise des algorithmes avancés pour résoudre des grilles Takuzu (également connu sous le nom de Binairo). L'application offre des fonctionnalités de génération de puzzles, de vérification et de résolution automatique, démontrant des techniques sophistiquées de résolution de problèmes logiques.",
         "role": "Développeur Logique & Concepteur d'Algorithmes"
       },
@@ -217,6 +393,81 @@
         "shortDescription": "Tableau de bord commercial alimenté par l'IA",
         "fullDescription": "Une plateforme moderne et intelligente de gestion des ventes qui exploite l'IA pour améliorer les opérations commerciales, l'analytique et les processus de prise de décision. La plateforme intègre des technologies d'IA avancées pour fournir des perspectives commerciales complètes.",
         "role": "Développeur IA & Architecte de Plateforme"
+      },
+      "aiguardiandrone": {
+        "title": "Drone Gardien IA",
+        "shortDescription": "Drone avancé alimenté par IA pour les opérations de recherche et sauvetage",
+        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+      },
+      "aircraftdamagedetection": {
+        "title": "Détection de Dommages d'Aéronef",
+        "shortDescription": "Système IA basé sur YOLOv8 pour l'évaluation des dommages d'aéronef",
+        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+      },
+      "aquacareiotsystem": {
+        "title": "Système IoT AquaCare",
+        "shortDescription": "Plateforme intelligente de surveillance et de prédiction de la qualité de l'eau",
+        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+      },
+      "aidiagnosticassistant": {
+        "title": "Assistant de Diagnostic IA",
+        "shortDescription": "Système de support de diagnostic médical alimenté par apprentissage automatique",
+        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+      },
+      "laravelstudentsmanagementsystem": {
+        "title": "Système de Gestion des Étudiants Laravel",
+        "shortDescription": "Application web complète de gestion des notes et modules d'étudiants",
+        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+      },
+      "real-timeobjectdetection": {
+        "title": "Détection d'Objets en Temps Réel",
+        "shortDescription": "Détection d'objets en temps réel utilisant OpenCV et SSD MobileNet",
+        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+      },
+      "e-sportmanagementapp": {
+        "title": "E-Sporter : Application de Gestion E-Sport",
+        "shortDescription": "Application complète de gestion de tournois d'esports pour League of Legends",
+        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+      },
+      "graphalgorithms": {
+        "title": "Algorithmes de Graphes",
+        "shortDescription": "Exploration approfondie des algorithmes de plus court chemin dans les graphes pondérés",
+        "skills": ["Développement", "Résolution de Problèmes", "Communication"]
+      },
+      "medicalclinicmanagementapp": {
+        "title": "Application de Gestion de Clinique Médicale",
+        "shortDescription": "Application web complète de gestion de pratique médicale avec architecture MVC",
+        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+      },
+      "caesarcipherencryptiontool": {
+        "title": "Outil de Chiffrement César",
+        "shortDescription": "Application de chiffrement et déchiffrement de messages basée sur console",
+        "skills": ["Développement", "Résolution de Problèmes", "Communication"]
+      },
+      "takuzupuzzlesolver": {
+        "title": "Solveur de Puzzle Takuzu",
+        "shortDescription": "Application de résolution de puzzle Takuzu (Binairo) intelligente",
+        "skills": ["Développement", "Résolution de Problèmes", "Communication"]
+      },
+      "tomatoe-commerceapplication": {
+        "title": "Application E-Commerce de Tomates Java",
+        "shortDescription": "Application de bureau de gestion des ventes et des stocks de produits",
+        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+      },
+      "onlineshopproductsapi": {
+        "title": "API de Produits de Boutique en Ligne",
+        "shortDescription": "API RESTful pour la gestion et la récupération d'informations de produits",
+        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+      },
+      "springbootblogapplication": {
+        "title": "Application de Blog Spring Boot",
+        "shortDescription": "Plateforme de blog sécurisée avec authentification utilisateur et gestion de contenu",
+        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+      },
+      "mantiqaisalesplatform": {
+        "title": "Plateforme de Ventes Mantiq IA",
+        "shortDescription": "Plateforme avancée d'analytique et de visualisation des ventes utilisant React et IA",
+        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
       }
     }
   },
@@ -267,8 +518,8 @@
         "starDrones": {
           "title": "Spécialiste en IA et Technologie de Drone",
           "organization": "Star Drones",
-          "duration": "Janv. 2022 - Présent",
-          "location": "Télétravail, Global",
+          "duration": "Avril 2024 - Aout 2024",
+          "location": "On-Site, Masqat, Oman",
           "description": "Pilotage de projets innovants d'IA et de technologie de drone, développement d'algorithmes d'apprentissage automatique avancés pour la navigation autonome de drones et le traitement intelligent des données.",
           "tags": ["IA", "Apprentissage Automatique", "Technologie de Drone", "Vision par Ordinateur"]
         },
@@ -276,7 +527,7 @@
           "title": "Développeur Logiciel",
           "organization": "Rent-Way",
           "duration": "Oct. 2023 - Juin 2024",
-          "location": "Sohar, Gouvernorat du Nord d'Al Batinah, Oman",
+          "location": "Sohar, Oman",
           "description": "Conception et mise en œuvre d'applications web évolutives, améliorant l'efficacité de la plateforme et l'expérience utilisateur grâce à des technologies modernes.",
           "tags": ["Contrat", "Développement Web", "Full-Stack"]
         },
@@ -443,28 +694,29 @@
       "description": "Choisissez un moment qui vous convient pour discuter de votre projet"
     },
     "form": {
-      "name": "Nom",
-      "email": "Email",
-      "subject": "Sujet",
-      "message": "Message",
-      "send": "Envoyer",
-      "sending": "Envoi en cours...",
-      "namePlaceholder": "Votre nom",
-      "emailPlaceholder": "Votre adresse email",
-      "subjectPlaceholder": "À propos de quoi ?",
-      "messagePlaceholder": "Partagez vos pensées, idées ou détails du projet...",
-      "success": "Message envoyé avec succès !",
-      "successMessage": "Merci de m'avoir contacté ! Je vous répondrai bientôt.",
-      "error": "Erreur lors de l'envoi. Veuillez réessayer.",
-      "close": "Fermer",
-      "nameError": "Le nom complet est requis",
+      "name": "Nom Complet",
+      "namePlaceholder": "Entrez votre nom complet",
+      "nameError": "Le nom est requis",
       "nameLengthError": "Le nom doit comporter au moins 2 caractères",
-      "emailError": "L'adresse email est requise",
+      "email": "Adresse Email",
+      "emailPlaceholder": "Entrez votre adresse email",
+      "emailError": "L'email est requis",
       "emailInvalidError": "Veuillez entrer une adresse email valide",
-      "subjectError": "Le sujet du message est requis",
-      "subjectLengthError": "Le sujet doit comporter au moins 5 caractères",
-      "messageError": "Le contenu du message est requis",
-      "messageLengthError": "Le message doit comporter au moins 10 caractères"
+      "subject": "Objet du Message",
+      "subjectPlaceholder": "Entrez l'objet de votre message",
+      "subjectError": "L'objet est requis",
+      "subjectLengthError": "L'objet doit comporter au moins 5 caractères",
+      "message": "Votre Message",
+      "messagePlaceholder": "Écrivez votre message ici...",
+      "messageError": "Le message est requis",
+      "messageLengthError": "Le message doit comporter au moins 10 caractères",
+      "send": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "close": "Fermer",
+      "successTitle": "Message Envoyé Avec Succès",
+      "successMessage": "Merci pour votre message. Je vous répondrai bientôt !",
+      "error": "Échec de l'envoi du message. Veuillez réessayer plus tard.",
+      "errorMessage": "Échec de l'envoi du message. Veuillez réessayer plus tard."
     }
   },
   "footer": {

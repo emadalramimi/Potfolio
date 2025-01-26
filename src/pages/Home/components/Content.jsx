@@ -735,35 +735,6 @@ const Content = () => {
                 </motion.div>
               </AnimatePresence>
             </TimelineContainer>
-            
-            {/* Explore More Link */}
-            <div style={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              marginTop: theme.spacing.lg 
-            }}>
-              <Badge 
-                onClick={() => {
-                  // Add navigation logic or modal for more details
-                  activeSection === 'experience' 
-                    ? navigate('/experience') 
-                    : navigate('/education')
-                }}
-                style={{ 
-                  background: theme.colors.gradient,
-                  color: 'white',
-                  cursor: 'pointer',
-                  padding: '10px 20px',
-                  borderRadius: '25px'
-                }}
-              >
-                <FaEye style={{ marginRight: '10px' }} />
-                {activeSection === 'experience' 
-                  ? t('home.experience.exploreMore') 
-                  : t('home.education.exploreMore')
-                }
-              </Badge>
-            </div>
           </Container>
         </SectionWrapper>
         <PersonalIntroSection />

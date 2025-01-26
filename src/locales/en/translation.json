@@ -7,6 +7,249 @@
     "projects": "Projects",
     "achievements": "Achievements"
   },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Expertise Across Multiple Domains",
+    "technicalCompetencies": "Technical Skills",
+    "technologiesAndTools": "Technologies & Tools",
+    "categories": {
+      "Entrepreneurship": {
+        "name": "Entrepreneurship",
+        "description": "Developing innovative business strategies and solutions",
+        "level": "Advanced",
+        "details": [
+          "Strategic Business Planning",
+          "Innovation Management",
+          "Market Analysis",
+          "Product Development"
+        ]
+      },
+      "Innovation R&D": {
+        "name": "Innovation R&D",
+        "description": "Driving research and development of cutting-edge technologies",
+        "level": "Expert",
+        "details": [
+          "Technology Research",
+          "Prototype Development",
+          "Emerging Technology Exploration",
+          "Scientific Methodology"
+        ]
+      },
+      "Development": {
+        "name": "Software Development",
+        "description": "Creating robust and scalable software solutions",
+        "level": "Expert",
+        "details": [
+          "Full-Stack Development",
+          "Backend & Frontend Engineering",
+          "Cloud Architecture",
+          "Performance Optimization"
+        ]
+      },
+      "AI & ML": {
+        "name": "AI & Machine Learning",
+        "description": "Developing intelligent systems using artificial intelligence and machine learning",
+        "level": "Advanced",
+        "details": [
+          "Machine Learning Algorithms",
+          "Deep Learning",
+          "Computer Vision",
+          "Natural Language Processing"
+        ]
+      },
+      "Communication": {
+        "name": "Technical Communication",
+        "description": "Effectively communicating complex technical concepts",
+        "level": "Expert",
+        "details": [
+          "Technical Writing",
+          "Presentation Skills",
+          "Cross-Functional Collaboration",
+          "Knowledge Transfer"
+        ]
+      },
+      "Problem-Solving": {
+        "name": "Strategic Problem-Solving",
+        "description": "Analyzing challenges and developing innovative solutions",
+        "level": "Expert",
+        "details": [
+          "Analytical Thinking",
+          "Critical Problem Decomposition",
+          "Creative Solution Design",
+          "Systematic Approach"
+        ]
+      }
+    }
+  },
+  "home": {
+    "title": "Hi, I'm Your Name",
+    "subtitle": "Full Stack Developer",
+    "greeting": "Hello, I'm",
+    "name": "Emad Al Ramimi",
+    "roles": {
+      "aiDeveloper": "AI Developer",
+      "mlSpecialist": "Machine Learning Specialist", 
+      "webDeveloper": "Web Developer",
+      "droneTech": "Drone Technology Expert"
+    },
+    "description": "Innovating at the intersection of AI, Machine Learning, and Technology",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me",
+    "socialLinks": {
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile", 
+      "twitter": "Twitter Profile",
+      "email": "Send Email"
+    },
+    "statistics": {
+      "title": "Professional Highlights",
+      "projects": {
+        "label": "Innovative Projects",
+        "description": "Cutting-edge solutions spanning web, mobile, and emerging technologies"
+      },
+      "achievements": {
+        "label": "Professional Achievements",
+        "description": "Awards recognizing innovation, leadership, and technical excellence"
+      },
+      "experience": {
+        "label": "Professional Experience",
+        "description": "Years of transformative work in tech innovation and software engineering"
+      }
+    },
+    "personalIntro": {
+      "title": "Let's Create Something Extraordinary",
+      "description": "I'm a passionate technologist who thrives on transforming complex challenges into elegant, innovative solutions. With a blend of technical expertise and creative problem-solving, I'm always eager to collaborate on projects that push the boundaries of what's possible.",
+      "contactButton": "Get In Touch"
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "badge": "Experience",
+      "details": {
+        "starDrones": {
+          "title": "AI & Drone Technology Specialist",
+          "organization": "Star Drones",
+          "duration": "Apr 2024 - Aug 2024",
+          "location": "On-Site, Muscat, Oman",
+          "description": "Leading innovative AI and drone technology projects, developing advanced machine learning algorithms for autonomous drone navigation and intelligent data processing.",
+          "tags": ["AI", "Machine Learning", "Drone Technology", "Computer Vision"]
+        },
+        "rentWay": {
+          "title": "Software Developer",
+          "organization": "Rent-Way",
+          "duration": "Oct 2023 - Jun 2024",
+          "location": "Sohar, Oman",
+          "description": "Designed and implemented scalable web applications, improving platform efficiency and user experience through modern technologies.",
+          "tags": ["Contract", "Web Development", "Full-Stack"]
+        },
+        "matterz": {
+          "title": "Innovation Specialist",
+          "organization": "Matterz",
+          "duration": "Jul 2023 - Nov 2023",
+          "location": "Muscat, Oman",
+          "description": "Guided and mentored emerging innovators, creating collaborative environments that foster creativity, critical thinking, and technical skill development.",
+          "tags": ["Innovation", "Facilitation", "Skill Development"]
+        }
+      },
+      "exploreMore": "Explore More Experiences"
+    },
+    "education": {
+      "title": "Educational Journey",
+      "badge": "Education",
+      "details": {
+        "toulouse": {
+          "title": "Bachelor of Technology in Computer Science",
+          "organization": "University of Toulouse",
+          "duration": "Sep 2022 - Jun 2025",
+          "location": "Toulouse, France",
+          "description": "Comprehensive program focusing on advanced software design, development methodologies, teamwork, and cutting-edge technological skills.",
+          "tags": ["Application Development", "Software Engineering"]
+        },
+        "lorraine": {
+          "title": "University Diploma in Scientific & Tech Training",
+          "organization": "University of Lorraine",
+          "duration": "Dec 2020 - Jun 2022",
+          "location": "Nancy, France",
+          "description": "Interdisciplinary program combining French language studies with scientific and technological training, developing a holistic approach to learning.",
+          "tags": ["French Language", "Sciences"]
+        }
+      },
+      "exploreMore": "Explore Academic Journey"
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "subtitle": "Expertise Across Multiple Domains",
+      "technicalCompetencies": "Technical Skills",
+      "technologiesAndTools": "Technologies & Tools",
+      "categories": {
+        "Entrepreneurship": {
+          "name": "Entrepreneurship",
+          "description": "Developing innovative business strategies and solutions",
+          "level": "Advanced",
+          "details": [
+            "Strategic Business Planning",
+            "Innovation Management",
+            "Market Analysis",
+            "Product Development"
+          ]
+        },
+        "Innovation R&D": {
+          "name": "Innovation R&D",
+          "description": "Driving research and development of cutting-edge technologies",
+          "level": "Expert",
+          "details": [
+            "Technology Research",
+            "Prototype Development",
+            "Emerging Technology Exploration",
+            "Scientific Methodology"
+          ]
+        },
+        "Development": {
+          "name": "Software Development",
+          "description": "Creating robust and scalable software solutions",
+          "level": "Expert",
+          "details": [
+            "Full-Stack Development",
+            "Backend & Frontend Engineering",
+            "Cloud Architecture",
+            "Performance Optimization"
+          ]
+        },
+        "AI & ML": {
+          "name": "AI & Machine Learning",
+          "description": "Developing intelligent systems using artificial intelligence and machine learning",
+          "level": "Advanced",
+          "details": [
+            "Machine Learning Algorithms",
+            "Deep Learning",
+            "Computer Vision",
+            "Natural Language Processing"
+          ]
+        },
+        "Communication": {
+          "name": "Technical Communication",
+          "description": "Effectively communicating complex technical concepts",
+          "level": "Expert",
+          "details": [
+            "Technical Writing",
+            "Presentation Skills",
+            "Cross-Functional Collaboration",
+            "Knowledge Transfer"
+          ]
+        },
+        "Problem-Solving": {
+          "name": "Strategic Problem-Solving",
+          "description": "Analyzing challenges and developing innovative solutions",
+          "level": "Expert",
+          "details": [
+            "Analytical Thinking",
+            "Critical Problem Decomposition",
+            "Creative Solution Design",
+            "Systematic Approach"
+          ]
+        }
+      }
+    }
+  },
   "projects": {
     "title": "My Projects",
     "subtitle": "Here are some of my recent works",
@@ -17,6 +260,79 @@
     "skills": "Skills Demonstrated",
     "exploreMyWork": "Explore my latest work in AI, Machine Learning, Web Development, and Technology",
     "relatedTo": "Projects related to",
+    "aiguardiandrone": {
+      "title": "AI Guardian Drone",
+      "shortDescription": "Advanced AI-powered drone for search and rescue operations"
+    },
+    "aircraftdamagedetection": {
+      "title": "Aircraft Damage Detection",
+      "shortDescription": "YOLOv8-based AI system for aircraft damage assessment"
+    },
+    "aquacareiotsystem": {
+      "title": "AquaCare IoT System",
+      "shortDescription": "Smart water quality monitoring and prediction platform"
+    },
+    "aidiagnosticassistant": {
+      "title": "AI Diagnostic Assistant",
+      "shortDescription": "Machine learning-powered medical diagnosis support system"
+    },
+    "laravelstudentsmanagementsystem": {
+      "title": "Laravel Students Management System",
+      "shortDescription": "Comprehensive student notes and modules management web application"
+    },
+    "real-timeobjectdetection": {
+      "title": "Real-Time Object Detection",
+      "shortDescription": "Real-time object detection using OpenCV and SSD MobileNet"
+    },
+    "e-sportmanagementapp": {
+      "title": "E-Sporter: E-Sport Management App",
+      "skills": ["Development", "Communication", "Problem-Solving"],
+      "shortDescription": "Comprehensive esports tournament management application for League of Legends"
+    },
+    "graphalgorithms": {
+      "title": "Graph Algorithms",
+      "shortDescription": "Comprehensive exploration of shortest path algorithms in weighted graphs"
+    },
+    "medicalclinicmanagementapp": {
+      "title": "Medical Clinic Management App",
+      "shortDescription": "Comprehensive medical practice management application with MVC architecture"
+    },
+    "caesarcipherencryptiontool": {
+      "title": "Caesar Cipher Encryption Tool",
+      "shortDescription": "Console-based message encryption and decryption application"
+    },
+    "takuzupuzzlesolver": {
+      "title": "Takuzu Puzzle Solver",
+      "shortDescription": "Intelligent Takuzu (Binairo) puzzle solving application"
+    },
+    "tomatoe-commerceapplication": {
+      "title": "Tomato E-Commerce Java Application",
+      "shortDescription": "Desktop e-commerce application for managing product sales and inventory"
+    },
+    "onlineshopproductsapi": {
+      "title": "Online Shop Products API",
+      "shortDescription": "RESTful API for managing and retrieving online shop product information"
+    },
+    "springbootblogapplication": {
+      "title": "Spring Boot Blog Application",
+      "shortDescription": "Secure blog platform with user authentication and content management"
+    },
+    "mantiqaisalesplatform": {
+      "title": "Mantiq AI Sales Platform",
+      "shortDescription": "Advanced sales analytics and visualization platform using React and AI"
+    },
+    "real-timeobjectdetection": {
+      "title": "Real-Time Object Detection",
+      "shortDescription": "Real-time object detection using OpenCV and SSD MobileNet"
+    },
+    "e-sportmanagementapp": {
+      "title": "E-Sporter: E-Sport Management App",
+      "shortDescription": "Comprehensive esports tournament management application"
+    },
+    "tomatoe-commerceapplication": {
+      "title": "Tomato E-Commerce Java Application",
+      "shortDescription": "Desktop e-commerce application for managing product sales and inventory"
+    },
     "filters": {
       "all": "All",
       "web": "Web",
@@ -104,101 +420,107 @@
         "Responsive and Adaptive Design",
         "Scalable AI Integration Framework"
       ]
-    }
-  },
-  "home": {
-    "title": "Hi, I'm Your Name",
-    "subtitle": "Full Stack Developer",
-    "greeting": "Hello, I'm",
-    "name": "Emad Al Ramimi",
-    "roles": {
-      "aiDeveloper": "AI Developer",
-      "mlSpecialist": "Machine Learning Specialist", 
-      "webDeveloper": "Web Developer",
-      "droneTech": "Drone Technology Expert"
     },
-    "description": "Innovating at the intersection of AI, Machine Learning, and Technology",
-    "downloadCV": "Download CV",
-    "contactMe": "Contact Me",
-    "socialLinks": {
-      "github": "GitHub Profile",
-      "linkedin": "LinkedIn Profile", 
-      "twitter": "Twitter Profile",
-      "email": "Send Email"
+    "categories": {
+      "DRONE": "Drone Technology",
+      "WEB": "Web Development",
+      "MOBILE": "Mobile Applications",
+      "DESKTOP": "Desktop Applications",
+      "AI": "Artificial Intelligence"
     },
-    "statistics": {
-      "title": "Professional Highlights",
-      "projects": {
-        "label": "Innovative Projects",
-        "description": "Cutting-edge solutions spanning web, mobile, and emerging technologies"
+    "skillsDetails": {
+      "Development": {
+        "name": "Software Development"
       },
-      "achievements": {
-        "label": "Professional Achievements",
-        "description": "Awards recognizing innovation, leadership, and technical excellence"
+      "AI & ML": {
+        "name": "AI & Machine Learning"
       },
-      "experience": {
-        "label": "Professional Experience",
-        "description": "Years of transformative work in tech innovation and software engineering"
+      "Problem-Solving": {
+        "name": "Strategic Problem-Solving"
+      },
+      "Communication": {
+        "name": "Strategic Communication"
+      },
+      "Innovation R&D": {
+        "name": "Research & Innovation"
       }
     },
-    "personalIntro": {
-      "title": "Let's Create Something Extraordinary",
-      "description": "I'm a passionate technologist who thrives on transforming complex challenges into elegant, innovative solutions. With a blend of technical expertise and creative problem-solving, I'm always eager to collaborate on projects that push the boundaries of what's possible.",
-      "contactButton": "Get In Touch"
-    },
-    "experience": {
-      "title": "Professional Experience",
-      "badge": "Experience",
-      "details": {
-        "starDrones": {
-          "title": "AI & Drone Technology Specialist",
-          "organization": "Star Drones",
-          "duration": "Jan 2022 - Present",
-          "location": "Remote, Global",
-          "description": "Leading innovative AI and drone technology projects, developing advanced machine learning algorithms for autonomous drone navigation and intelligent data processing.",
-          "tags": ["AI", "Machine Learning", "Drone Technology", "Computer Vision"]
-        },
-        "rentWay": {
-          "title": "Software Developer",
-          "organization": "Rent-Way",
-          "duration": "Oct 2023 - Jun 2024",
-          "location": "Sohar, Al Batinah North Governorate, Oman",
-          "description": "Designed and implemented scalable web applications, improving platform efficiency and user experience through modern technologies.",
-          "tags": ["Contract", "Web Development", "Full-Stack"]
-        },
-        "matterz": {
-          "title": "Innovation Specialist",
-          "organization": "Matterz",
-          "duration": "Jul 2023 - Nov 2023",
-          "location": "Masqaţ, Oman",
-          "description": "Guided and mentored emerging innovators, creating collaborative environments that foster creativity, critical thinking, and technical skill development.",
-          "tags": ["Innovation", "Facilitation", "Skill Development"]
-        }
+    "projectsList": {
+      "1": {
+        "title": "AI Guardian Drone",
+        "shortDescription": "Advanced AI-powered drone for search and rescue operations",
+        "fullDescription": "An intelligent drone system utilizing computer vision and machine learning algorithms to enhance search and rescue capabilities. The project integrates real-time object detection, thermal imaging, and path optimization to improve emergency intervention efficiency."
       },
-      "exploreMore": "Explore More Experiences"
-    },
-    "education": {
-      "title": "Educational Journey",
-      "badge": "Education",
-      "details": {
-        "toulouse": {
-          "title": "Bachelor of Technology in Computer Science",
-          "organization": "University of Toulouse",
-          "duration": "Sep 2022 - Jun 2025",
-          "location": "Toulouse, France",
-          "description": "Comprehensive program focusing on advanced software design, development methodologies, teamwork, and cutting-edge technological skills.",
-          "tags": ["Application Development", "Software Engineering"]
-        },
-        "lorraine": {
-          "title": "University Diploma in Scientific & Tech Training",
-          "organization": "University of Lorraine",
-          "duration": "Dec 2020 - Jun 2022",
-          "location": "Nancy, France",
-          "description": "Interdisciplinary program combining French language studies with scientific and technological training, developing a holistic approach to learning.",
-          "tags": ["French Language", "Sciences"]
-        }
+      "2": {
+        "title": "Aircraft Damage Detection",
+        "shortDescription": "YOLOv8-based AI system for aircraft damage assessment",
+        "fullDescription": "Implemented a state-of-the-art object detection model using YOLOv8 to automatically identify and classify aircraft surface damages. The system provides precise localization and severity assessment of structural imperfections, reducing manual inspection time and improving maintenance efficiency."
       },
-      "exploreMore": "Explore Academic Journey"
+      "3": {
+        "title": "AquaCare IoT System",
+        "shortDescription": "Smart water quality monitoring and prediction platform",
+        "fullDescription": "Created an IoT-based water quality monitoring system that uses machine learning algorithms to predict water contamination levels. The project integrates sensor data, real-time analytics, and predictive modeling to provide early warnings and comprehensive water health insights."
+      },
+      "4": {
+        "title": "AI Diagnostic Assistant",
+        "shortDescription": "Machine learning-powered medical diagnosis support system",
+        "fullDescription": "Developed an AI-powered diagnostic assistant that helps healthcare professionals in making accurate diagnoses. The system analyzes patient symptoms, medical history, and test results using advanced machine learning algorithms to suggest potential diagnoses and treatment plans."
+      },
+      "5": {
+        "title": "Laravel Students Management System",
+        "shortDescription": "Comprehensive student notes and modules management web application",
+        "fullDescription": "A robust Laravel-based web application designed for educational institutions to manage student information, modules, and grades. Features include user authentication, role-based access control, student and module management, and grade tracking. The system provides a clean, intuitive interface for administrators, teachers, and students."
+      },
+      "6": {
+        "title": "Real-Time Object Detection",
+        "shortDescription": "Real-time object detection using OpenCV and SSD MobileNet",
+        "fullDescription": "Implemented a comprehensive object detection system using OpenCV and machine learning techniques. The project demonstrates advanced computer vision skills, including image processing, feature extraction, and real-time object recognition across various scenarios."
+      },
+      "7": {
+        "title": "E-Sporter: E-Sport Management App",
+        "shortDescription": "Comprehensive esports tournament management application",
+        "fullDescription": "A sophisticated desktop application for managing esports tournaments, team performance, and player statistics. The app provides tools for tournament organization, match scheduling, team management, and performance analytics."
+      },
+      "8": {
+        "title": "Graph Algorithms",
+        "shortDescription": "Comprehensive exploration of shortest path algorithms in weighted graphs",
+        "fullDescription": "A comprehensive project demonstrating implementation of Dijkstra and Bellman-Ford shortest path algorithms. The project includes algorithm visualization, performance analysis, and practical applications in network routing and path finding."
+      },
+      "9": {
+        "title": "Medical Clinic Management App",
+        "shortDescription": "Comprehensive medical practice management application with MVC architecture",
+        "fullDescription": "A comprehensive web application for medical clinics to manage patient records, appointments, medical histories, and administrative tasks. The system provides secure, efficient, and user-friendly solutions for healthcare management."
+      },
+      "10": {
+        "title": "Caesar Cipher Encryption Tool",
+        "shortDescription": "Console-based message encryption and decryption application",
+        "fullDescription": "A cryptography project implementing secure message encryption techniques. The application demonstrates advanced encryption algorithms, secure communication principles, and practical cryptographic techniques."
+      },
+      "11": {
+        "title": "Takuzu Puzzle Solver",
+        "shortDescription": "Intelligent Takuzu (Binairo) puzzle solving application",
+        "fullDescription": "An advanced puzzle-solving application that uses sophisticated algorithms to solve Takuzu (Binairo) puzzles. The project demonstrates logical reasoning, constraint satisfaction, and algorithmic problem-solving techniques."
+      },
+      "12": {
+        "title": "Tomato E-Commerce Java Application",
+        "shortDescription": "Desktop e-commerce application for managing product sales and inventory",
+        "fullDescription": "A comprehensive Java-based e-commerce application specializing in tomato products. The platform includes features like product catalog, shopping cart, user authentication, and order management."
+      },
+      "13": {
+        "title": "Online Shop Products API",
+        "shortDescription": "RESTful API for managing and retrieving online shop product information",
+        "fullDescription": "A robust RESTful API designed for managing online product catalogs, supporting e-commerce platforms with efficient product information retrieval, creation, and management."
+      },
+      "14": {
+        "title": "Spring Boot Blog Application",
+        "shortDescription": "Secure blog platform with user authentication and content management",
+        "fullDescription": "A comprehensive Spring Boot web application demonstrating modern security practices and user management. Features include secure JWT authentication, role-based access control, and a clean RESTful API architecture."
+      },
+      "15": {
+        "title": "Mantiq AI Sales Platform",
+        "shortDescription": "Advanced sales analytics and visualization platform using React and AI",
+        "fullDescription": "An intelligent sales platform leveraging AI technologies to provide comprehensive sales insights, automate workflows, and optimize business performance through advanced data visualization and predictive analytics."
+      }
     }
   },
   "contact": {
@@ -211,28 +533,28 @@
       "description": "Choose a convenient time for us to discuss your project"
     },
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "subject": "Subject",
-      "message": "Message",
+      "errorMessage": "Failed to send message. Please try again later.",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "nameError": "Name is required",
+      "nameLengthError": "Name must be at least 2 characters long",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "emailError": "Email is required",
+      "emailInvalidError": "Please enter a valid email address",
+      "subject": "Message Subject",
+      "subjectPlaceholder": "Enter the subject of your message",
+      "subjectError": "Subject is required",
+      "subjectLengthError": "Subject must be at least 5 characters long",
+      "message": "Your Message",
+      "messagePlaceholder": "Write your message here...",
+      "messageError": "Message is required",
+      "messageLengthError": "Message must be at least 10 characters long",
       "send": "Send Message",
       "sending": "Sending...",
-      "namePlaceholder": "Your name",
-      "emailPlaceholder": "Your email address",
-      "subjectPlaceholder": "What's your message about?",
-      "messagePlaceholder": "Share your thoughts, ideas, or project details...",
-      "success": "Message sent successfully!",
-      "successMessage": "Thank you for reaching out! I'll get back to you soon.",
-      "error": "Error sending message. Please try again.",
       "close": "Close",
-      "nameError": "Full name is required",
-      "nameLengthError": "Name must be at least 2 characters",
-      "emailError": "Email address is required",
-      "emailInvalidError": "Please enter a valid email address",
-      "subjectError": "Message subject is required",
-      "subjectLengthError": "Subject must be at least 5 characters",
-      "messageError": "Message content is required",
-      "messageLengthError": "Message must be at least 10 characters"
+      "successTitle": "Message Sent Successfully",
+      "successMessage": "Thank you for your message. I'll get back to you soon!"
     }
   },
   "achievements": {

@@ -1,59 +1,37 @@
 import React, { useState, useContext } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './SkillsGrid.scss';
 
 // Create a context for skill filtering
 export const SkillFilterContext = React.createContext();
 
-const skillCategories = [
-  {
-    title: "Réaliser",
-    color: "#A52A2A",
-    lightColor: "#FFC5C5",
-    textColor: "white",
-    description: "Adapter des applications sur un ensemble de supports (embarqué, web, mobile, IoT...)",
-    level: "Niveau 3"
+const skillCategories = {
+  "Entrepreneurship": {
+    color: "#8B5CF6", // Matching the image's purple
+    icon: "💡"
   },
-  {
-    title: "Optimiser",
-    color: "#DEB887",
-    lightColor: "#F5F5DC",
-    textColor: "black",
-    description: "Analyser et optimiser des applications",
-    level: "Niveau 3"
+  "Innovation R&D": {
+    color: "#EC4899", // Matching the image's pink
+    icon: "🔬"
   },
-  {
-    title: "Administrer",
-    color: "#DAA520",
-    lightColor: "#FFF2CC",
-    textColor: "white",
-    description: "Déployer des services dans une architecture réseau",
-    level: "Niveau 2"
+  "Development": {
+    color: "#3B82F6", // Matching the image's blue
+    icon: "💻"
   },
-  {
-    title: "Gérer",
-    color: "#90EE90",
-    lightColor: "#C6F4D6",
-    textColor: "black",
-    description: "Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité",
-    level: "Niveau 2"
+  "AI & ML": {
+    color: "#84CC16", // Matching the image's green
+    icon: "🤖"
   },
-  {
-    title: "Conduire",
-    color: "#000080",
-    lightColor: "#ADD8E6",
-    textColor: "white",
-    description: "Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs",
-    level: "Niveau 2"
+  "Communication": {
+    color: "#F59E0B", // Matching the image's orange/yellow
+    icon: "🗣️"
   },
-  {
-    title: "Collaborer",
-    color: "#000000",
-    lightColor: "#CCCCCC",
-    textColor: "white",
-    description: "Manager une équipe informatique",
-    level: "Niveau 3"
+  "Problem-Solving": {
+    color: "#7C3AED", // Matching the image's purple
+    icon: "🎯"
   }
-];
+};
 
 // Skill Filter Provider Component
 export const SkillFilterProvider = ({ children }) => {
@@ -67,41 +45,72 @@ export const SkillFilterProvider = ({ children }) => {
 };
 
 const SkillsGrid = () => {
+  const { t } = useTranslation();
   const { activeSkill, setActiveSkill } = useContext(SkillFilterContext);
 
+  const handleSkillClick = (skill) => {
+    setActiveSkill(activeSkill === skill ? null : skill);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <div className="skills-grid">
-      {skillCategories.map((category, index) => (
-        <div 
-          key={index} 
-          className={`category-column ${activeSkill === index ? 'active-skill' : ''}`}
-          onClick={() => setActiveSkill(activeSkill === index ? null : index)}
+    <motion.div 
+      className="skills-grid"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      {Object.entries(skillCategories).map(([category, { color, icon }]) => (
+        <motion.div
+          key={category}
+          className={`skill-card ${activeSkill === category ? 'active' : ''}`}
+          variants={itemVariants}
+          whileHover={{ 
+            y: -5,
+            transition: { duration: 0.2 }
+          }}
+          onClick={() => handleSkillClick(category)}
           style={{
-            '--bg-color': category.lightColor,
-            '--text-color': category.textColor,
-            '--bg-secondary': 'rgba(255, 255, 255, 0.2)',
-            '--bg-hover': 'rgba(255, 255, 255, 0.3)'
+            backgroundColor: color
           }}
         >
-          <div 
-            className="category-header" 
-            style={{ 
-              backgroundColor: category.color,
-              color: category.textColor 
-            }}
-          >
-            {category.title}
-          </div>
-          <div className="level-box">
-            <h3 style={{ color: category.textColor }}>{category.level}</h3>
-            <p style={{ color: 'black' }}>{category.description}</p>
-            <div className="skills-list">
-              {/* Add skill tags if needed */}
+          <div className="skill-content">
+            <div className="skill-icon">{icon}</div>
+            <div className="skill-text">
+              <h3>{t(`skills.categories.${category}.name`)}</h3>
+              <div className="skill-level">
+                <span className="level-badge">
+                  {t(`skills.categories.${category}.level`)}
+                </span>
+              </div>
+              <p>{t(`skills.categories.${category}.description`)}</p>
             </div>
           </div>
-        </div>
+          <div className="skill-overlay"></div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

@@ -28,7 +28,8 @@ export const projectCategories = {
   WEB: { icon: FaGlobe, color: "#4ECDC4" },
   MOBILE: { icon: FaMobile, color: "#45B7D1" },
   DESKTOP: { icon: FaDesktop, color: "#96CEB4" },
-  IOT: { icon: FaMicrochip, color: "#FFEEAD" }
+  IOT: { icon: FaMicrochip, color: "#FFEEAD" },
+  DRONE: { icon: FaRobot, color: "#6495ED" }
 };
 
 export const difficultyLevels = {
@@ -43,35 +44,33 @@ export const projectsData = [
     id: 1,
     title: "AI Guardian Drone",
     category: "AI & Drone Technology",
-    categoryType: "AI",
-    shortDescription: "Advanced AI-powered drone for search and rescue operations",
-    fullDescription: "Developed an intelligent drone system using computer vision and machine learning algorithms to enhance search and rescue capabilities. The project integrates real-time object detection, thermal imaging, and path optimization to improve emergency response efficiency.",
+    categoryType: "DRONE",
     technologies: ["Python", "OpenCV", "TensorFlow", "ROS"],
     githubLink: "https://github.com/emadalramimi/AI-Guardian-Drone",
     imageUrl: aiDroneImage,
-    skills: ["Réaliser", "Optimiser", "Conduire"],
+    skills: ["Development", "AI & ML", "Problem-Solving"],
     timeline: {
       start: "2023-06",
       end: "2023-12",
       duration: "6 months"
     },
-    difficulty: "EXPERT",
+    difficulty: "ADVANCED",
     teamSize: 3,
-    role: "Lead Developer & AI Engineer",
+    role: "Lead AI Engineer & Developer",
     keyAchievements: [
-      "Implemented real-time object detection with 95% accuracy",
-      "Reduced search time by 60% compared to traditional methods",
-      "Integrated thermal imaging for night operations"
+      "Developed AI-powered drone detection system",
+      "Implemented advanced computer vision algorithms",
+      "Enhanced drone navigation and object recognition"
     ],
     learnings: [
       "Advanced computer vision techniques",
-      "Drone control systems",
-      "Real-time data processing"
+      "AI integration with drone technology",
+      "ROS (Robot Operating System)"
     ],
     futureImprovements: [
-      "Implement autonomous navigation",
-      "Add multi-drone coordination",
-      "Enhance battery efficiency"
+      "Improve object detection accuracy",
+      "Implement multi-drone coordination",
+      "Enhance real-time tracking capabilities"
     ]
   },
   {
@@ -84,7 +83,7 @@ export const projectsData = [
     technologies: ["Python", "YOLOv8", "PyTorch", "OpenCV"],
     githubLink: "https://github.com/emadalramimi/Aircraft-Damage-Detection",
     imageUrl: aircraftImage,
-    skills: ["Réaliser", "Administrer", "Gérer"],
+    skills: ["Development", "AI & ML", "Problem-Solving"],
     timeline: {
       start: "2022-01",
       end: "2022-06",
@@ -120,7 +119,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/AquaCare-IoT",
     demoLink: "https://demo.aquacare-iot.com",
     imageUrl: aquacareImage,
-    skills: ["Réaliser", "Administrer", "Gérer"],
+    skills: ["Development", "AI & ML", "Problem-Solving"],
     timeline: {
       start: "2022-07",
       end: "2022-12",
@@ -156,7 +155,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/AI-Diagnostic",
     demoLink: null,
     imageUrl: aiDiagnosticImage,
-    skills: ["Collaborer", "Gérer", "Optimiser"],
+    skills: ["Development", "AI & ML", "Problem-Solving"],
     timeline: {
       start: "2022-01",
       end: "2022-06",
@@ -192,7 +191,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Students-mangement-laravel",
     demoLink: null,
     imageUrl: laravelNotesImage,
-    skills: ["Réaliser", "Administrer", "Gérer"],
+    skills: ["Development", "Communication", "Problem-Solving"],
     timeline: {
       start: "2021-07",
       end: "2021-12",
@@ -228,7 +227,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Object-Detection-Opencv",
     demoLink: null,
     imageUrl: objectDetectionImage,
-    skills: ["Réaliser", "Optimiser", "Conduire"],
+    skills: ["Development", "AI & ML", "Problem-Solving"],
     timeline: {
       start: "2021-01",
       end: "2021-06",
@@ -256,7 +255,7 @@ export const projectsData = [
   {
     id: 7,
     title: "E-Sporter: E-Sport Management App",
-    category: "Software Development",
+    category: "Development",
     categoryType: "DESKTOP",
     shortDescription: "Comprehensive esports tournament management application for League of Legends",
     fullDescription: "E-Sporter is an advanced Java-based application designed to manage esports tournaments comprehensively. Developed by Team 9, the app provides robust features for team management, tournament tracking, match scheduling, and result analysis. It supports multiple user roles including administrators and referees, with a focus on efficient tournament operations and detailed performance tracking.",
@@ -264,7 +263,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/E-Sporter",
     demoLink: null,
     imageUrl: eSporterImage,
-    skills: ["Collaborer", "Gérer", "Optimiser"],
+    skills: ["Development", "Communication", "Problem-Solving"],
     timeline: {
       start: "2020-07",
       end: "2020-12",
@@ -300,7 +299,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Dijkstra-Bellman-Ford-algorithms",
     demoLink: null,
     imageUrl: saeProjectImage,
-    skills: ["Réaliser", "Administrer", "Gérer"],
+    skills: ["Development", "Problem-Solving", "Communication"],
     timeline: {
       start: "2020-01",
       end: "2020-06",
@@ -336,7 +335,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Medical-Clinic-Management-Website",
     demoLink: null,
     imageUrl: medicalClinicImage,
-    skills: ["Réaliser", "Optimiser", "Conduire"],
+    skills: ["Development", "Communication", "Problem-Solving"],
     timeline: {
       start: "2019-07",
       end: "2019-12",
@@ -372,7 +371,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Message-Encryption",
     demoLink: null,
     imageUrl: messageEncryptionImage,
-    skills: ["Collaborer", "Gérer", "Optimiser"],
+    skills: ["Development", "Problem-Solving", "Communication"],
     timeline: {
       start: "2019-01",
       end: "2019-06",
@@ -408,7 +407,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Takuzu_solver",
     demoLink: null,
     imageUrl: takuzuSolverImage,
-    skills: ["Réaliser", "Administrer", "Gérer"],
+    skills: ["Development", "Problem-Solving", "Communication"],
     timeline: {
       start: "2018-07",
       end: "2018-12",
@@ -444,7 +443,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Tomato-E-Commerce-Java-Application",
     demoLink: null,
     imageUrl: tomatoEcommerceImage,
-    skills: ["Collaborer", "Gérer", "Optimiser"],
+    skills: ["Development", "Communication", "Problem-Solving"],
     timeline: {
       start: "2018-01",
       end: "2018-06",
@@ -480,7 +479,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Products_API",
     demoLink: null,
     imageUrl: onlineShopApiImage,
-    skills: ["Collaborer", "Gérer", "Optimiser"],
+    skills: ["Development", "Problem-Solving", "Communication"],
     timeline: {
       start: "2017-07",
       end: "2017-12",
@@ -516,7 +515,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/R5.A05-TP_Spring",
     demoLink: null,
     imageUrl: springBlogImage,
-    skills: ["Réaliser", "Administrer", "Gérer"],
+    skills: ["Development", "Communication", "Problem-Solving"],
     timeline: {
       start: "2017-01",
       end: "2017-06",
@@ -543,16 +542,14 @@ export const projectsData = [
   },
   {
     id: 15,
-    title: "Mantiq Platform",
-    category: "Web",
+    title: "Mantiq AI Sales Platform",
+    category: "AI & Business Intelligence",
     categoryType: "WEB",
-    shortDescription: "A modern, intelligent sales management platform that leverages AI to enhance sales operations, analytics, and decision-making processes.",
-    fullDescription: "A modern, intelligent sales management platform that leverages AI to enhance sales operations, analytics, and decision-making processes. The platform integrates advanced AI technologies to provide comprehensive sales insights, automate workflows, and optimize business performance.",
     technologies: ["React.js", "Material-UI", "Nivo Charts", "Emotion", "React Router"],
     githubLink: "https://github.com/emadalramimi/Mantiq-AI-platform",
     demoLink: "https://mantiq-platform.netlify.app",
     imageUrl: mantiqPlatformImage,
-    skills: ["Innover", "Analyser", "Optimiser"],
+    skills: ["Innovation R&D", "Development", "AI & ML"],
     timeline: {
       start: "2023-01",
       end: "2023-06",
@@ -580,45 +577,35 @@ export const projectsData = [
 ];
 
 const skillCategories = {
-  "Réaliser": {
-    color: "#A52A2A",
+  "Entrepreneurship": {
+    color: "#6495ED",
     textColor: "white",
-    description: "Adapter des applications sur un ensemble de supports (embarqué, web, mobile, IoT...)"
+    description: "Developing innovative business strategies and solutions"
   },
-  "Optimiser": {
-    color: "#DEB887",
-    textColor: "black",
-    description: "Analyser et optimiser des applications"
+  "Innovation R&D": {
+    color: "#DC143C",
+    textColor: "white", 
+    description: "Driving research and development of cutting-edge technologies"
   },
-  "Administrer": {
-    color: "#DAA520",
-    textColor: "white",
-    description: "Déployer des services dans une architecture réseau"
-  },
-  "Gérer": {
-    color: "#90EE90",
-    textColor: "black",
-    description: "Administrer une base de données, concevoir et réaliser des systèmes d'informations décisionnels"
-  },
-  "Conduire": {
+  "Development": {
     color: "#000080",
     textColor: "white",
-    description: "Participer à la conception et à la mise en œuvre d'un projet système d'information"
+    description: "Creating robust and scalable software solutions"
   },
-  "Collaborer": {
+  "AI & ML": {
+    color: "#A52A2A",
+    textColor: "white",
+    description: "Developing intelligent systems using artificial intelligence and machine learning"
+  },
+  "Communication": {
     color: "#000000",
     textColor: "white",
-    description: "Manager une équipe informatique"
+    description: "Effectively communicating complex technical concepts"
   },
-  "Innover": {
-    color: "#6495ED",
-    textColor: "black",
-    description: "Développer des solutions innovantes"
-  },
-  "Analyser": {
-    color: "#DC143C",
+  "Problem-Solving": {
+    color: "#6A5ACD",
     textColor: "white",
-    description: "Analyser des données pour prendre des décisions éclairées"
+    description: "Analyzing challenges and developing innovative solutions"
   }
 };
 
@@ -673,12 +660,12 @@ function ProjectDetailModal({
                         key={index} 
                         className="skill-tag"
                         style={{
-                          backgroundColor: skillCategories[skill]?.color || 'var(--card-bg)',
-                          color: skillCategories[skill]?.textColor || 'var(--text-color)'
+                          backgroundColor: skillCategories[skill] ? skillCategories[skill].color : "#808080",
+                          color: skillCategories[skill] ? skillCategories[skill].textColor : "white"
                         }}
                         onClick={() => onSkillClick(skill)}
                       >
-                        {skill}
+                        {t(`projects.skillsDetails.${skill}.name`) || skill}
                       </span>
                     ))}
                   </div>
@@ -755,6 +742,14 @@ const Projects = () => {
   const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
   const isRtl = i18n.dir() === 'rtl';
 
+  const getSkillColor = (skill) => {
+    return skillCategories[skill] ? skillCategories[skill].color : "#808080";
+  };
+
+  const getSkillTextColor = (skill) => {
+    return skillCategories[skill] ? skillCategories[skill].textColor : "white";
+  };
+
   return (
     <div className="projects-container">
       <div className="projects-grid">
@@ -808,8 +803,8 @@ const Projects = () => {
                       <span 
                         key={index} 
                         style={{
-                          backgroundColor: skillCategories[skill].color,
-                          color: skillCategories[skill].textColor
+                          backgroundColor: getSkillColor(skill),
+                          color: getSkillTextColor(skill)
                         }}
                       >
                         {skill}

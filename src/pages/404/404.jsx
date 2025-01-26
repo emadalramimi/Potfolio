@@ -54,19 +54,6 @@ const NotFound = () => {
           property="og:description"
           content="The page you are looking for cannot be found."
         />
-        <meta
-          property="og:image"
-          content="https://ik.imagekit.io/itsrakesh/Portfolio/404__og_5VtpVJDVMx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644160421004"
-        />
-        <meta property="twitter:title" content="Page Not Found" />
-        <meta
-          property="twitter:description"
-          content="The page you are looking for cannot be found."
-        />
-        <meta
-          property="twitter:image"
-          content="https://ik.imagekit.io/itsrakesh/Portfolio/404__og_5VtpVJDVMx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644160421004"
-        />
       </Helmet>
       <div id="not-found" className="not-found">
         <div className="container">

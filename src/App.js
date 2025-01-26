@@ -1,6 +1,6 @@
-import React, { lazy } from 'react';
+import React, { lazy, Suspense } from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   Navigate
@@ -25,7 +25,6 @@ const ProfileRedirect = lazy(() =>
 );
 const Profiles = lazy(() => import('./pages/Profiles/Profiles'));
 const ProjectItem = lazy(() => import('./pages/Work/projects/ProjectItem'));
-const Events = lazy(() => import('./pages/Events/Events'));
 const PrivacyPolicy = lazy(() => import('./pages/Misc/PrivacyPolicy'));
 const Achievements = lazy(() => import('./pages/Achievements/Achievements'));
 
@@ -35,7 +34,7 @@ const App = () => {
       <Router>
         <CampaignBanner />
         <Navigation />
-        <React.Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={<LoadingSpinner />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -46,12 +45,11 @@ const App = () => {
             <Route path="/projects/:repoName" element={<ProjectItem />} />
             <Route path="/profiles/:profile" element={<ProfileRedirect />} />
             <Route path="/profiles" element={<Profiles />} />
-            <Route path="/events" element={<Events />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/404" element={<NotFound />} />
-            <Route path="*" element={<Navigate to="/404" />} />
+            <Route path="*" element={<Navigate to="/404" replace />} />
           </Routes>
-        </React.Suspense>
+        </Suspense>
         <Footer />
       </Router>
     </React.Fragment>

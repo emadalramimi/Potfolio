@@ -8,6 +8,7 @@
     "url": "https://github.com/emadalramimi/Potfolio"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@popperjs/core": "2.11.8",
     "animejs": "^3.2.2",
     "axios": "^1.6.2",

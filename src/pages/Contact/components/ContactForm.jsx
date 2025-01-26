@@ -1,28 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
 import {
   Form,
   Row,
   Col,
-  Spinner,
-  Modal,
   Alert,
+  Modal,
   Button
 } from 'react-bootstrap';
-import { 
-  FaGithub, 
-  FaLinkedin, 
-  FaTwitter, 
-  FaPaperPlane, 
-  FaCheckCircle,
-  FaSpinner
-} from 'react-icons/fa';
-import { MdEmail, MdError } from 'react-icons/md';
-
+import { FaSpinner, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
+import { MdError, MdEmail } from 'react-icons/md';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import { CustomButton } from '../../../common/components/UIElements';
-import useHttpHook from '../../../common/hooks/http-hook';
 import './ContactForm.scss';
 
+// Input component definition
 const Input = ({
   label,
   type,
@@ -64,17 +58,25 @@ const Input = ({
 };
 
 const ContactForm = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [formState, setFormState] = useState({
     fullName: '',
-    contactEmail: '',
-    messageSubject: '',
-    messageContent: ''
+    email: '',
+    subject: '',
+    message: ''
   });
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [showModal, setShowModal] = useState(false);
-  const { sendRequest, isLoading, error: httpError } = useHttpHook();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  // Ensure EmailJS is initialized only once
+  useEffect(() => {
+    emailjs.init({
+      publicKey: '0eL5KayW2mP3HRvOD'
+    });
+  }, []);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -102,22 +104,22 @@ const ContactForm = () => {
       errors.fullName = t('contact.form.nameLengthError');
     }
 
-    if (!formState.contactEmail.trim()) {
-      errors.contactEmail = t('contact.form.emailError');
-    } else if (!emailRegex.test(formState.contactEmail)) {
-      errors.contactEmail = t('contact.form.emailInvalidError');
+    if (!formState.email.trim()) {
+      errors.email = t('contact.form.emailError');
+    } else if (!emailRegex.test(formState.email)) {
+      errors.email = t('contact.form.emailInvalidError');
     }
 
-    if (!formState.messageSubject.trim()) {
-      errors.messageSubject = t('contact.form.subjectError');
-    } else if (formState.messageSubject.trim().length < 5) {
-      errors.messageSubject = t('contact.form.subjectLengthError');
+    if (!formState.subject.trim()) {
+      errors.subject = t('contact.form.subjectError');
+    } else if (formState.subject.trim().length < 5) {
+      errors.subject = t('contact.form.subjectLengthError');
     }
 
-    if (!formState.messageContent.trim()) {
-      errors.messageContent = t('contact.form.messageError');
-    } else if (formState.messageContent.trim().length < 10) {
-      errors.messageContent = t('contact.form.messageLengthError');
+    if (!formState.message.trim()) {
+      errors.message = t('contact.form.messageError');
+    } else if (formState.message.trim().length < 10) {
+      errors.message = t('contact.form.messageLengthError');
     }
 
     return errors;
@@ -138,32 +140,44 @@ const ContactForm = () => {
       return;
     }
 
+    setIsLoading(true);
+    setError(null);
+
     try {
-      const response = await sendRequest(
-        `${process.env.REACT_APP_BACKEND_URL}/contact`,
-        'POST',
-        {
-          fullName: formState.fullName,
-          contactEmail: formState.contactEmail,
-          messageSubject: formState.messageSubject,
-          messageContent: formState.messageContent
-        }
+      const templateParams = {
+        from_name: formState.fullName,
+        from_email: formState.email,
+        subject: formState.subject,
+        message: formState.message,
+      };
+
+      const response = await emailjs.send(
+        'service_kad7ypf',
+        'template_mhuvhxm',
+        templateParams
       );
 
-      if (response.success) {
-        setShowModal(true);
-        setFormState({
-          fullName: '',
-          contactEmail: '',
-          messageSubject: '',
-          messageContent: ''
-        });
-        setErrors({});
-        setTouched({});
-      }
+      console.log('Email sent successfully:', response);
+      
+      setShowModal(true);
+      setFormState({
+        fullName: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+      setTouched({});
+      setErrors({});
     } catch (err) {
-      console.error('Error sending message:', err);
+      console.error('Error sending email:', err);
+      setError(t('contact.form.errorMessage'));
+    } finally {
+      setIsLoading(false);
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   const isRtl = i18n.dir() === 'rtl';
@@ -194,9 +208,9 @@ const ContactForm = () => {
       </div>
 
       <Form onSubmit={formSubmitHandler} className="contact-form" noValidate>
-        {httpError && (
+        {error && (
           <Alert variant="danger" className="mb-3">
-            <MdError className="me-2" /> {httpError}
+            <MdError className="me-2" /> {error}
           </Alert>
         )}
 
@@ -210,68 +224,74 @@ const ContactForm = () => {
               onChange={handleInputChange}
               onBlur={handleBlur}
               placeholder={t('contact.form.namePlaceholder')}
-              controlId="fullName"
-              isInvalid={touched.fullName && errors.fullName}
               error={errors.fullName}
+              isInvalid={touched.fullName && errors.fullName}
               required
+              controlId="fullName"
             />
           </Col>
           <Col md={6}>
             <Input
               label={t('contact.form.email')}
               type="email"
-              name="contactEmail"
-              value={formState.contactEmail}
+              name="email"
+              value={formState.email}
               onChange={handleInputChange}
               onBlur={handleBlur}
               placeholder={t('contact.form.emailPlaceholder')}
-              controlId="contactEmail"
-              isInvalid={touched.contactEmail && errors.contactEmail}
-              error={errors.contactEmail}
+              error={errors.email}
+              isInvalid={touched.email && errors.email}
               required
+              controlId="email"
             />
           </Col>
         </Row>
-
         <Input
           label={t('contact.form.subject')}
           type="text"
-          name="messageSubject"
-          value={formState.messageSubject}
+          name="subject"
+          value={formState.subject}
           onChange={handleInputChange}
           onBlur={handleBlur}
           placeholder={t('contact.form.subjectPlaceholder')}
-          controlId="messageSubject"
-          isInvalid={touched.messageSubject && errors.messageSubject}
-          error={errors.messageSubject}
+          error={errors.subject}
+          isInvalid={touched.subject && errors.subject}
           required
+          controlId="subject"
         />
-
-        <Form.Group className="mb-3" controlId="messageContent">
+        <Form.Group className="input-wrapper" controlId="message">
           <Form.Label>{t('contact.form.message')}</Form.Label>
-          <Form.Control
-            as="textarea"
-            name="messageContent"
-            value={formState.messageContent}
-            onChange={handleInputChange}
-            onBlur={handleBlur}
-            placeholder={t('contact.form.messagePlaceholder')}
-            style={{ height: '150px' }}
-            isInvalid={touched.messageContent && errors.messageContent}
-            required
-          />
-          {touched.messageContent && errors.messageContent && (
-            <Form.Control.Feedback type="invalid">
-              <MdError className="me-2" /> {errors.messageContent}
-            </Form.Control.Feedback>
-          )}
+          <div className="input-container">
+            <Form.Control
+              as="textarea"
+              rows={5}
+              name="message"
+              value={formState.message}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+              placeholder={t('contact.form.messagePlaceholder')}
+              isInvalid={touched.message && errors.message}
+              required
+            />
+            {touched.message && errors.message && (
+              <Form.Control.Feedback type="invalid">
+                <MdError className="me-2" /> {errors.message}
+              </Form.Control.Feedback>
+            )}
+          </div>
         </Form.Group>
 
-        <div className="form-actions">
-          <Button 
-            type="submit" 
-            className={`submit-btn ${isRtl ? 'rtl-submit' : ''}`}
+        {error && (
+          <Alert variant="danger" className="mt-3">
+            <MdError className="me-2" /> {error}
+          </Alert>
+        )}
+
+        <div className="d-grid">
+          <CustomButton
+            type="submit"
             disabled={isLoading}
+            className="submit-button"
           >
             {isLoading ? (
               <span className="button-content">
@@ -293,18 +313,22 @@ const ContactForm = () => {
                 )}
               </span>
             )}
-          </Button>
+          </CustomButton>
         </div>
       </Form>
 
       <Modal 
         show={showModal} 
-        onHide={() => setShowModal(false)} 
+        onHide={handleCloseModal} 
         centered 
-        className="success-modal"
+        className="success-modal dark-mode"
+        contentClassName="dark-modal-content"
       >
-        <Modal.Header closeButton>
-          <Modal.Title>{t('contact.form.success')}</Modal.Title>
+        <Modal.Header closeButton closeVariant="white" className="dark-modal-header">
+          <Modal.Title className="dark-modal-title">
+            <FaCheckCircle className="text-success me-2" />
+            {t('contact.form.successTitle')}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="text-center">
@@ -313,7 +337,7 @@ const ContactForm = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <CustomButton onClick={() => setShowModal(false)}>
+          <CustomButton onClick={handleCloseModal}>
             {t('contact.form.close')}
           </CustomButton>
         </Modal.Footer>

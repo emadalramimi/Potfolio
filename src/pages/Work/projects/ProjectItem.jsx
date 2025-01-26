@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { 
+  FaGithub, 
+  FaExternalLinkAlt, 
+  FaCode, 
+  FaLayerGroup 
+} from 'react-icons/fa';
 import './ProjectItem.scss';
 
 const ProjectItem = ({ project }) => {
@@ -21,71 +26,87 @@ const ProjectItem = ({ project }) => {
   const translationKey = getTranslationKey(project.title);
 
   return (
-    <motion.div
+    <motion.div 
       className="project-item"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
+      whileHover={{ 
+        scale: 1.03,
+        transition: { duration: 0.2 }
+      }}
     >
-      <div className="project-image-container">
+      <div className="project-item__image-container">
         <img 
           src={project.imageUrl} 
           alt={project.title} 
-          className="project-image" 
+          className="project-item__image"
         />
-        {isHovered && (
-          <motion.div 
-            className="project-hover-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="project-links">
-              {project.githubLink && (
-                <a 
-                  href={project.githubLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="project-link github"
-                >
-                  <FaGithub /> {t('projects.viewGithub')}
-                </a>
-              )}
-              {project.demoLink && (
-                <a 
-                  href={project.demoLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="project-link demo"
-                >
-                  <FaExternalLinkAlt /> {t('projects.visitWebsite')}
-                </a>
-              )}
-            </div>
-          </motion.div>
-        )}
+        <div className={`project-item__overlay ${isHovered ? 'project-item__overlay--active' : ''}`}>
+          <div className="project-item__links">
+            {project.githubLink && (
+              <a 
+                href={project.githubLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="project-item__link"
+              >
+                <FaGithub />
+              </a>
+            )}
+            {project.demoLink && (
+              <a 
+                href={project.demoLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="project-item__link"
+              >
+                <FaExternalLinkAlt />
+              </a>
+            )}
+          </div>
+        </div>
       </div>
-
-      <div className="project-details">
-        <h3 className="project-title">
+      
+      <div className="project-item__details">
+        <h3 className="project-item__title">
           {t(`projects.${translationKey}.title`)}
         </h3>
-        <p className="project-description">
+        
+        <div className="project-item__tech-stack">
+          <FaLayerGroup className="project-item__tech-icon" />
+          <span className="project-item__tech-text">
+            {project.technologies.join(' • ')}
+          </span>
+        </div>
+        
+        <p className="project-item__description">
           {t(`projects.${translationKey}.shortDescription`)}
         </p>
-
-        <div className="project-technologies">
-          {project.technologies.map((tech, index) => (
-            <span key={index} className="tech-tag">{tech}</span>
-          ))}
-        </div>
-
-        <div className="project-skills">
-          {project.skills.map((skill, index) => (
-            <span key={index} className="skill-tag">{skill}</span>
-          ))}
+        
+        <div className="project-item__actions">
+          {project.githubLink && (
+            <a 
+              href={project.githubLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="project-item__action-btn"
+            >
+              <FaCode /> Source Code
+            </a>
+          )}
+          {project.demoLink && (
+            <a 
+              href={project.demoLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="project-item__action-btn project-item__action-btn--outline"
+            >
+              <FaExternalLinkAlt /> Live Demo
+            </a>
+          )}
         </div>
       </div>
     </motion.div>

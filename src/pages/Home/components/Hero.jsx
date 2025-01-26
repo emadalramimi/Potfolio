@@ -55,7 +55,7 @@ const Hero = () => {
               </p>
               <div className="hero-cta-buttons">
                 <a 
-                  href="/resume.pdf" 
+                  href={i18n.language === 'fr' ? '/cv-fr.pdf' : '/cv-en.pdf'} 
                   download 
                   className="btn btn-primary"
                 >
