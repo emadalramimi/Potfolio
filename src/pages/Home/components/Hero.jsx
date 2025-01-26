@@ -62,7 +62,7 @@ const Hero = () => {
                   <AiOutlineDownload /> {t('home.downloadCV')}
                 </a>
                 <a 
-                  href="#contact" 
+                  href="contact" 
                   className="btn btn-outline-primary"
                 >
                   {t('home.contactMe')}
