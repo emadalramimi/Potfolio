@@ -277,15 +277,19 @@ const Achievements = () => {
 
   return (
     <div className="achievements-page">
-      <motion.div
-        className="page-header"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <h1>{t('achievements.title')}</h1>
-        <p className="subtitle">{t('achievements.subtitle')}</p>
-      </motion.div>
+      <div className="achievements-header">
+        <motion.div 
+          className="tech-stack-header text-center w-100"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="header-content d-inline-block">
+            <h1>{t('achievements.title')}</h1>
+          </div>
+        </motion.div>
+        <p className="achievements-subtitle">{t('achievements.subtitle')}</p>
+      </div>
 
       <div className="achievements-grid">
         {achievements.map((achievement, index) => (

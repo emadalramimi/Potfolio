@@ -34,8 +34,9 @@ const Footer = () => {
 
   const quickLinks = [
     { to: "/", label: t('footer.links.home') },
-    { to: "/skills", label: t('footer.links.about') },
+    { to: "/skills", label: t('footer.links.skills') },
     { to: "/projects", label: t('footer.links.projects') },
+    { to: "/achievements", label: t('footer.links.achievements') },
     { to: "/contact", label: t('footer.links.contact') }
   ];
 

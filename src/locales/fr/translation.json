@@ -81,6 +81,13 @@
       },
       "Development": {
         "name": "Développement Logiciel",
+        "description": "Création de solutions logicielles robustes et évolutives",
+        "details": [
+          "Développement Full-Stack",
+          "Ingénierie Backend & Frontend",
+          "Architecture Cloud",
+          "Optimisation des Performances"
+        ],
         "level": "Expert"
       }
     },
@@ -227,6 +234,13 @@
       },
       "Development": {
         "name": "Développement Logiciel",
+        "description": "Création de solutions logicielles robustes et évolutives",
+        "details": [
+          "Développement Full-Stack",
+          "Ingénierie Backend & Frontend",
+          "Architecture Cloud",
+          "Optimisation des Performances"
+        ],
         "level": "Expert"
       }
     },
@@ -479,7 +493,7 @@
     "roles": {
       "aiDeveloper": "Développeur IA",
       "mlSpecialist": "Spécialiste en R&D", 
-      "webDeveloper": "Développeur Web",
+      "webDeveloper": "Développeur Full Stack",
       "droneTech": "Expert en Technologie de Drone"
     },
     "description": "Innovation à l'intersection de l'IA, de l'Apprentissage Automatique et de la Technologie",
@@ -504,7 +518,8 @@
       "experience": {
         "label": "Expérience Professionnelle",
         "description": "Années de travail transformateur dans l'innovation technologique et l'ingénierie logicielle"
-      }
+      },
+      "seeMore": "Voir Plus"
     },
     "personalIntro": {
       "title": "Créons Quelque Chose d'Extraordinaire",
@@ -710,7 +725,7 @@
       "messagePlaceholder": "Écrivez votre message ici...",
       "messageError": "Le message est requis",
       "messageLengthError": "Le message doit comporter au moins 10 caractères",
-      "send": "Envoyer le Message",
+      "send": "  Envoyer le Message",
       "sending": "Envoi en cours...",
       "close": "Fermer",
       "successTitle": "Message Envoyé Avec Succès",
@@ -728,8 +743,11 @@
     "tagline": "Conçu avec 💻 & ❤️",
     "links": {
       "home": "Accueil",
+      "skills": "Compétences",
+      "work": "Travaux",
+      "contact": "Contact",
       "projects": "Projets",
-      "contact": "Contact"
+      "achievements": "Réalisations"
     }
   }
 }

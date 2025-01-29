@@ -404,56 +404,65 @@ const StatisticsSection = () => {
       animate="visible"
     >
       <Container>
-        <SectionTitle>
-          {t('home.statistics.title')}
-        </SectionTitle>
-        <StatGridContainer>
-          {statsData.map((stat, index) => (
-            <StatCard 
-              key={index}
-              gradient={stat.gradient}
-              background={stat.background}
-              shadowColor={stat.shadowColor}
-              variants={itemVariants}
-              whileHover="hover"
-              onClick={() => navigate(stat.link)}
-            >
-              <StatIcon 
+        <div className="statistics-section">
+          <motion.div 
+            className="tech-stack-header text-center w-100"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="header-content d-inline-block">
+              <h2>{t('home.statistics.title')}</h2>
+            </div>
+          </motion.div>
+          <StatGridContainer>
+            {statsData.map((stat, index) => (
+              <StatCard 
+                key={index}
                 gradient={stat.gradient}
-                initial={{ rotate: -10 }}
-                whileHover={{ 
-                  rotate: 0,
-                  transition: { duration: 0.3 }
-                }}
+                background={stat.background}
+                shadowColor={stat.shadowColor}
+                variants={itemVariants}
+                whileHover="hover"
+                onClick={() => navigate(stat.link)}
               >
-                <stat.icon />
-              </StatIcon>
-              <StatNumber gradient={stat.gradient}>
-                <CountUp 
-                  start={0}
-                  end={stat.number} 
-                  duration={2.5} 
-                  suffix={stat.suffix || ''} 
-                  prefix={stat.prefix || ''}
-                />
-              </StatNumber>
-              <StatLabel>{stat.label}</StatLabel>
-              <StatDescription>{stat.description}</StatDescription>
-              <motion.div
-                style={{ 
-                  marginTop: theme.spacing.sm, 
-                  display: 'flex', 
-                  alignItems: 'center',
-                  color: theme.colors.primary
-                }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <FaExternalLinkAlt style={{ marginRight: '8px' }} />
-                <span>Explore More</span>
-              </motion.div>
-            </StatCard>
-          ))}
-        </StatGridContainer>
+                <StatIcon 
+                  gradient={stat.gradient}
+                  initial={{ rotate: -10 }}
+                  whileHover={{ 
+                    rotate: 0,
+                    transition: { duration: 0.3 }
+                  }}
+                >
+                  <stat.icon />
+                </StatIcon>
+                <StatNumber gradient={stat.gradient}>
+                  <CountUp 
+                    start={0}
+                    end={stat.number} 
+                    duration={2.5} 
+                    suffix={stat.suffix || ''} 
+                    prefix={stat.prefix || ''}
+                  />
+                </StatNumber>
+                <StatLabel>{stat.label}</StatLabel>
+                <StatDescription>{stat.description}</StatDescription>
+                <motion.div
+                  style={{ 
+                    marginTop: theme.spacing.sm, 
+                    display: 'flex', 
+                    alignItems: 'center',
+                    color: theme.colors.primary
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <FaExternalLinkAlt style={{ marginRight: '8px' }} />
+                  <span>{t('home.statistics.seeMore')}</span>
+                </motion.div>
+              </StatCard>
+            ))}
+          </StatGridContainer>
+        </div>
       </Container>
     </StatisticsWrapper>
   );
@@ -655,10 +664,19 @@ const Content = () => {
         <StatisticsSection />
         <SectionWrapper>
           <Container>
-            <SectionTitle>
-              {activeSection === 'experience' ? <FaBriefcase /> : <FaGraduationCap />}
-              {activeSection === 'experience' ? t('home.experience.title') : t('home.education.title')}
-            </SectionTitle>
+            <motion.div 
+              className="tech-stack-header text-center w-100"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="header-content d-inline-block">
+                <h2>
+                  {activeSection === 'experience' ? <FaBriefcase style={{ marginRight: '10px' }} /> : <FaGraduationCap style={{ marginRight: '10px' }} />}
+                  {activeSection === 'experience' ? t('home.experience.title') : t('home.education.title')}
+                </h2>
+              </div>
+            </motion.div>
 
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: theme.spacing.lg }}>
               <Badge 

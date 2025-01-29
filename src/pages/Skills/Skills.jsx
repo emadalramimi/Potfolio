@@ -105,6 +105,8 @@ const technologies = [
 ];
 
 const TechStack = () => {
+  const { t } = useTranslation();
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -136,7 +138,7 @@ const TechStack = () => {
         transition={{ duration: 0.5 }}
       >
         <div className="header-content">
-          <h2>Technologies & Tools</h2>
+          <h2>{t('skills.technologiesAndTools')}</h2>
         </div>
       </motion.div>
       <motion.div 
@@ -380,9 +382,16 @@ const Skills = () => {
           <div className="skills-content">
             <Container>
               <div className="skills-section">
-                <div className="section-title">
-                  <h2>{t('skills.technicalCompetencies')}</h2>
-                </div>
+                <motion.div 
+                  className="tech-stack-header text-center w-100"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <div className="header-content d-inline-block">
+                    <h2>{t('skills.technicalCompetencies')}</h2>
+                  </div>
+                </motion.div>
                 <SkillsGrid />
               </div>
             </Container>

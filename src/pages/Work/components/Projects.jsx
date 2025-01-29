@@ -755,7 +755,16 @@ const Projects = () => {
       <div className="projects-grid">
         <Container>
           <div className="section-title">
-            <h2>{t('projects.title')}</h2>
+            <motion.div 
+              className="tech-stack-header text-center w-100"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="header-content d-inline-block">
+                <h2>{t('projects.title')}</h2>
+              </div>
+            </motion.div>
             <p>{t('projects.exploreMyWork')}</p>
           </div>
           

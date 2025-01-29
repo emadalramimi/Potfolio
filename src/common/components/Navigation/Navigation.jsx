@@ -10,9 +10,14 @@ const Navigation = () => {
 
   const getLinkStyle = (path) => {
     return {
-      color: location.pathname === path ? '#4F46E5' : 'inherit',
       textDecoration: 'none'
     };
+  };
+
+  const getLinkClassName = (path) => {
+    const isActive = location.pathname === path || 
+      (path !== '/' && location.pathname.startsWith(path));
+    return `nav__btn__link ${isActive ? 'active' : ''}`;
   };
 
   const closeNav = () => {
@@ -38,7 +43,7 @@ const Navigation = () => {
               <Link
                 to="/"
                 style={getLinkStyle('/')}
-                className="nav__btn__link"
+                className={getLinkClassName('/')}
               >
                 {t('navbar.home')}
               </Link>
@@ -47,7 +52,7 @@ const Navigation = () => {
               <Link
                 to="/skills"
                 style={getLinkStyle('/skills')}
-                className="nav__btn__link"
+                className={getLinkClassName('/skills')}
               >
                 {t('navbar.skills')}
               </Link>
@@ -56,7 +61,7 @@ const Navigation = () => {
               <Link
                 to="/projects"
                 style={getLinkStyle('/projects')}
-                className="nav__btn__link"
+                className={getLinkClassName('/projects')}
               >
                 {t('navbar.projects')}
               </Link>
@@ -65,7 +70,7 @@ const Navigation = () => {
               <Link
                 to="/achievements"
                 style={getLinkStyle('/achievements')}
-                className="nav__btn__link"
+                className={getLinkClassName('/achievements')}
               >
                 {t('navbar.achievements')}
               </Link>
@@ -74,7 +79,7 @@ const Navigation = () => {
               <Link
                 to="/contact"
                 style={getLinkStyle('/contact')}
-                className="nav__btn__link"
+                className={getLinkClassName('/contact')}
               >
                 {t('navbar.contact')}
               </Link>
@@ -85,27 +90,27 @@ const Navigation = () => {
       <div className="nav__links">
         <ul>
           <li>
-            <Link to="/" style={getLinkStyle('/')}>
+            <Link to="/" style={getLinkStyle('/')} className={getLinkClassName('/')}>
               {t('navbar.home')}
             </Link>
           </li>
           <li>
-            <Link to="/skills" style={getLinkStyle('/skills')}>
+            <Link to="/skills" style={getLinkStyle('/skills')} className={getLinkClassName('/skills')}>
               {t('navbar.skills')}
             </Link>
           </li>
           <li>
-            <Link to="/projects" style={getLinkStyle('/projects')}>
+            <Link to="/projects" style={getLinkStyle('/projects')} className={getLinkClassName('/projects')}>
               {t('navbar.projects')}
             </Link>
           </li>
           <li>
-            <Link to="/achievements" style={getLinkStyle('/achievements')}>
+            <Link to="/achievements" style={getLinkStyle('/achievements')} className={getLinkClassName('/achievements')}>
               {t('navbar.achievements')}
             </Link>
           </li>
           <li>
-            <Link to="/contact" style={getLinkStyle('/contact')}>
+            <Link to="/contact" style={getLinkStyle('/contact')} className={getLinkClassName('/contact')}>
               {t('navbar.contact')}
             </Link>
           </li>

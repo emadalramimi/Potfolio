@@ -88,8 +88,8 @@
     "name": "Emad Al Ramimi",
     "roles": {
       "aiDeveloper": "AI Developer",
-      "mlSpecialist": "Machine Learning Specialist", 
-      "webDeveloper": "Web Developer",
+      "mlSpecialist": "R&D Specialist", 
+      "webDeveloper": "Full Stack Developer",
       "droneTech": "Drone Technology Expert"
     },
     "description": "Innovating at the intersection of AI, Machine Learning, and Technology",
@@ -114,7 +114,8 @@
       "experience": {
         "label": "Professional Experience",
         "description": "Years of transformative work in tech innovation and software engineering"
-      }
+      },
+      "seeMore": "See More"
     },
     "personalIntro": {
       "title": "Let's Create Something Extraordinary",
@@ -550,7 +551,7 @@
       "messagePlaceholder": "Write your message here...",
       "messageError": "Message is required",
       "messageLengthError": "Message must be at least 10 characters long",
-      "send": "Send Message",
+      "send": " Send Message",
       "sending": "Sending...",
       "close": "Close",
       "successTitle": "Message Sent Successfully",
