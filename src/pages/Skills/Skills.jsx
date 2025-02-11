@@ -8,6 +8,7 @@ import { SkillsGrid } from '../Work/components';
 import { SkillFilterContext, SkillFilterProvider } from '../Work/components/SkillsGrid';
 import { projectsData } from '../Work/components/Projects';
 import ProjectItem from '../Work/projects/ProjectItem';
+import { useLocation } from 'react-router-dom';
 
 // Import project images
 import aiDroneImage from '../../assets/images/projects/ai-drone.jpg';
@@ -183,10 +184,10 @@ const RelatedProjects = () => {
 
   // Mapping of original titles to translation keys
   const projectTranslationMap = {
-    'AI Guardian Drone': 'aiguardiandrone',
-    'Aircraft Damage Detection': 'aircraftdamagedetection',
-    'AquaCare IoT System': 'aquacareiotsystem',
-    'AI Diagnostic Assistant': 'aidiagnosticassistant',
+    // 'AI Guardian Drone': 'aiguardiandrone',
+    // 'Aircraft Damage Detection': 'aircraftdamagedetection',
+    // 'AquaCare IoT System': 'aquacareiotsystem',
+    // 'AI Diagnostic Assistant': 'aidiagnosticassistant',
     'Laravel Students Management System': 'laravelstudentsmanagementsystem',
     'Real-Time Object Detection': 'real-timeobjectdetection',
     'E-Sporter: E-Sport Management App': 'e-sportmanagementapp',
@@ -296,11 +297,11 @@ const RelatedProjects = () => {
                     title: projectTitle,
                     shortDescription: projectDescription,
                     imageUrl: project.imageUrl || {
-                      'AI Guardian Drone': aiDroneImage,
-                      'Aircraft Damage Detection': aircraftImage,
-                      'AquaCare IoT System': aquacareImage,
-                      'AI Diagnostic Assistant': aiDiagnosticImage,
-                      'Laravel Students Management System': laravelNotesImage,
+                      // 'AI Guardian Drone': aiDroneImage,
+                      // 'Aircraft Damage Detection': aircraftImage,
+                      // 'AquaCare IoT System': aquacareImage,
+                      // 'AI Diagnostic Assistant': aiDiagnosticImage,
+                      // 'Laravel Students Management System': laravelNotesImage,
                       'Real-Time Object Detection': objectDetectionImage,
                       'E-Sporter: E-Sport Management App': eSporterImage,
                       'Graph Algorithms': saeProjectImage,
@@ -351,8 +352,90 @@ const RelatedProjects = () => {
   );
 };
 
+export const projectsInfo = [
+  {
+    id: 15,
+    githubLink: "https://github.com/emadalramimi/Mantiq-AI-platform",
+    demoLink: "https://mantiq-platform.netlify.app",
+    skills: ["Innovation R&D", "Development", "AI & ML", "Entrepreneurship"]
+  },
+  {
+    id: 5,
+    githubLink: "https://github.com/emadalramimi/Students-mangement-laravel",
+    demoLink: null,
+    skills: ["Development", "Problem-Solving"]
+  },
+  {
+    id: 6,
+    githubLink: "https://github.com/emadalramimi/Object-Detection-Opencv",
+    demoLink: null,
+    skills: ["Innovation R&D", "Development", "AI & ML", "Problem-Solving"]
+  },
+  {
+    id: 7,
+    githubLink: "https://github.com/emadalramimi/E-Sporter",
+    demoLink: null,
+    skills: ["Development", "Communication", "Problem-Solving"]
+  },
+  {
+    id: 8,
+    githubLink: "https://github.com/emadalramimi/Dijkstra-Bellman-Ford-algorithms",
+    demoLink: null,
+    skills: ["Innovation R&D", "AI & ML", "Problem-Solving", "Communication"]
+  },
+  {
+    id: 9,
+    githubLink: "https://github.com/emadalramimi/Medical-Clinic-Management-Website",
+    demoLink: null,
+    skills: ["Development", "Entrepreneurship", "Problem-Solving"]
+  },
+  {
+    id: 10,
+    githubLink: "https://github.com/emadalramimi/Message-Encryption",
+    demoLink: null,
+    skills: ["Development", "Problem-Solving", "Communication"]
+  },
+  {
+    id: 11,
+    githubLink: "https://github.com/emadalramimi/Takuzu_solver",
+    demoLink: null,
+    skills: ["Development", "Problem-Solving", "AI & ML"]
+  },
+  {
+    id: 12,
+    githubLink: "https://github.com/emadalramimi/Tomato-E-Commerce-Java-Application",
+    demoLink: null,
+    skills: ["Development", "Communication", "Problem-Solving"]
+  },
+  {
+    id: 13,
+    githubLink: "https://github.com/emadalramimi/Products_API",
+    demoLink: null,
+    skills: ["Development", "Problem-Solving", "Entrepreneurship"]
+  },
+  {
+    id: 14,
+    githubLink: "https://github.com/emadalramimi/R5.A05-TP_Spring",
+    demoLink: null,
+    skills: ["Development", "Communication"]
+  }
+];
+
 const Skills = () => {
+  const location = useLocation();
+  const [currentSkill, setCurrentSkill] = useState(null);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    // Parse query parameters from the URL
+    const searchParams = new URLSearchParams(location.search);
+    const skillParam = searchParams.get('skill');
+  
+    // If a skill is passed as a query parameter, set it as the current skill
+    if (skillParam) {
+      setCurrentSkill(skillParam);
+    }
+  }, [location.search]);
 
   return (
     <Fragment>
@@ -390,6 +473,7 @@ const Skills = () => {
                 >
                   <div className="header-content d-inline-block">
                     <h2>{t('skills.technicalCompetencies')}</h2>
+                    <p>{t('skills.subtitle')}</p>
                   </div>
                 </motion.div>
                 <SkillsGrid />

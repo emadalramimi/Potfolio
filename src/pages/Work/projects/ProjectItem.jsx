@@ -13,18 +13,6 @@ const ProjectItem = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { t } = useTranslation();
 
-  const getTranslationKey = (title) => {
-    const titleToKey = {
-      'Tomato Ecommerce': 'tomatoEcommerce',
-      'Takuzu Solver': 'takuzuSolver',
-      'Online Shop API': 'onlineShopApi',
-      'Spring Boot Blog': 'springBlog'
-    };
-    return titleToKey[title] || title.toLowerCase().replace(/\s+/g, '');
-  };
-
-  const translationKey = getTranslationKey(project.title);
-
   return (
     <motion.div 
       className="project-item"
@@ -41,7 +29,7 @@ const ProjectItem = ({ project }) => {
       <div className="project-item__image-container">
         <img 
           src={project.imageUrl} 
-          alt={project.title} 
+          alt={t(`projects.projectsList.${project.id}.title`)} 
           className="project-item__image"
         />
         <div className={`project-item__overlay ${isHovered ? 'project-item__overlay--active' : ''}`}>
@@ -72,7 +60,7 @@ const ProjectItem = ({ project }) => {
       
       <div className="project-item__details">
         <h3 className="project-item__title">
-          {t(`projects.${translationKey}.title`)}
+          {t(`projects.projectsList.${project.id}.title`)}
         </h3>
         
         <div className="project-item__tech-stack">
@@ -83,7 +71,7 @@ const ProjectItem = ({ project }) => {
         </div>
         
         <p className="project-item__description">
-          {t(`projects.${translationKey}.shortDescription`)}
+          {t(`projects.projectsList.${project.id}.shortDescription`)}
         </p>
         
         <div className="project-item__actions">

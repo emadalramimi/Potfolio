@@ -5,12 +5,13 @@ import { FaGithub, FaExternalLinkAlt, FaInfoCircle, FaCalendar, FaUsers, FaStar,
 import './Projects.scss';
 import { SkillFilterContext, SkillFilterProvider } from './SkillsGrid';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 // Import project images
-import aiDroneImage from '../../../assets/images/projects/ai-drone.jpg';
-import aircraftImage from '../../../assets/images/projects/aircraft.jpg';
-import aquacareImage from '../../../assets/images/projects/aquacare.jpg';
-import aiDiagnosticImage from '../../../assets/images/projects/ai-diagnostic.jpg';
+// import aiDroneImage from '../../../assets/images/projects/ai-drone.jpg';
+// import aircraftImage from '../../../assets/images/projects/aircraft.jpg';
+// import aquacareImage from '../../../assets/images/projects/aquacare.jpg';
+// import aiDiagnosticImage from '../../../assets/images/projects/ai-diagnostic.jpg';
 import laravelNotesImage from '../../../assets/images/projects/laravel-notes.jpg';
 import objectDetectionImage from '../../../assets/images/projects/object-detection.jpg';
 import eSporterImage from '../../../assets/images/projects/e-sporter.jpg';
@@ -41,143 +42,37 @@ export const difficultyLevels = {
 
 export const projectsData = [
   {
-    id: 1,
-    title: "AI Guardian Drone",
-    category: "AI & Drone Technology",
-    categoryType: "DRONE",
-    technologies: ["Python", "OpenCV", "TensorFlow", "ROS"],
-    githubLink: "https://github.com/emadalramimi/AI-Guardian-Drone",
-    imageUrl: aiDroneImage,
-    skills: ["Development", "AI & ML", "Problem-Solving"],
+    id: 15,
+    title: "Mantiq AI Sales Platform",
+    category: "AI & Business Intelligence",
+    categoryType: "WEB",
+    technologies: ["React.js", "Material-UI", "Nivo Charts", "Emotion", "React Router"],
+    githubLink: "https://github.com/emadalramimi/Mantiq-AI-platform",
+    demoLink: "https://mantiq-platform.netlify.app",
+    imageUrl: mantiqPlatformImage,
+    skills: ["Innovation R&D", "Development", "AI & ML", "Entrepreneurship"],
     timeline: {
-      start: "2023-06",
-      end: "2023-12",
+      start: "2023-01",
+      end: "2023-06",
       duration: "6 months"
     },
     difficulty: "ADVANCED",
-    teamSize: 3,
-    role: "Lead AI Engineer & Developer",
-    keyAchievements: [
-      "Developed AI-powered drone detection system",
-      "Implemented advanced computer vision algorithms",
-      "Enhanced drone navigation and object recognition"
-    ],
-    learnings: [
-      "Advanced computer vision techniques",
-      "AI integration with drone technology",
-      "ROS (Robot Operating System)"
-    ],
-    futureImprovements: [
-      "Improve object detection accuracy",
-      "Implement multi-drone coordination",
-      "Enhance real-time tracking capabilities"
-    ]
-  },
-  {
-    id: 2,
-    title: "Aircraft Damage Detection",
-    category: "Computer Vision",
-    categoryType: "AI",
-    shortDescription: "YOLOv8-based AI system for aircraft damage assessment",
-    fullDescription: "Implemented a state-of-the-art object detection model using YOLOv8 to automatically identify and classify aircraft surface damages. The system provides precise localization and severity assessment of structural imperfections, reducing manual inspection time and improving maintenance efficiency.",
-    technologies: ["Python", "YOLOv8", "PyTorch", "OpenCV"],
-    githubLink: "https://github.com/emadalramimi/Aircraft-Damage-Detection",
-    imageUrl: aircraftImage,
-    skills: ["Development", "AI & ML", "Problem-Solving"],
-    timeline: {
-      start: "2022-01",
-      end: "2022-06",
-      duration: "6 months"
-    },
-    difficulty: "ADVANCED",
-    teamSize: 2,
-    role: "Lead Developer & AI Engineer",
-    keyAchievements: [
-      "Achieved 90% accuracy in damage detection",
-      "Reduced manual inspection time by 40%",
-      "Improved maintenance efficiency by 30%"
-    ],
-    learnings: [
-      "Object detection techniques",
-      "YOLOv8 model implementation",
-      "Aircraft damage assessment"
-    ],
-    futureImprovements: [
-      "Implement real-time damage detection",
-      "Add multi-camera support",
-      "Enhance model accuracy"
-    ]
-  },
-  {
-    id: 3,
-    title: "AquaCare IoT System",
-    category: "IoT & Machine Learning",
-    categoryType: "IOT",
-    shortDescription: "Smart water quality monitoring and prediction platform",
-    fullDescription: "Created an IoT-based water quality monitoring system that uses machine learning algorithms to predict water contamination levels. The project integrates sensor data, real-time analytics, and predictive modeling to provide early warnings and comprehensive water health insights.",
-    technologies: ["Python", "TensorFlow", "Raspberry Pi", "Node.js"],
-    githubLink: "https://github.com/emadalramimi/AquaCare-IoT",
-    demoLink: "https://demo.aquacare-iot.com",
-    imageUrl: aquacareImage,
-    skills: ["Development", "AI & ML", "Problem-Solving"],
-    timeline: {
-      start: "2022-07",
-      end: "2022-12",
-      duration: "6 months"
-    },
-    difficulty: "INTERMEDIATE",
     teamSize: 4,
-    role: "Lead Developer & IoT Engineer",
-    keyAchievements: [
-      "Implemented real-time water quality monitoring",
-      "Achieved 85% accuracy in contamination prediction",
-      "Reduced water waste by 20%"
-    ],
-    learnings: [
-      "IoT system design",
-      "Machine learning for predictive modeling",
-      "Water quality monitoring"
-    ],
-    futureImprovements: [
-      "Implement autonomous water treatment",
-      "Add multi-sensor support",
-      "Enhance model accuracy"
-    ]
-  },
-  {
-    id: 4,
-    title: "AI Diagnostic Assistant",
-    category: "Healthcare AI",
-    categoryType: "AI",
-    shortDescription: "Machine learning-powered medical diagnosis support system",
-    fullDescription: "Developed an AI-powered diagnostic assistant that helps healthcare professionals in making accurate diagnoses. The system analyzes patient symptoms, medical history, and test results using advanced machine learning algorithms to suggest potential diagnoses and treatment plans.",
-    technologies: ["Python", "TensorFlow", "Flask", "React"],
-    githubLink: "https://github.com/emadalramimi/AI-Diagnostic",
-    demoLink: null,
-    imageUrl: aiDiagnosticImage,
-    skills: ["Development", "AI & ML", "Problem-Solving"],
-    timeline: {
-      start: "2022-01",
-      end: "2022-06",
-      duration: "6 months"
-    },
-    difficulty: "ADVANCED",
-    teamSize: 3,
     role: "Lead Developer & AI Engineer",
     keyAchievements: [
-      "Achieved 90% accuracy in diagnosis",
-      "Reduced diagnosis time by 30%",
-      "Improved patient outcomes by 25%"
+      "Implemented AI-powered sales analytics",
+      "Developed automated workflows",
+      "Improved business performance by 25%"
     ],
     learnings: [
-      "Machine learning for medical diagnosis",
-      "Natural language processing",
-      "Medical knowledge graph"
+      "React.js framework",
+      "Material-UI library",
+      "AI-powered sales analytics"
     ],
     futureImprovements: [
-      "Implement real-time diagnosis",
-      "Add multi-modal support",
-      "Enhance model accuracy"
+      "Implement multi-sales support",
+      "Add multi-language support",
+      "Enhance AI-powered insights"
     ]
   },
   {
@@ -191,7 +86,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Students-mangement-laravel",
     demoLink: null,
     imageUrl: laravelNotesImage,
-    skills: ["Development", "Communication", "Problem-Solving"],
+    skills: ["Development", "Problem-Solving"],
     timeline: {
       start: "2021-07",
       end: "2021-12",
@@ -227,7 +122,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Object-Detection-Opencv",
     demoLink: null,
     imageUrl: objectDetectionImage,
-    skills: ["Development", "AI & ML", "Problem-Solving"],
+    skills: ["Innovation R&D", "Development", "AI & ML", "Problem-Solving"],
     timeline: {
       start: "2021-01",
       end: "2021-06",
@@ -299,7 +194,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Dijkstra-Bellman-Ford-algorithms",
     demoLink: null,
     imageUrl: saeProjectImage,
-    skills: ["Development", "Problem-Solving", "Communication"],
+    skills: ["Innovation R&D", "AI & ML", "Problem-Solving", "Communication"],
     timeline: {
       start: "2020-01",
       end: "2020-06",
@@ -335,7 +230,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Medical-Clinic-Management-Website",
     demoLink: null,
     imageUrl: medicalClinicImage,
-    skills: ["Development", "Communication", "Problem-Solving"],
+    skills: ["Development", "Entrepreneurship", "Problem-Solving"],
     timeline: {
       start: "2019-07",
       end: "2019-12",
@@ -407,7 +302,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Takuzu_solver",
     demoLink: null,
     imageUrl: takuzuSolverImage,
-    skills: ["Development", "Problem-Solving", "Communication"],
+    skills: ["Development", "Problem-Solving", "AI & ML"],
     timeline: {
       start: "2018-07",
       end: "2018-12",
@@ -479,7 +374,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/Products_API",
     demoLink: null,
     imageUrl: onlineShopApiImage,
-    skills: ["Development", "Problem-Solving", "Communication"],
+    skills: ["Development", "Problem-Solving", "Entrepreneurship"],
     timeline: {
       start: "2017-07",
       end: "2017-12",
@@ -515,7 +410,7 @@ export const projectsData = [
     githubLink: "https://github.com/emadalramimi/R5.A05-TP_Spring",
     demoLink: null,
     imageUrl: springBlogImage,
-    skills: ["Development", "Communication", "Problem-Solving"],
+    skills: ["Development", "Communication"],
     timeline: {
       start: "2017-01",
       end: "2017-06",
@@ -538,40 +433,6 @@ export const projectsData = [
       "Implement multi-user support",
       "Add multi-language support",
       "Enhance API security"
-    ]
-  },
-  {
-    id: 15,
-    title: "Mantiq AI Sales Platform",
-    category: "AI & Business Intelligence",
-    categoryType: "WEB",
-    technologies: ["React.js", "Material-UI", "Nivo Charts", "Emotion", "React Router"],
-    githubLink: "https://github.com/emadalramimi/Mantiq-AI-platform",
-    demoLink: "https://mantiq-platform.netlify.app",
-    imageUrl: mantiqPlatformImage,
-    skills: ["Innovation R&D", "Development", "AI & ML"],
-    timeline: {
-      start: "2023-01",
-      end: "2023-06",
-      duration: "6 months"
-    },
-    difficulty: "ADVANCED",
-    teamSize: 4,
-    role: "Lead Developer & AI Engineer",
-    keyAchievements: [
-      "Implemented AI-powered sales analytics",
-      "Developed automated workflows",
-      "Improved business performance by 25%"
-    ],
-    learnings: [
-      "React.js framework",
-      "Material-UI library",
-      "AI-powered sales analytics"
-    ],
-    futureImprovements: [
-      "Implement multi-sales support",
-      "Add multi-language support",
-      "Enhance AI-powered insights"
     ]
   }
 ];
@@ -707,6 +568,7 @@ function ProjectDetailModal({
 }
 
 const Projects = () => {
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const { currentSkill = null, setCurrentSkill = () => {} } = useContext(SkillFilterContext) || {};
   const [filteredProjects, setFilteredProjects] = useState(projectsData);
@@ -748,6 +610,10 @@ const Projects = () => {
 
   const getSkillTextColor = (skill) => {
     return skillCategories[skill] ? skillCategories[skill].textColor : "white";
+  };
+
+  const onSkillClick = (skill) => {
+    navigate(`/skills?skill=${encodeURIComponent(skill)}`);
   };
 
   return (
@@ -831,7 +697,7 @@ const Projects = () => {
           onHide={handleClose}
           project={selectedProject}
           skillCategories={skillCategories}
-          onSkillClick={() => {}}
+          onSkillClick={onSkillClick}
           isDarkMode={isDarkMode}
         />
       </div>

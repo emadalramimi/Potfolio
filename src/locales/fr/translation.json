@@ -8,9 +8,9 @@
     "achievements": "Réalisations"
   },
   "skills": {
-    "title": "Compétences Techniques",
-    "subtitle": "Expertise dans Plusieurs Domaines",
-    "technicalCompetencies": "Compétences Techniques",
+    "title": "Mes Compétences",
+    "subtitle": "Clickez sur une compétence pour voir ses projets",
+    "technicalCompetencies": "Mes Compétences",
     "technologiesAndTools": "Technologies & Outils",
     "categories": {
       "Entrepreneurship": {
@@ -36,19 +36,19 @@
         "level": "Expert"
       },
       "Software Development": {
-        "name": "Développement Logiciel",
+        "name": "Développement logiciel",
         "description": "Création de solutions logicielles robustes et évolutives",
         "details": [
           "Développement Full-Stack",
           "Ingénierie Backend & Frontend",
-          "Architecture Cloud",
-          "Optimisation des Performances"
+          "Architecture cloud",
+          "Optimisation des performances"
         ],
         "level": "Expert"
       },
       "AI & ML": {
         "name": "IA & Apprentissage Automatique",
-        "description": "Développement de systèmes intelligents utilisant l'intelligence artificielle et l'apprentissage automatique",
+        "description": "Développement de systèmes intelligents utilisant l'Intelligence Artificielle et l'Apprentissage Automatique",
         "details": [
           "Algorithmes d'Apprentissage Automatique",
           "Apprentissage Profond",
@@ -58,18 +58,18 @@
         "level": "Avancé"
       },
       "Communication": {
-        "name": "Communication Stratégique",
+        "name": "Communication stratégique",
         "description": "Communication efficace de concepts techniques complexes",
         "details": [
-          "Rédaction Technique",
-          "Compétences en Présentation",
-          "Collaboration Interdisciplinaire",
-          "Transfert de Connaissances"
+          "Rédaction technique",
+          "Compétences en présentation",
+          "Collaboration interdisciplinaire",
+          "Transfert de connaissances"
         ],
         "level": "Expert"
       },
       "Problem-Solving": {
-        "name": "Résolution Stratégique de Problèmes",
+        "name": "Résolution stratégique de problèmes",
         "description": "Analyse des défis et développement de solutions innovantes",
         "details": [
           "Pensée Analytique",
@@ -80,7 +80,7 @@
         "level": "Expert"
       },
       "Development": {
-        "name": "Développement Logiciel",
+        "name": "Développement logiciel",
         "description": "Création de solutions logicielles robustes et évolutives",
         "details": [
           "Développement Full-Stack",
@@ -119,13 +119,13 @@
   },
   "projects": {
     "title": "Mes Projets",
-    "subtitle": "Voici quelques-uns de mes travaux récents",
-    "viewProject": "Voir le Projet",
-    "viewGithub": "Voir sur GitHub",
-    "visitWebsite": "Visiter le Site",
-    "technologies": "Technologies Utilisées",
+    "subtitle": "Voici quelques-Uns de mes travaux récents",
+    "viewProject": "Voir Le projet",
+    "viewGithub": "Voir Sur GitHub",
+    "visitWebsite": "Visiter le site",
+    "technologies": "Technologies utilisées",
     "skills": "Compétences",
-    "exploreMyWork": "Explorez mes derniers travaux en IA, Apprentissage Automatique, Développement Web et Technologie",
+    "exploreMyWork": "Explorez mes derniers travaux en IA, Apprentissage Automatique, Développement web et Technologie",
     "relatedTo": "Projets liés à",
     "filters": {
       "all": "Tous",
@@ -136,8 +136,8 @@
     },
     "status": {
       "completed": "Terminé",
-      "inProgress": "En Cours",
-      "ongoing": "En Développement"
+      "inProgress": "En cours",
+      "ongoing": "En développement"
     },
     "details": {
       "client": "Client",
@@ -146,18 +146,18 @@
       "description": "Description",
       "teamSize": "Taille de l'équipe",
       "difficulty": "Difficulté",
-      "keyAchievements": "Réalisations Clés",
+      "keyAchievements": "Réalisations clés",
       "learnings": "Apprentissages",
-      "futureImprovements": "Améliorations Futures",
+      "futureImprovements": "Améliorations futures",
       "metrics": "Métriques"
     },
     "categories": {
-      "AI": "Intelligence Artificielle",
-      "WEB": "Développement Web",
-      "MOBILE": "Applications Mobiles",
-      "DESKTOP": "Applications Bureau",
-      "IOT": "Internet des Objets",
-      "DRONE": "Technologie des Drones"
+      "AI": "Intelligence artificielle",
+      "WEB": "Développement web",
+      "MOBILE": "Applications mobiles",
+      "DESKTOP": "Applications bureau",
+      "IOT": "Internet des objets",
+      "DRONE": "Technologie des drones"
     },
     "difficulty": {
       "BEGINNER": "Débutant",
@@ -170,10 +170,10 @@
         "name": "Entrepreneuriat",
         "description": "Développement de stratégies commerciales et de solutions innovantes",
         "details": [
-          "Planification Stratégique",
-          "Gestion de l'Innovation",
-          "Analyse de Marché",
-          "Développement de Produits"
+          "Planification stratégique",
+          "Gestion de l'innovation",
+          "Analyse de marché",
+          "Développement de produits"
         ],
         "level": "Avancé"
       },
@@ -181,21 +181,21 @@
         "name": "Recherche & Innovation",
         "description": "Pilotage de la recherche et du développement de technologies de pointe",
         "details": [
-          "Recherche Technologique",
-          "Développement de Prototypes",
-          "Exploration des Technologies Émergentes",
-          "Méthodologie Scientifique"
+          "Recherche technologique",
+          "Développement de prototypes",
+          "Exploration des technologies émergentes",
+          "Méthodologie scientifique"
         ],
         "level": "Expert"
       },
       "Software Development": {
-        "name": "Développement Logiciel",
+        "name": "Développement logiciel",
         "description": "Création de solutions logicielles robustes et évolutives",
         "details": [
           "Développement Full-Stack",
           "Ingénierie Backend & Frontend",
-          "Architecture Cloud",
-          "Optimisation des Performances"
+          "Architecture cloud",
+          "Optimisation des performances"
         ],
         "level": "Expert"
       },
@@ -203,43 +203,43 @@
         "name": "IA & Apprentissage Automatique",
         "description": "Développement de systèmes intelligents utilisant l'intelligence artificielle et l'apprentissage automatique",
         "details": [
-          "Algorithmes d'Apprentissage Automatique",
-          "Apprentissage Profond",
+          "Algorithmes d'apprentissage automatique",
+          "Apprentissage profond",
           "Vision par Ordinateur",
           "Traitement du Langage Naturel"
         ],
         "level": "Avancé"
       },
       "Communication": {
-        "name": "Communication Stratégique",
+        "name": "Communication stratégique",
         "description": "Communication efficace de concepts techniques complexes",
         "details": [
-          "Rédaction Technique",
-          "Compétences en Présentation",
-          "Collaboration Interdisciplinaire",
-          "Transfert de Connaissances"
+          "Rédaction technique",
+          "Compétences en présentation",
+          "Collaboration interdisciplinaire",
+          "Transfert de connaissances"
         ],
         "level": "Expert"
       },
       "Problem-Solving": {
-        "name": "Résolution Stratégique de Problèmes",
+        "name": "Résolution stratégique de problèmes",
         "description": "Analyse des défis et développement de solutions innovantes",
         "details": [
-          "Pensée Analytique",
-          "Décomposition Critique des Problèmes",
-          "Conception de Solutions Créatives",
-          "Approche Systématique"
+          "Pensée analytique",
+          "Décomposition critique des problèmes",
+          "Conception de solutions creatives",
+          "Approche systémique"
         ],
         "level": "Expert"
       },
       "Development": {
-        "name": "Développement Logiciel",
+        "name": "Développement logiciel",
         "description": "Création de solutions logicielles robustes et évolutives",
         "details": [
           "Développement Full-Stack",
           "Ingénierie Backend & Frontend",
-          "Architecture Cloud",
-          "Optimisation des Performances"
+          "Architecture cloud",
+          "Optimisation des performances"
         ],
         "level": "Expert"
       }
@@ -247,35 +247,35 @@
     "projectsList": {
       "1": {
         "title": "Drone Guardian IA",
-        "category": "IA & Technologie des Drones",
+        "category": "IA & technologie des drones",
         "shortDescription": "Drone avancé alimenté par l'IA pour les opérations de recherche et sauvetage",
-        "fullDescription": "Développement d'un système de drone intelligent utilisant la vision par ordinateur et des algorithmes d'apprentissage automatique pour améliorer les capacités de recherche et sauvetage. Le projet intègre la détection d'objets en temps réel, l'imagerie thermique et l'optimisation des trajets pour améliorer l'efficacité des interventions d'urgence.",
-        "role": "Développeur Principal & Ingénieur IA"
+        "fullDescription": "Développement d'un système de drone intelligent utilisant la vision par ordinateur et des algorithmes d'apprentissage automatique pour améliorer les capacités de recherche et sauvetage. Le projet intègre la Détection d'objets en temps réel, l'imagerie thermique et l'optimisation des trajets pour améliorer l'efficacité des interventions d'urgence.",
+        "role": "Développeur Principal & ingénieur IA"
       },
       "2": {
         "title": "Détection des Dommages d'Aéronefs",
         "category": "Vision par Ordinateur",
         "shortDescription": "Système IA basé sur YOLOv8 pour l'évaluation des dommages d'aéronef",
         "fullDescription": "Implémentation d'un modèle de détection d'objets de pointe utilisant YOLOv8 pour identifier et classifier automatiquement les dommages sur la surface des aéronefs. Le système fournit une localisation précise et une évaluation de la gravité des imperfections structurelles, réduisant le temps d'inspection manuelle et améliorant l'efficacité de la maintenance.",
-        "role": "Développeur Principal & Ingénieur IA"
+        "role": "Développeur Principal & ingénieur IA"
       },
       "3": {
         "title": "Système IoT AquaCare",
         "category": "IoT & Apprentissage Automatique",
         "shortDescription": "Plateforme intelligente de surveillance et prédiction de la qualité de l'eau",
         "fullDescription": "Création d'un système de surveillance de la qualité de l'eau basé sur l'IoT qui utilise des algorithmes d'apprentissage automatique pour prédire les niveaux de contamination. Le projet intègre des données de capteurs, des analyses en temps réel et une modélisation prédictive pour fournir des alertes précoces et des aperçus complets de la santé de l'eau.",
-        "role": "Développeur Principal & Ingénieur IoT"
+        "role": "Développeur Principal & ingénieur IoT"
       },
       "4": {
         "title": "Assistant Diagnostic IA",
         "category": "IA pour la Santé",
-        "shortDescription": "Système d'aide au diagnostic médical alimenté par l'apprentissage automatique",
+        "shortDescription": "Système d'aide au diagnostic médical alimenté par apprentissage automatique",
         "fullDescription": "Développement d'un assistant de diagnostic alimenté par l'IA qui aide les professionnels de santé à établir des diagnostics précis. Le système analyse les symptômes des patients, les antécédents médicaux et les résultats des tests en utilisant des algorithmes d'apprentissage automatique avancés pour suggérer des diagnostics potentiels et des plans de traitement.",
-        "role": "Développeur Principal & Ingénieur IA"
+        "role": "Développeur Principal & ingénieur IA"
       },
       "5": {
         "title": "Application de Blog - Spring Boot",
-        "category": "Développement Web",
+        "category": "Développement web",
         "shortDescription": "Application web Spring Boot sécurisée avec authentification JWT, gestion des utilisateurs et création d'articles",
         "fullDescription": "Une application web Spring Boot complète démontrant les pratiques modernes de sécurité et la gestion des utilisateurs. Les fonctionnalités incluent l'authentification sécurisée par jetons JWT, le contrôle d'accès basé sur les rôles et une architecture API RESTful claire.",
         "features": [
@@ -308,102 +308,70 @@
         ]
       },
       "6": {
-        "title": "Plateforme Mantiq - Tableau de Bord Commercial Alimenté par l'IA",
-        "category": "IA & Développement Web",
-        "shortDescription": "Une plateforme moderne et intelligente de gestion des ventes qui exploite l'IA pour améliorer les opérations commerciales, l'analytique et les processus de prise de décision.",
-        "fullDescription": "Une plateforme moderne et intelligente de gestion des ventes qui exploite l'IA pour améliorer les opérations commerciales, l'analytique et les processus de prise de décision. La plateforme intègre des technologies d'IA avancées pour fournir des perspectives commerciales complètes, automatiser les workflows et optimiser les performances commerciales.",
-        "features": [
-          "Tableau de Bord Interactif avec Métriques de Vente en Temps Réel",
-          "Assistant de Vente Alimenté par l'IA",
-          "Générateur de Propositions Intelligent",
-          "Analyse Intelligente des Contrats",
-          "Intelligence des Prospects par IA",
-          "Analyse Concurrentielle du Marché",
-          "Segmentation Avancée des Clients",
-          "Suivi de l'Engagement sur les Réseaux Sociaux",
-          "Automatisation des Tâches de Workflow",
-          "Outils de Collaboration d'Équipe"
-        ],
-        "technologies": [
-          "React.js pour un Frontend Dynamique",
-          "Material-UI pour un Design Moderne",
-          "Nivo Charts pour une Visualisation de Données Avancée",
-          "Emotion pour le Stylisme",
-          "React Router pour une Navigation Fluide"
-        ],
-        "challenges": [
-          "Intégration des Technologies d'IA",
-          "Création d'une Expérience Utilisateur Intuitive",
-          "Développement de Visualisations de Données Complexes",
-          "Implémentation d'Analytiques en Temps Réel",
-          "Garantie de la Confidentialité et de la Sécurité des Données"
-        ],
-        "projectStructure": [
-          "Architecture de Composants Modulaire",
-          "Gestion Complète des États",
-          "Design Réactif et Adaptatif",
-          "Framework d'Intégration d'IA Évolutif"
-        ]
+        "title": "Détection d'objets en temps réel",
+        "shortDescription": "Détection d'objets en temps réel utilisant OpenCV et SSD MobileNet",
+        "fullDescription": "Une application web utilisant OpenCV et SSD MobileNet pour la Détection d'objets en temps réel.",
+        "role": "Développeur Web & ingénieur IA"
       },
       "7": {
-        "title": "E-Sporter : Application de Gestion E-Sport",
+        "title": "E-Sporter : Application de gestion E-Sport",
         "category": "Développement de Logiciel",
         "shortDescription": "Application de gestion complète pour équipes et tournois d'e-sport",
         "fullDescription": "Une plateforme innovante de gestion d'e-sport conçue pour aider les équipes, les joueurs et les organisateurs à gérer efficacement les tournois, les performances des joueurs et les stratégies d'équipe. L'application offre des outils de suivi, d'analyse et de communication pour optimiser les performances compétitives.",
-        "role": "Développeur Principal & Concepteur UX"
+        "role": "Développeur principal & concepteur UX"
       },
       "8": {
-        "title": "Solveur de Graphes et d'Algorithmes",
-        "category": "Algorithmes et Structures de Données",
+        "title": "Solveur de graphes et d'algorithmes",
+        "category": "Algorithmes et structures de données",
         "shortDescription": "Outil interactif de résolution et de visualisation de graphes",
         "fullDescription": "Un outil de développement avancé pour la résolution et la visualisation de problèmes de graphes. L'application permet aux utilisateurs d'implémenter et de tester divers algorithmes de graphes, offrant une interface interactive pour comprendre et explorer les structures de données complexes.",
-        "role": "Développeur Algorithmique & Concepteur d'Interface"
+        "role": "Développeur algorithmique & concepteur d'interface"
       },
       "9": {
         "title": "Assistant de Diagnostic Médical Mobile",
-        "category": "IA pour la Santé",
+        "category": "IA pour la santé",
         "shortDescription": "Application mobile d'aide au diagnostic médical basée sur l'IA",
         "fullDescription": "Une solution mobile innovante qui utilise l'intelligence artificielle pour assister les professionnels de santé dans le diagnostic précoce et la gestion des conditions médicales. L'application combine des algorithmes d'apprentissage automatique avec une base de données médicale comprehensive pour fournir des recommandations précises.",
-        "role": "Développeur IA & Concepteur d'Application Mobile"
+        "role": "Développeur IA & concepteur d'application mobile"
       },
       "10": {
         "title": "Outil de Chiffrement César",
         "category": "Cryptographie",
         "shortDescription": "Application de chiffrement de messages utilisant le chiffre de César",
         "fullDescription": "Un outil de cryptographie éducatif et pratique qui implémente l'algorithme de chiffrement César. L'application permet aux utilisateurs de chiffrer et déchiffrer des messages en utilisant différents décalages, offrant une introduction interactive aux concepts de cryptographie classique.",
-        "role": "Développeur de Sécurité & Concepteur d'Outils"
+        "role": "Développeur de sécurité & concepteur d'outils"
       },
       "11": {
         "title": "Solveur de Puzzle Takuzu",
-        "category": "Logique et Algorithmes",
+        "category": "Logique et algorithmes",
         "shortDescription": "Application de résolution de puzzle Takuzu (Binairo)",
-        "fullDescription": "Un solveur de puzzles intelligent qui utilise des algorithmes avancés pour résoudre des grilles Takuzu (également connu sous le nom de Binairo). L'application offre des fonctionnalités de génération de puzzles, de vérification et de résolution automatique, démontrant des techniques sophistiquées de résolution de problèmes logiques.",
-        "role": "Développeur Logique & Concepteur d'Algorithmes"
+        "fullDescription": "Un solveur de puzzles intelligent qui utilise des algorithmes avancés pour résoudre des grilles Takuzu (également connu sous le nom de Binairo). L'application offre des fonctionnalités de génération de puzzles, de vérification et de résolution automatique, démontrant des techniques sophistiquées de Résolution de problèmes logiques.",
+        "role": "Développeur logique & concepteur d'algorithmes"
       },
       "12": {
         "title": "Plateforme E-Commerce Tomato",
-        "category": "Développement Web",
+        "category": "Développement web",
         "shortDescription": "Plateforme de commerce électronique complète et moderne",
         "fullDescription": "Une solution e-commerce robuste qui offre une expérience d'achat en ligne fluide et intuitive. La plateforme intègre des fonctionnalités avancées telles que la gestion des produits, le panier d'achat, le système de paiement et la gestion des utilisateurs.",
-        "role": "Développeur Full Stack & Architecte Web"
+        "role": "Développeur Full Stack & architecte Web"
       },
       "13": {
         "title": "API de Produits en Ligne",
         "category": "Développement Backend",
         "shortDescription": "Interface API RESTful pour la gestion de produits en ligne",
         "fullDescription": "Une API backend hautement performante et sécurisée pour la gestion de produits en ligne. Conçue avec des pratiques modernes de développement, l'API offre des endpoints complets pour la manipulation et la récupération de données de produits.",
-        "role": "Développeur Backend & Architecte API"
+        "role": "Développeur Backend & architecte API"
       },
       "14": {
         "title": "API de Blog Spring",
         "category": "Développement Backend",
         "shortDescription": "API de blog RESTful construite avec Spring Boot",
         "fullDescription": "Une API de blog robuste et sécurisée développée avec Spring Boot. L'application offre des fonctionnalités complètes de gestion de blog, y compris l'authentification, la création d'articles, et la gestion des utilisateurs.",
-        "role": "Développeur Backend & Architecte Spring"
+        "role": "Développeur Backend & architecte Spring"
       },
       "15": {
         "title": "Plateforme de Vente Mantiq",
-        "category": "IA & Développement Web",
+        "category": "IA & Développement web",
         "shortDescription": "Tableau de bord commercial alimenté par l'IA",
         "fullDescription": "Une plateforme moderne et intelligente de gestion des ventes qui exploite l'IA pour améliorer les opérations commerciales, l'analytique et les processus de prise de décision. La plateforme intègre des technologies d'IA avancées pour fournir des perspectives commerciales complètes.",
         "role": "Développeur IA & Architecte de Plateforme"
@@ -411,82 +379,82 @@
       "aiguardiandrone": {
         "title": "Drone Gardien IA",
         "shortDescription": "Drone avancé alimenté par IA pour les opérations de recherche et sauvetage",
-        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+        "skills": ["Développement", "IA & ML", "Résolution de problèmes"]
       },
       "aircraftdamagedetection": {
-        "title": "Détection de Dommages d'Aéronef",
+        "title": "Détection de dommages d'aéronef",
         "shortDescription": "Système IA basé sur YOLOv8 pour l'évaluation des dommages d'aéronef",
-        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+        "skills": ["Développement", "IA & ML", "Résolution de problèmes"]
       },
       "aquacareiotsystem": {
         "title": "Système IoT AquaCare",
         "shortDescription": "Plateforme intelligente de surveillance et de prédiction de la qualité de l'eau",
-        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+        "skills": ["Développement", "IA & ML", "Résolution de problèmes"]
       },
       "aidiagnosticassistant": {
         "title": "Assistant de Diagnostic IA",
         "shortDescription": "Système de support de diagnostic médical alimenté par apprentissage automatique",
-        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+        "skills": ["Développement", "IA & ML", "Résolution de problèmes"]
       },
       "laravelstudentsmanagementsystem": {
-        "title": "Système de Gestion des Étudiants Laravel",
+        "title": "Système de gestion des étudiants Laravel",
         "shortDescription": "Application web complète de gestion des notes et modules d'étudiants",
-        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+        "skills": ["Développement", "Communication", "Résolution de problèmes"]
       },
       "real-timeobjectdetection": {
-        "title": "Détection d'Objets en Temps Réel",
+        "title": "Détection d'objets en temps réel",
         "shortDescription": "Détection d'objets en temps réel utilisant OpenCV et SSD MobileNet",
-        "skills": ["Développement", "IA & ML", "Résolution de Problèmes"]
+        "skills": ["Développement", "IA & ML", "Résolution de problèmes"]
       },
       "e-sportmanagementapp": {
-        "title": "E-Sporter : Application de Gestion E-Sport",
+        "title": "E-Sporter : Application de gestion E-Sport",
         "shortDescription": "Application complète de gestion de tournois d'esports pour League of Legends",
-        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+        "skills": ["Développement", "Communication", "Résolution de problèmes"]
       },
       "graphalgorithms": {
-        "title": "Algorithmes de Graphes",
+        "title": "Algorithmes de graphes",
         "shortDescription": "Exploration approfondie des algorithmes de plus court chemin dans les graphes pondérés",
-        "skills": ["Développement", "Résolution de Problèmes", "Communication"]
+        "skills": ["Développement", "Résolution de problèmes", "Communication"]
       },
       "medicalclinicmanagementapp": {
-        "title": "Application de Gestion de Clinique Médicale",
+        "title": "Application de gestion de clinique médicale",
         "shortDescription": "Application web complète de gestion de pratique médicale avec architecture MVC",
-        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+        "skills": ["Développement", "Communication", "Résolution de problèmes"]
       },
       "caesarcipherencryptiontool": {
-        "title": "Outil de Chiffrement César",
+        "title": "Outil de chiffrement césar",
         "shortDescription": "Application de chiffrement et déchiffrement de messages basée sur console",
-        "skills": ["Développement", "Résolution de Problèmes", "Communication"]
+        "skills": ["Développement", "Résolution de problèmes", "Communication"]
       },
       "takuzupuzzlesolver": {
-        "title": "Solveur de Puzzle Takuzu",
+        "title": "Solveur de puzzle Takuzu",
         "shortDescription": "Application de résolution de puzzle Takuzu (Binairo) intelligente",
-        "skills": ["Développement", "Résolution de Problèmes", "Communication"]
+        "skills": ["Développement", "Résolution de problèmes", "Communication"]
       },
       "tomatoe-commerceapplication": {
-        "title": "Application E-Commerce de Tomates Java",
+        "title": "Application e-commerce de tomates Java",
         "shortDescription": "Application de bureau de gestion des ventes et des stocks de produits",
-        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+        "skills": ["Développement", "Communication", "Résolution de problèmes"]
       },
       "onlineshopproductsapi": {
-        "title": "API de Produits de Boutique en Ligne",
+        "title": "API de produits de boutique en ligne",
         "shortDescription": "API RESTful pour la gestion et la récupération d'informations de produits",
-        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+        "skills": ["Développement", "Communication", "Résolution de problèmes"]
       },
       "springbootblogapplication": {
-        "title": "Application de Blog Spring Boot",
+        "title": "Application de blog Spring Boot",
         "shortDescription": "Plateforme de blog sécurisée avec authentification utilisateur et gestion de contenu",
-        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+        "skills": ["Développement", "Communication", "Résolution de problèmes"]
       },
       "mantiqaisalesplatform": {
-        "title": "Plateforme de Ventes Mantiq IA",
+        "title": "Plateforme de ventes Mantiq IA",
         "shortDescription": "Plateforme avancée d'analytique et de visualisation des ventes utilisant React et IA",
-        "skills": ["Développement", "Communication", "Résolution de Problèmes"]
+        "skills": ["Développement", "Communication", "Résolution de problèmes"]
       }
     }
   },
   "home": {
-    "title": "Bonjour, je suis Votre Nom",
+    "title": "Bonjour, je suis",
     "subtitle": "Développeur Full Stack",
     "greeting": "Bonjour, je suis",
     "name": "Emad Al Ramimi",
@@ -506,86 +474,86 @@
       "email": "Envoyer un e-mail"
     },
     "statistics": {
-      "title": "Mes Points Forts",
+      "title": "Mes points forts",
       "projects": {
-        "label": "Projets Innovants",
+        "label": "Projets innovants",
         "description": "Solutions de pointe couvrant le web, le mobile et les technologies émergentes"
       },
       "achievements": {
-        "label": "Réalisations Professionnelles",
+        "label": "Réalisations professionnelles",
         "description": "Prix reconnaissant l'innovation, le leadership et l'excellence technique"
       },
       "experience": {
-        "label": "Expérience Professionnelle",
+        "label": "Expérience professionnelle",
         "description": "Années de travail transformateur dans l'innovation technologique et l'ingénierie logicielle"
       },
-      "seeMore": "Voir Plus"
+      "seeMore": "Voir plus"
     },
     "personalIntro": {
-      "title": "Créons Quelque Chose d'Extraordinaire",
+      "title": "Créons quelque chose d'extraordinaire",
       "description": "Je suis un technologue passionné qui transforme les défis complexes en solutions élégantes et innovantes. Avec un mélange d'expertise technique et de résolution créative de problèmes, je suis toujours enthousiaste à l'idée de collaborer sur des projets qui repoussent les limites du possible.",
       "contactButton": "Contactez-moi"
     },
     "experience": {
-      "title": "Expérience Professionnelle",
+      "title": "Expérience professionnelle",
       "badge": "Expérience",
       "details": {
         "starDrones": {
-          "title": "Spécialiste en IA et Technologie de Drone",
+          "title": "Spécialiste en IA et technologie de drone",
           "organization": "Star Drones",
           "duration": "Avril 2024 - Aout 2024",
           "location": "On-Site, Masqat, Oman",
           "description": "Pilotage de projets innovants d'IA et de technologie de drone, développement d'algorithmes d'apprentissage automatique avancés pour la navigation autonome de drones et le traitement intelligent des données.",
-          "tags": ["IA", "Apprentissage Automatique", "Technologie de Drone", "Vision par Ordinateur"]
+          "tags": ["IA", "Apprentissage automatique", "Technologie de drone", "Vision par ordinateur"]
         },
         "rentWay": {
-          "title": "Développeur Logiciel",
+          "title": "Développeur logiciel",
           "organization": "Rent-Way",
           "duration": "Oct. 2023 - Juin 2024",
           "location": "Sohar, Oman",
           "description": "Conception et mise en œuvre d'applications web évolutives, améliorant l'efficacité de la plateforme et l'expérience utilisateur grâce à des technologies modernes.",
-          "tags": ["Contrat", "Développement Web", "Full-Stack"]
+          "tags": ["Contrat", "Développement web", "Full-Stack"]
         },
         "matterz": {
           "title": "Spécialiste en Innovation",
           "organization": "Matterz",
           "duration": "Juil. 2023 - Nov. 2023",
-          "location": "Masqaţ, Oman",
+          "location": "Masqate, Oman",
           "description": "Guidé et encadré des innovateurs émergents, créant des environnements collaboratifs qui favorisent la créativité, la pensée critique et le développement des compétences techniques.",
-          "tags": ["Innovation", "Facilitation", "Développement des Compétences"]
+          "tags": ["Innovation", "Facilitation", "Développement des compétences"]
         }
       },
-      "exploreMore": "Explorer Plus d'Expériences"
+      "exploreMore": "Explorer plus d'expériences"
     },
     "education": {
-      "title": "Parcours Éducatif",
+      "title": "Parcours éducatif",
       "badge": "Éducation",
       "details": {
         "toulouse": {
-          "title": "Licence en Technologie Informatique",
+          "title": "Bachelor Universitaire de Technologie en Informatique",
           "organization": "Université de Toulouse",
           "duration": "Sept. 2022 - Juin 2025",
           "location": "Toulouse, France",
           "description": "Programme complet axé sur la conception avancée de logiciels, les méthodologies de développement, le travail d'équipe et les compétences technologiques de pointe.",
-          "tags": ["Développement d'Applications", "Génie Logiciel"]
+          "tags": ["Développement d'applications", "Génie logiciel"]
         },
         "lorraine": {
           "title": "Diplôme Universitaire en Formation Scientifique et Technique",
           "organization": "Université de Lorraine",
           "duration": "Déc. 2020 - Juin 2022",
           "location": "Nancy, France",
-          "description": "Programme interdisciplinaire combinant des études de langue française avec une formation scientifique et technologique, développant une approche holistique de l'apprentissage.",
-          "tags": ["Langue Française", "Sciences"]
+          "description": "Programme interdisciplinaire combinant des études de langue française avec une formation scientifique et technologique, développementant une approche holistique de l'apprentissage.",
+          "tags": ["Langue française", "Sciences"]
         }
       },
-      "exploreMore": "Explorer Mon Parcours Académique"
+      "exploreMore": "Explorer mon parcours académique"
     }
   },
   "achievements": {
     "title": "Réalisations & Reconnaissances",
     "subtitle": "Un parcours d'innovation, de recherche et d'excellence scientifique dans plusieurs domaines",
     "learnMore": "En Savoir Plus",
-    "viewGallery": "Voir la Galerie",
+    "viewGallery": "Voir la galerie",
     "items": {
       "liysf": {
         "title": "Forum International des Jeunes Scientifiques de Londres (LIYSF)",
@@ -598,7 +566,7 @@
         ]
       },
       "rowad": {
-        "title": "Hackathon ROWAD - Projet Furat",
+        "title": "Hackathon ROWAD - projet FURAT",
         "description": "Développement du Projet Furat combinant biosolutions et technologies IA pour l'innovation entrepreneuriale au Hackathon ROWAD.",
         "highlights": [
           "Intégration des biosolutions avec la technologie IA",
@@ -608,7 +576,7 @@
         ]
       },
       "biodiversity": {
-        "title": "Prix du Marathon de la Biodiversité",
+        "title": "Prix du marathon de la biodiversité",
         "description": "Lauréat du Marathon des Idées sur la Biodiversité avec le projet d'Unités de Filtration d'Eau Intégrées, menant à une incubation scientifique à l'Université Sultan Qaboos.",
         "highlights": [
           "Première place au Marathon des Idées sur la Biodiversité",
@@ -618,7 +586,7 @@
         ]
       },
       "techYouth": {
-        "title": "Camps Technologiques pour la Jeunesse",
+        "title": "Camps technologiques pour la jeunesse",
         "description": "Programme intensif de formation technique axé sur les technologies émergentes incluant l'IA, l'IoT, la Robotique et l'impression 3D.",
         "highlights": [
           "Expérience pratique en IA et IoT",
@@ -628,7 +596,7 @@
         ]
       },
       "waterAward2020": {
-        "title": "Prix de Recherche et Innovation en Eau 2020",
+        "title": "Prix de recherche et innovation en eau 2020",
         "description": "Deuxième place pour une unité innovante de purification eau-pétrole utilisant l'énergie électrochimique dans les processus d'extraction pétrolière.",
         "highlights": [
           "Deuxième place",
@@ -638,7 +606,7 @@
         ]
       },
       "dahirah": {
-        "title": "Forum des Leaders d'Al-Dahirah",
+        "title": "Forum des leaders d'Al-Dahirah",
         "description": "Deuxième place au forum des applications de la Quatrième Révolution Industrielle pour une solution innovante de Production Vitale Agricole.",
         "highlights": [
           "Deuxième place dans un programme spécialisé",
@@ -648,7 +616,7 @@
         ]
       },
       "alRoya": {
-        "title": "Prix Al-Roya pour les Initiatives Jeunesse",
+        "title": "Prix Al-Roya pour les initiatives jeunesse",
         "description": "Deuxième place dans la catégorie énergie renouvelable et nomination pour le Prix d'Innovation Occidental Oman.",
         "highlights": [
           "Deuxième place en énergie renouvelable",
@@ -658,7 +626,7 @@
         ]
       },
       "waterAward2019": {
-        "title": "Prix de Recherche et Innovation en Eau 2019",
+        "title": "Prix de recherche et innovation en eau 2019",
         "description": "Première place pour le développement d'un filtre biologique de purification d'eau utilisant des extraits naturels de plantes omanaises.",
         "highlights": [
           "Première place",
@@ -668,7 +636,7 @@
         ]
       },
       "waterAward2018": {
-        "title": "Prix de Recherche et Innovation en Eau 2018",
+        "title": "Prix de recherche et innovation en eau 2018",
         "description": "Première place pour une solution innovante traitant les parasites des eaux grises utilisant l'énergie thermoélectrique.",
         "highlights": [
           "Première place",
@@ -688,7 +656,7 @@
         ]
       },
       "globe": {
-        "title": "Compétition de Recherche Environnementale GLOBE",
+        "title": "Compétition de recherche environnementale GLOBE",
         "description": "Troisième place pour la recherche sur l'impact environnemental des parasites des eaux grises et cinquième place pour l'étude de la fertilité des sols.",
         "highlights": [
           "Deux prix en recherche environnementale",
@@ -709,36 +677,36 @@
       "description": "Choisissez un moment qui vous convient pour discuter de votre projet"
     },
     "form": {
-      "name": "Nom Complet",
+      "name": "Nom complet",
       "namePlaceholder": "Entrez votre nom complet",
       "nameError": "Le nom est requis",
       "nameLengthError": "Le nom doit comporter au moins 2 caractères",
-      "email": "Adresse Email",
+      "email": "Adresse email",
       "emailPlaceholder": "Entrez votre adresse email",
       "emailError": "L'email est requis",
       "emailInvalidError": "Veuillez entrer une adresse email valide",
-      "subject": "Objet du Message",
+      "subject": "Objet du message",
       "subjectPlaceholder": "Entrez l'objet de votre message",
       "subjectError": "L'objet est requis",
       "subjectLengthError": "L'objet doit comporter au moins 5 caractères",
-      "message": "Votre Message",
+      "message": "Votre message",
       "messagePlaceholder": "Écrivez votre message ici...",
       "messageError": "Le message est requis",
       "messageLengthError": "Le message doit comporter au moins 10 caractères",
-      "send": "  Envoyer le Message",
+      "send": "  Envoyer le message",
       "sending": "Envoi en cours...",
       "close": "Fermer",
-      "successTitle": "Message Envoyé Avec Succès",
+      "successTitle": "Message envoyé avec succès",
       "successMessage": "Merci pour votre message. Je vous répondrai bientôt !",
       "error": "Échec de l'envoi du message. Veuillez réessayer plus tard.",
       "errorMessage": "Échec de l'envoi du message. Veuillez réessayer plus tard."
     }
   },
   "footer": {
-    "subtitle": "Développeur Full Stack",
+    "subtitle": "Développeur full-stack",
     "description": "Développement de solutions innovantes à l'intersection de l'IA et de la technologie.",
-    "quickLinks": "Liens Rapides",
-    "connectWith": "Connectez-vous avec Moi",
+    "quickLinks": "Liens rapides",
+    "connectWith": "Connectez-vous avec moi",
     "copyright": "Emad Al Ramimi. Tous droits réservés.",
     "tagline": "Conçu avec 💻 & ❤️",
     "links": {
